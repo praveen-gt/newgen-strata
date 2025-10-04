@@ -1,42 +1,438 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Tailwind CSS v4 base imports */
+@import "tailwindcss";
+
+/* Tailwind v4 Theme Configuration - Replaces tailwind.config.js */
+@theme {
+  --color-theme-green: #016938;
+  --color-theme-purple: #592c81;
+  /* --color-theme-lightgreen: #c2c310; */
+  --color-theme-lightgreen: #016938;
+  --color-theme-cream: #233b1e0d;
+  --color-theme-navy: #2E2A5B;
+  --color-theme-gold: #FFD700;
+  --color-theme-gold: #FFD700;
+
+  /* Brand Color Mappings */
+  --color-primary: var(--color-theme-green);
+  --color-primary-foreground: #FFFFFF;
+  --color-secondary: var(--color-theme-purple);
+  --color-secondary-foreground: #FFFFFF;
+  --color-accent: var(--color-theme-gold);
+  --color-accent-foreground: var(--color-theme-navy);
+
+  /* Custom Brand Colors */
+  --color-brand-primary: var(--color-theme-green);
+  --color-brand-secondary: var(--color-theme-purple);
+  --color-brand-accent: var(--color-theme-gold);
+  --color-brand-neutral: var(--color-theme-cream);
+  --color-brand-dark: var(--color-theme-navy);
+
+  /* Background and Foreground */
+  --color-background: #FFFFFF;
+  --color-foreground: #0F172A;
+  --color-muted: #F1F5F9;
+  --color-muted-foreground: #64748B;
+
+  /* Border and Input */
+  --color-border: #E2E8F0;
+  --color-input: var(--color-border);
+  --color-ring: var(--color-primary);
+
+  /* Card Colors */
+  --color-card: var(--color-background);
+  --color-card-foreground: var(--color-foreground);
+
+  /* Popover Colors */
+  --color-popover: var(--color-background);
+  --color-popover-foreground: var(--color-foreground);
+
+  /* Destructive Colors */
+  --color-destructive: #EF4444;
+  --color-destructive-foreground: #FFFFFF;
+
+  /* Typography */
+  --font-family-heading: 'Playfair Display', ui-serif, serif;
+  --font-family-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-family-sans: var(--font-family-body);
+  --font-family-serif: var(--font-family-heading);
+
+  /* Spacing */
+  --spacing-section: 4rem;
+  --spacing-container: 2rem;
+
+  /* Border Radius */
+  --radius: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-xl: 1rem;
+
+  /* Shadows */
+  --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-card-hover: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  /* Animations */
+  --animate-fade-in: fade-in 0.5s ease-out;
+  --animate-slide-up: slide-up 0.6s ease-out;
+  --animate-slide-in-right: slide-in-right 0.6s ease-out;
+  --animate-pulse-slow: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  /* Gradients */
+  --gradient-wimbledon: linear-gradient(135deg, var(--color-theme-green) 0%, var(--color-theme-purple) 100%);
+  --gradient-gold: linear-gradient(135deg, var(--color-theme-gold) 0%, #FFA500 100%);
+
+  /* Container */
+  --container-padding: 2rem;
+  --container-max-width-sm: 640px;
+  --container-max-width-md: 768px;
+  --container-max-width-lg: 1024px;
+  --container-max-width-xl: 1280px;
+  --container-max-width-2xl: 1400px;
 }
 
+/* Dark mode theme (optional) */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  @theme {
+    /* --color-background: #0F172A; */
+    --color-foreground: #F8FAFC;
+    --color-muted: #1E293B;
+    --color-muted-foreground: #94A3B8;
+    --color-border: #334155;
+    --color-input: var(--color-border);
+    /* --color-card: #1E293B; */
+    --color-card-foreground: var(--color-foreground);
+    --color-popover: var(--color-card);
+    --color-popover-foreground: var(--color-foreground);
+    /* --color-primary: #22C55E; */
+    --color-primary: #016938;
+    --color-secondary: #A855F7;
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
+/* Base styles */
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-family-body);
+    font-feature-settings: "rlig" 1, "calt" 1;
+    line-height: 1.6;
+  }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
   html {
-    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: var(--color-muted);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 80%, transparent);
+  }
+}
+
+/* Component layer styles */
+@layer components {
+  /* Custom button variants */
+  .btn-wimbledon {
+    background: var(--gradient-wimbledon);
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--radius-lg);
+    transition: all 0.2s;
+  }
+
+  .bg-gradient-wimbledon {
+  background: linear-gradient(135deg, #1A472A, #3D8B37); /* Wimbledon green shades */
+}
+
+  .btn-wimbledon:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-0.125rem);
+  }
+
+  .btn-wimbledon-outline {
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    background: transparent;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--radius-lg);
+    transition: all 0.2s;
+  }
+
+  .btn-wimbledon-outline:hover {
+    background-color: var(--color-primary);
+    color: white;
+  }
+
+  /* Custom card styles */
+  .card-wimbledon {
+    background: color-mix(in srgb, white 80%, transparent);
+    backdrop-filter: blur(8px);
+    border: 1px solid color-mix(in srgb, white 20%, transparent);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s;
+  }
+
+  .card-wimbledon:hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  /* Typography styles */
+  .heading-wimbledon {
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+    color: var(--color-brand-dark);
+  }
+
+  .text-gradient-wimbledon {
+    background: var(--gradient-wimbledon);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  /* Section styles */
+  .section-padding {
+    padding-top: var(--spacing-section);
+    padding-bottom: var(--spacing-section);
+  }
+
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  .container-custom {
+    container-type: inline-size;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-custom {
+      max-width: var(--container-max-width-sm);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container-custom {
+      max-width: var(--container-max-width-md);
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-custom {
+      max-width: var(--container-max-width-lg);
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container-custom {
+      max-width: var(--container-max-width-xl);
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .container-custom {
+      max-width: var(--container-max-width-2xl);
+    }
+  }
+
+  /* Animation classes */
+  .fade-in-up {
+    transform: translateY(2rem);
+    opacity: 0;
+    transition: all 0.7s ease-out;
+  }
+
+  .fade-in-up.animate {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  /* Hero section background */
+  .skyline-silhouette {
+  background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 100%),
+              url('/images/melbourne-skyline-silhouette.jpg') bottom center / 100% auto no-repeat;
+  /* Added `background-attachment: fixed;` potentially for a parallax effect if you scroll the main page */
+  /* You can remove `background-attachment: fixed;` if you don't want the parallax effect */
+  background-attachment: fixed; 
+}
+
+  /* Glass morphism effect */
+  .glass {
+    background: color-mix(in srgb, white 10%, transparent);
+    backdrop-filter: blur(12px);
+    border: 1px solid color-mix(in srgb, white 20%, transparent);
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    transition: transform 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-0.5rem);
+  }
+
+  /* Focus styles for accessibility */
+  .focus-wimbledon {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+
+  .focus-wimbledon:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+/* Utility layer */
+@layer utilities {
+  /* Text utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Responsive utilities */
+  .responsive-text {
+    font-size: 0.875rem;
+  }
+
+  @media (min-width: 768px) {
+    .responsive-text {
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .responsive-text {
+      font-size: 1.125rem;
+    }
+  }
+
+  .responsive-heading {
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .responsive-heading {
+      font-size: 1.875rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .responsive-heading {
+      font-size: 2.25rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .responsive-heading {
+      font-size: 3rem;
+    }
+  }
+
+  /* Animation delays */
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+}
+
+/* Keyframe animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  * {
+    print-color-adjust: exact !important;
   }
 }

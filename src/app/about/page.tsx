@@ -5,8 +5,7 @@ import { Metadata } from 'next'
 import { AboutHero } from '@/components/sections/AboutHero'
 import { Founders } from '@/components/sections/Founders'
 import { HowWereDifferent } from '@/components/sections/HowWereDifferent'
-import { CompanyValues } from '@/components/sections/CompanyValues'
-import { Timeline } from '@/components/sections/Timeline'
+import { WhoWeHelp } from '@/components/sections/CompanyValues'
 import AboutDetails from '@/components/sections/AboutDetails'
 
 export const metadata: Metadata = {
@@ -21,7 +20,7 @@ export default function AboutPage() {
     <AboutHero />
       <AboutDetails />
        <HowWereDifferent />
-      <CompanyValues />
+      <WhoWeHelp />
       {/* <Timeline /> */}
       <Founders />
     </>

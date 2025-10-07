@@ -1,90 +1,28 @@
-// "use client"
-
-// import React from 'react'
-// import { Button } from '@/components/ui/button'
-// import { Card } from '@/components/ui/card'
-// import { ArrowRight, Phone, Mail } from 'lucide-react'
-// import Link from 'next/link'
-// import { motion } from 'framer-motion'
-
-// export function CaseStudyCTA() {
-//   return (
-//     <section className="section-padding bg-gradient-to-br from-gray-50 to-white">
-//       <div className="container-custom">
-//         <motion.div
-//           initial={{ opacity: 0, y: 20 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           viewport={{ once: true }}
-//           transition={{ duration: 0.6 }}
-//         >
-//           <Card className="bg-gradient-wimbledon text-white p-8 lg:p-12 rounded-2xl">
-//             <div className="max-w-3xl mx-auto text-center">
-//               <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
-//                 Facing Similar Challenges?
-//               </h2>
-//               <p className="text-xl text-white/90 mb-8 leading-relaxed">
-//                 Every owners corporation faces unique challenges. Let us show you how our 
-//                 experience and problem-solving approach can work for your property.
-//               </p>
-              
-//               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-//                 <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
-//                   <Link href="/contact">
-//                     Get Your Free Consultation
-//                     <ArrowRight className="ml-2 h-5 w-5" />
-//                   </Link>
-//                 </Button>
-//                 <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-//                   <Link href="tel:+61399999999">
-//                     <Phone className="mr-2 h-4 w-4" />
-//                     Call Now
-//                   </Link>
-//                 </Button>
-//               </div>
-
-//               <div className="border-t border-white/20 pt-6">
-//                 <p className="text-white/80 mb-4">
-//                   Want to read more case studies?
-//                 </p>
-//                 <div className="flex flex-wrap gap-3 justify-center">
-//                   <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white hover:text-primary" size="sm">
-//                     <Link href="/resources/fixing-the-leaks">
-//                       Emergency Response
-//                     </Link>
-//                   </Button>
-//                   <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white hover:text-primary" size="sm">
-//                     <Link href="/resources/making-invisible-visible">
-//                       Financial Transparency
-//                     </Link>
-//                   </Button>
-//                   <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white hover:text-primary" size="sm">
-//                     <Link href="/resources/problem-solvers-rescue">
-//                       Dispute Resolution
-//                     </Link>
-//                   </Button>
-//                 </div>
-//               </div>
-//             </div>
-//           </Card>
-//         </motion.div>
-//       </div>
-//     </section>
-//   )
-// }
-
-
-// src/components/case-studies/CaseStudyCTA.tsx
-
 "use client"
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { ArrowRight, Phone, Mail, FileText } from 'lucide-react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
+// Pre-generated random values to prevent hydration mismatch
+const PARTICLE_POSITIONS = [
+  { left: 20, top: 30, delay: 0 },
+  { left: 80, top: 60, delay: 0.5 },
+  { left: 50, top: 15, delay: 1 },
+  { left: 30, top: 80, delay: 1.5 },
+  { left: 70, top: 40, delay: 2 }
+]
+
 export function CaseStudyCTA() {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   return (
     <section className="relative section-padding overflow-hidden">
       {/* Animated Background */}
@@ -207,26 +145,25 @@ export function CaseStudyCTA() {
                 </div>
 
                 {/* Divider */}
-                <div className="border-t border-white/20 pt-10 mt-10">
+                {/* <div className="border-t border-white/20 pt-10 mt-10">
                   <p className="text-white/80 mb-6 text-lg">
                     Want to read more case studies?
                   </p>
                   
-                  {/* Related Case Studies */}
                   <div className="grid sm:grid-cols-3 gap-4">
                     {[
                       { 
-                        href: '/resources/fixing-the-leaks', 
+                        href: '/case-studies/fixing-the-leaks', 
                         title: 'Emergency Response',
                         icon: '🚨'
                       },
                       { 
-                        href: '/resources/making-invisible-visible', 
+                        href: '/case-studies/making-invisible-visible', 
                         title: 'Financial Transparency',
                         icon: '💰'
                       },
                       { 
-                        href: '/resources/problem-solvers-rescue', 
+                        href: '/case-studies/problem-solvers-rescue', 
                         title: 'Dispute Resolution',
                         icon: '🤝'
                       }
@@ -251,31 +188,31 @@ export function CaseStudyCTA() {
                       </motion.div>
                     ))}
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </Card>
         </motion.div>
 
-        {/* Floating particles effect */}
-        {[...Array(5)].map((_, i) => (
+        {/* Floating particles effect - only render after mount to prevent hydration issues */}
+        {mounted && PARTICLE_POSITIONS.map((particle, i) => (
           <motion.div
             key={i}
             animate={{
               y: [0, -30, 0],
-              x: [0, Math.random() * 20 - 10, 0],
+              x: [0, (i % 2 === 0 ? 10 : -10), 0],
               opacity: [0, 1, 0],
             }}
             transition={{
-              duration: 3 + Math.random() * 2,
+              duration: 3 + (i * 0.5),
               repeat: Infinity,
-              delay: Math.random() * 2,
+              delay: particle.delay,
               ease: "easeInOut"
             }}
             className="absolute w-2 h-2 bg-white rounded-full"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${particle.left}%`,
+              top: `${particle.top}%`,
             }}
           />
         ))}

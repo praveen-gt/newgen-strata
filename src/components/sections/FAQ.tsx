@@ -96,7 +96,7 @@ export function FAQ() {
             className="text-lg text-gray-600 leading-relaxed"
           >
             Find answers to the most common questions about our strata management services. 
-            Can't find what you're looking for? We're here to help.
+            Can&apos;t find what you&apos;re looking for? We&apos;re here to help.
           </motion.p>
         </motion.div>
 

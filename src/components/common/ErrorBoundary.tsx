@@ -68,7 +68,7 @@ function DefaultErrorFallback({ error, resetError }: { error?: Error; resetError
               Oops! Something went wrong
             </h1>
             <p className="text-gray-600">
-              We're sorry for the inconvenience. Please try refreshing the page or return to the homepage.
+              We&apos;re sorry for the inconvenience. Please try refreshing the page or return to the homepage.
             </p>
           </div>
 

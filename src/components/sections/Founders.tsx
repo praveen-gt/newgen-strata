@@ -283,7 +283,7 @@ import React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { Star, ArrowRight, Quote } from 'lucide-react'
+import { ArrowRight, Quote } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
@@ -396,8 +396,8 @@ export function Founders() {
         >
           <Quote className="h-12 w-12 text-white/40 mx-auto mb-6" />
           <blockquote className="text-xl lg:text-2xl font-medium mb-6 leading-relaxed max-w-4xl mx-auto">
-            "We're committed to bringing a new level of support, respect, and excellence 
-            to owners corporation management using the latest technology and proven business principles."
+            &quot;We&apos;re committed to bringing a new level of support, respect, and excellence 
+            to owners corporation management using the latest technology and proven business principles.&quot;
           </blockquote>
           <div className="font-semibold">
             Kevin Fuller & Sam Disanayaka

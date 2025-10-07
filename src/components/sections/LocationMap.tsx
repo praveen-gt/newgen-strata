@@ -235,7 +235,7 @@ export function LocationMap() {
           </motion.h3>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {serviceAreas.map((area, index) => (
+            {serviceAreas.map((area) => (
               <motion.div key={area.name} variants={fadeInUp}>
                 <Card className="card-wimbledon h-full hover-lift">
                   <CardContent className="p-4">
@@ -278,7 +278,7 @@ export function LocationMap() {
           variants={staggerContainer}
           className="grid md:grid-cols-4 gap-6 mb-16"
         >
-          {locationStats.map((stat, index) => {
+          {locationStats.map((stat) => {
             const IconComponent = stat.icon
             return (
               <motion.div key={stat.label} variants={fadeInUp}>
@@ -303,7 +303,7 @@ export function LocationMap() {
           variants={staggerContainer}
           className="grid lg:grid-cols-2 gap-8 mb-16"
         >
-          {keyLocations.map((location, index) => (
+          {keyLocations.map((location) => (
             <motion.div key={location.name} variants={fadeInUp}>
               <Card className="card-wimbledon h-full hover-lift">
                 <CardContent className="p-6">
@@ -347,7 +347,7 @@ export function LocationMap() {
                 Ready to Get Started?
               </h3>
               <p className="text-white/90 text-lg mb-8">
-                No matter where your property is located in Melbourne, we're here to provide 
+                No matter where your property is located in Melbourne, we&apos;re here to provide 
                 exceptional strata management services. Contact us today for your free consultation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

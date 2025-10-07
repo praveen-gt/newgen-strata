@@ -3,7 +3,6 @@
 "use client"
 
 import React from 'react'
-import Image from 'next/image'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { motion } from 'framer-motion'
@@ -38,7 +37,7 @@ export function ServicesValueProposition() {
               {/* Placeholder for value proposition circle image */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
                 <div className="text-center text-white">
-                  <div className="text-xl font-bold mb-2">NewGen's Strata Services</div>
+                  <div className="text-xl font-bold mb-2">NewGen&apos;s Strata Services</div>
                   <div className="grid grid-cols-2 gap-4 p-8">
                     {values.map((value) => (
                       <div key={value.label} className={`${value.color} rounded-full p-4 flex items-center justify-center text-xs font-medium ${value.color === 'bg-white' ? 'text-gray-800' : 'text-white'}`}>
@@ -75,7 +74,7 @@ export function ServicesValueProposition() {
             </p>
 
             <div className="space-y-4">
-              {['Capability', 'Reliability', 'Integrity'].map((commitment, idx) => (
+              {['Capability', 'Reliability', 'Integrity'].map((commitment) => (
                 <Card key={commitment} className="border-l-4 border-primary">
                   <CardContent className="p-4">
                     <h3 className="text-xl font-semibold text-brand-dark">{commitment}</h3>

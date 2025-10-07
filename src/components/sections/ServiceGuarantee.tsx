@@ -135,7 +135,7 @@ export function ServiceGuarantee() {
           variants={staggerContainer}
           className="grid md:grid-cols-2 gap-8 mb-16"
         >
-          {guarantees.map((guarantee, index) => {
+          {guarantees.map((guarantee) => {
             const IconComponent = guarantee.icon
             return (
               <motion.div key={guarantee.title} variants={fadeInUp}>
@@ -188,7 +188,7 @@ export function ServiceGuarantee() {
           </motion.div>
 
           <div className="grid lg:grid-cols-3 gap-8">
-            {commitments.map((commitment, index) => {
+            {commitments.map((commitment) => {
               const IconComponent = commitment.icon
               return (
                 <motion.div key={commitment.title} variants={fadeInUp}>

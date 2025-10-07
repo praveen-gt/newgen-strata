@@ -8,7 +8,6 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { 
   Lightbulb, 
-  Users, 
   Building, 
   Rocket, 
   Target, 
@@ -170,7 +169,7 @@ export function Timeline() {
             className="text-lg text-gray-600 leading-relaxed"
           >
             Our journey began with a simple observation: strata management could be so much better. 
-            Here's how we're making that vision a reality.
+            Here&apos;s how we&apos;re making that vision a reality.
           </motion.p>
         </motion.div>
 
@@ -294,7 +293,7 @@ export function Timeline() {
           </motion.div>
 
           <div className="grid md:grid-cols-4 gap-6 mb-12">
-            {milestones.map((milestone, index) => (
+            {milestones.map((milestone) => (
               <motion.div key={milestone.label} variants={fadeInUp}>
                 <Card className="card-wimbledon text-center p-6 hover-lift">
                   <div className="text-3xl font-bold text-gradient-wimbledon mb-2">

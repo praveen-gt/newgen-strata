@@ -3,13 +3,13 @@
 import React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { motion } from 'framer-motion'
-import { LucideIcon } from 'lucide-react'
-import { Clock, DollarSign, CheckCircle } from 'lucide-react'
+// import { LucideIcon } from 'lucide-react'
+import { Clock, DollarSign, CheckCircle, Droplets } from 'lucide-react'
 
-const icons = { Clock, DollarSign, CheckCircle }
+const icons = { Clock, DollarSign, CheckCircle, Droplets }
 
 interface Stat {
-   icon: keyof typeof icons
+   icon: string
   value: string
   label: string
   description: string
@@ -25,7 +25,8 @@ export function CaseStudyStats({ stats }: CaseStudyStatsProps) {
       <div className="container-custom">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, index) => {
-            const IconComponent = icons[stat.icon] || CheckCircle as LucideIcon
+            // const IconComponent = icons[stat.icon] || CheckCircle as LucideIcon
+            const IconComponent = icons[stat.icon as keyof typeof icons] || CheckCircle
             return (
               <motion.div
                 key={stat.label}

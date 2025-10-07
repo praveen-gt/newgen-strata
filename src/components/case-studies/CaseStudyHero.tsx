@@ -136,22 +136,10 @@ export function CaseStudyHero({ data }: CaseStudyHeroProps) {
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+           whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8 }}
-          >
-            {/* Back Button */}
-            <Link 
-              href="/resources" 
-              className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors group"
-            >
-              <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" />
-              <span>Back to Resources</span>
-            </Link>
-
-            <Badge className="bg-white/20 backdrop-blur-sm text-white border-white/30 mb-4 px-4 py-1.5">
-              {data.category}
-            </Badge>
-            
+          > 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
               {data.title}
             </h1>
@@ -190,7 +178,8 @@ export function CaseStudyHero({ data }: CaseStudyHeroProps) {
           {/* Right Image */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
+whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >

@@ -257,7 +257,7 @@ export default function AboutDetails() {
             <div className="relative h-[650px] rounded-2xl overflow-hidden shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-brand-dark opacity-20" />
               <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold">
-                <Image src="/images/about/about-image.jpg" alt="Modern apartment building representing our strata management services" fill className="object-cover" objectPosition='center' />
+                <Image src="/images/about/about-image-1.jpg" alt="Modern apartment building representing our strata management services" fill className="object-cover" objectPosition='center' />
               </div>
             </div>
           </motion.div>
@@ -287,12 +287,12 @@ export default function AboutDetails() {
             </p> */}
 
             <p className="text-gray-600 leading-relaxed">
-  The two founders, Kevin Fuller and Sam Disanayaka, have more than 70 years 
-  of business experience between them. Both have been involved in a variety of 
-  businesses ranging from small startups to large corporations, bringing invaluable 
-  hands-on experience and many years in business leadership roles. They have worked 
-  together on various successful projects for several different corporations.
-</p>
+              The two founders, Kevin Fuller and Sam Disanayaka, have more than 70 years
+              of business experience between them. Both have been involved in a variety of
+              businesses ranging from small startups to large corporations, bringing invaluable
+              hands-on experience and many years in business leadership roles. They have worked
+              together on various successful projects for several different corporations.
+            </p>
 
             <div className="space-y-3">
               {differentiators.map((item, index) => (

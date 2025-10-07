@@ -1,171 +1,10 @@
-// import React from 'react'
-// import { Metadata } from 'next'
-// import { CaseStudyHero } from '@/components/case-studies/CaseStudyHero'
-// import { CaseStudyContent } from '@/components/case-studies/CaseStudyContent'
-// import { CaseStudyStats } from '@/components/case-studies/CaseStudyStats'
-// import { CaseStudyCTA } from '@/components/case-studies/CaseStudyCTA'
-// import { 
-//   Droplets, 
-//   Clock, 
-//   DollarSign, 
-//   CheckCircle,
-//   AlertTriangle,
-//   Target
-// } from 'lucide-react'
-
-// export const metadata: Metadata = {
-//   title: 'Case Study: Emergency Water Damage Response | NewGen Strata Services',
-//   description: 'How NewGen Strata Services resolved a critical water damage emergency in a 45-unit apartment complex, saving $200K+ through rapid response.',
-// }
-
-// const caseStudyData = {
-//   hero: {
-//     title: 'Fixing the Leaks',
-//     subtitle: 'Emergency Water Damage Response & Crisis Management',
-//     category: 'Emergency Response',
-//     readTime: '6 min read',
-//     tags: ['Emergency Response', 'Water Damage', 'Crisis Management']
-//   },
-  
-//   stats: [
-//     {
-//       icon: 'Clock',
-//       value: '< 2 Hours',
-//       label: 'Emergency Response Time',
-//       description: 'From initial call to site arrival'
-//     },
-//     {
-//       icon: 'DollarSign',
-//       value: '$200K+',
-//       label: 'Potential Damages Prevented',
-//       description: 'Through rapid intervention'
-//     },
-//     {
-//       icon: 'CheckCircle',
-//       value: '45 Units',
-//       label: 'Properties Protected',
-//       description: 'All residents safely relocated'
-//     },
-//     {
-//       icon: 'CheckCircle',
-//       value: '100%',
-//       label: 'Owner Satisfaction',
-//       description: 'Post-crisis survey results'
-//     }
-//   ],
-
-//   challenge: {
-//     title: 'The Challenge',
-//     icon: 'AlertTriangle',
-//     description: 'A severe water main burst occurred at 2 AM in a 45-unit apartment complex in Melbourne\'s inner east. Water flooded three levels, affecting 18 units and threatening structural damage.',
-//     keyIssues: [
-//       'Major water main burst at 2 AM affecting multiple floors',
-//       'Previous strata manager unreachable during emergency',
-//       '18 units flooded with residents displaced',
-//       'Potential structural damage to building',
-//       'No emergency response plan in place',
-//       'Risk of mold development'
-//     ]
-//   },
-
-//   solution: {
-//     title: 'Our Solution',
-//     icon: 'Target',
-//     description: 'NewGen Strata Services implemented a comprehensive emergency response plan.',
-//     actions: [
-//       {
-//         phase: 'Immediate Response (0-2 hours)',
-//         steps: [
-//           'Kevin attended site within 90 minutes',
-//           'Coordinated emergency plumber to shut off water',
-//           'Arranged accommodation for 18 families',
-//           'Set up communication center',
-//           'Documented all damage for insurance'
-//         ]
-//       },
-//       {
-//         phase: 'Crisis Management (2-24 hours)',
-//         steps: [
-//           'Engaged water extraction specialists',
-//           'Coordinated building inspector',
-//           'Established temporary water supply',
-//           'Emergency committee video meeting',
-//           'Initiated insurance claims'
-//         ]
-//       }
-//     ]
-//   },
-
-//   results: {
-//     title: 'The Results',
-//     icon: 'CheckCircle',
-//     description: 'Through rapid response, we minimized damage and kept residents safe.',
-//     outcomes: [
-//       {
-//         metric: 'Response Time',
-//         value: 'Under 2 hours on-site',
-//         impact: 'Prevented additional water damage'
-//       },
-//       {
-//         metric: 'Resident Care',
-//         value: 'All families housed within 4 hours',
-//         impact: 'Zero families left without shelter'
-//       },
-//       {
-//         metric: 'Financial Savings',
-//         value: '$200K+ damages prevented',
-//         impact: 'Rapid extraction prevented mold'
-//       }
-//     ]
-//   },
-
-//   testimonial: {
-//     quote: "At 2 AM when our building was flooding, Kevin was there within 90 minutes. He took control and turned a disaster into a well-managed emergency response.",
-//     author: 'Patricia Chen',
-//     role: 'Committee Chairperson',
-//     property: '45-Unit Apartment Complex, Hawthorn'
-//   },
-
-//   lessons: {
-//     title: 'Key Takeaways',
-//     points: [
-//       {
-//         title: 'Emergency Response Matters',
-//         description: '24/7 availability can save hundreds of thousands in damages.'
-//       },
-//       {
-//         title: 'Communication is Critical',
-//         description: 'Constant updates reduce panic during crises.'
-//       }
-//     ]
-//   }
-// }
-
-// export default function FixingTheLeaksPage() {
-//   return (
-//     <main>
-//       <CaseStudyHero data={caseStudyData.hero} />
-//       <CaseStudyStats stats={caseStudyData.stats} />
-//       <CaseStudyContent data={caseStudyData} />
-//       <CaseStudyCTA />
-//     </main>
-//   )
-// }
-
 import React from 'react'
 import { Metadata } from 'next'
 import { CaseStudyHero } from '@/components/case-studies/CaseStudyHero'
 import { CaseStudyContent } from '@/components/case-studies/CaseStudyContent'
 import { CaseStudyStats } from '@/components/case-studies/CaseStudyStats'
 import { CaseStudyCTA } from '@/components/case-studies/CaseStudyCTA'
-import { 
-  Droplets, 
-  Clock, 
-  DollarSign, 
-  CheckCircle,
-  AlertTriangle,
-  Target
-} from 'lucide-react'
+
 
 export const metadata: Metadata = {
   title: 'Case Study: Emergency Water Damage Response | NewGen Strata Services',
@@ -180,7 +19,7 @@ const caseStudyData = {
     category: 'Emergency Response',
     readTime: '6 min read',
     date: 'March 2024',
-    image: '/images/case-studies/water-damage.jpg', // Add your image here
+    image: '/images/case-study/fixing-the-leaks.jpg',
     tags: ['Emergency Response', 'Water Damage', 'Crisis Management']
   },
   
@@ -213,7 +52,7 @@ const caseStudyData = {
 
   challenge: {
     title: 'The Challenge',
-    icon: 'AlertTriangle',
+    icon: "AlertTriangle",
     description: 'A severe water main burst occurred at 2 AM in a 45-unit apartment complex in Melbourne\'s inner east. Water flooded three levels, affecting 18 units and threatening structural damage. The previous strata manager was unreachable, residents were panicking, and water was still flowing.',
     keyIssues: [
       'Major water main burst at 2 AM affecting multiple floors',

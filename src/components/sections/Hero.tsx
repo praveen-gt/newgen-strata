@@ -129,7 +129,7 @@ export default function Hero() {
         {/* Badge */}
         {/* <Badge className="mb-6 bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-3 rounded-full shadow-lg animate-slide-down"> */}
         <Badge className="mb-6 bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-3 rounded-full shadow-lg shadow-brand-accent/20 animate-slide-down">
-          Melbourne's Premier Strata Management
+          Melbourne&apos;s Premier Strata Management
         </Badge>
 
         {/* Heading */}

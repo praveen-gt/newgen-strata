@@ -119,8 +119,8 @@ export function HowWereDifferent() {
             Experience the NewGen Difference
           </h3>
           <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-            We understand that our "providers" are critical to our business success, 
-            and we're committed to collaborative decision-making that puts your needs first.
+            We understand that our &quot;providers&quot; are critical to our business success, 
+            and we&apos;re committed to collaborative decision-making that puts your needs first.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="btn-wimbledon">

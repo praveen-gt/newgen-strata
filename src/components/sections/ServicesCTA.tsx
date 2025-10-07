@@ -34,7 +34,7 @@ export function ServicesCTA() {
             <span className="text-yellow-300">NewGen Difference?</span>
           </h2>
           <p className="text-xl text-white/90 leading-relaxed">
-            Let's discuss how our comprehensive services can transform your 
+            Let&apos;s discuss how our comprehensive services can transform your 
             owners corporation management experience.
           </p>
         </motion.div>

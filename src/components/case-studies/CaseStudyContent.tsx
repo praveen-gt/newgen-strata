@@ -4,243 +4,73 @@
 // import { Card, CardContent } from '@/components/ui/card'
 // import { Badge } from '@/components/ui/badge'
 // import { motion } from 'framer-motion'
-// import { CheckCircle, Quote } from 'lucide-react'
+// import { CheckCircle, Quote, Sparkles, AlertTriangle } from 'lucide-react'
 
+// const icons = { CheckCircle, Quote, Sparkles, AlertTriangle } 
+// interface ChallengeData {
+//   icon: string
+//   title: string
+//   description: string
+//   keyIssues: string[]
+// }
+
+// interface SolutionAction {
+//   phase: string
+//   steps: string[]
+// }
+
+// interface SolutionData {
+//   icon: string
+//   title: string
+//   description: string
+//   actions: SolutionAction[]
+// }
+
+// interface ResultOutcome {
+//   metric: string
+//   value: string
+//   impact: string
+// }
+
+// interface ResultsData {
+//   icon: string
+//   title: string
+//   description: string
+//   outcomes: ResultOutcome[]
+// }
+
+// interface TestimonialData {
+//   quote: string
+//   author: string
+//   role: string
+//   property: string
+// }
+
+// interface LessonPoint {
+//   title: string
+//   description: string
+// }
+
+// interface LessonsData {
+//   title: string
+//   points: LessonPoint[]
+// }
+
+// export interface CaseStudyData {
+//   challenge: ChallengeData
+//   solution: SolutionData
+//   results: ResultsData
+//   testimonial: TestimonialData
+//   lessons: LessonsData
+// }
 // interface CaseStudyContentProps {
-//   data: any
+//   data: CaseStudyData
 // }
 
 // export function CaseStudyContent({ data }: CaseStudyContentProps) {
-//   const ChallengeIcon = data.challenge.icon
-//   const SolutionIcon = data.solution.icon
-//   const ResultsIcon = data.results.icon
-
-//   return (
-//     <>
-//       {/* Challenge Section */}
-//       <section className="section-padding bg-gray-50">
-//         <div className="container-custom max-w-5xl">
-//           <motion.div
-//             initial={{ opacity: 0, y: 20 }}
-//             whileInView={{ opacity: 1, y: 0 }}
-//             viewport={{ once: true }}
-//             transition={{ duration: 0.6 }}
-//           >
-//             <div className="flex items-center gap-3 mb-6">
-//               <div className="p-3 bg-red-100 rounded-lg">
-//                 <ChallengeIcon className="h-6 w-6 text-red-600" />
-//               </div>
-//               <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-dark">
-//                 {data.challenge.title}
-//               </h2>
-//             </div>
-
-//             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-//               {data.challenge.description}
-//             </p>
-
-//             <Card className="card-wimbledon bg-white">
-//               <CardContent className="p-6">
-//                 <h3 className="font-semibold text-brand-dark mb-4 text-lg">
-//                   Key Issues:
-//                 </h3>
-//                 <ul className="space-y-3">
-//                   {data.challenge.keyIssues.map((issue: string, index: number) => (
-//                     <li key={index} className="flex items-start gap-3">
-//                       <span className="flex-shrink-0 w-6 h-6 bg-red-100 rounded-full flex items-center justify-center text-red-600 text-sm font-semibold mt-0.5">
-//                         {index + 1}
-//                       </span>
-//                       <span className="text-gray-700">{issue}</span>
-//                     </li>
-//                   ))}
-//                 </ul>
-//               </CardContent>
-//             </Card>
-//           </motion.div>
-//         </div>
-//       </section>
-
-//       {/* Solution Section */}
-//       <section className="section-padding bg-white">
-//         <div className="container-custom max-w-5xl">
-//           <motion.div
-//             initial={{ opacity: 0, y: 20 }}
-//             whileInView={{ opacity: 1, y: 0 }}
-//             viewport={{ once: true }}
-//             transition={{ duration: 0.6 }}
-//           >
-//             <div className="flex items-center gap-3 mb-6">
-//               <div className="p-3 bg-blue-100 rounded-lg">
-//                 <SolutionIcon className="h-6 w-6 text-blue-600" />
-//               </div>
-//               <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-dark">
-//                 {data.solution.title}
-//               </h2>
-//             </div>
-
-//             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-//               {data.solution.description}
-//             </p>
-
-//             <div className="space-y-6">
-//               {data.solution.actions.map((action: any, index: number) => (
-//                 <Card key={index} className="card-wimbledon">
-//                   <CardContent className="p-6">
-//                     <div className="flex items-center gap-3 mb-4">
-//                       <Badge className="bg-primary/10 text-primary border-primary/20">
-//                         Phase {index + 1}
-//                       </Badge>
-//                       <h3 className="font-semibold text-brand-dark text-lg">
-//                         {action.phase}
-//                       </h3>
-//                     </div>
-//                     <ul className="space-y-2">
-//                       {action.steps.map((step: string, stepIndex: number) => (
-//                         <li key={stepIndex} className="flex items-start gap-3">
-//                           <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-//                           <span className="text-gray-700">{step}</span>
-//                         </li>
-//                       ))}
-//                     </ul>
-//                   </CardContent>
-//                 </Card>
-//               ))}
-//             </div>
-//           </motion.div>
-//         </div>
-//       </section>
-
-//       {/* Results Section */}
-//       <section className="section-padding bg-gradient-to-br from-green-50 to-blue-50">
-//         <div className="container-custom max-w-5xl">
-//           <motion.div
-//             initial={{ opacity: 0, y: 20 }}
-//             whileInView={{ opacity: 1, y: 0 }}
-//             viewport={{ once: true }}
-//             transition={{ duration: 0.6 }}
-//           >
-//             <div className="flex items-center gap-3 mb-6">
-//               <div className="p-3 bg-green-100 rounded-lg">
-//                 <ResultsIcon className="h-6 w-6 text-green-600" />
-//               </div>
-//               <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-dark">
-//                 {data.results.title}
-//               </h2>
-//             </div>
-
-//             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-//               {data.results.description}
-//             </p>
-
-//             <div className="grid md:grid-cols-2 gap-6">
-//               {data.results.outcomes.map((outcome: any, index: number) => (
-//                 <Card key={index} className="card-wimbledon bg-white">
-//                   <CardContent className="p-6">
-//                     <h3 className="font-semibold text-brand-dark mb-2 text-lg">
-//                       {outcome.metric}
-//                     </h3>
-//                     <div className="text-2xl font-bold text-gradient-wimbledon mb-3">
-//                       {outcome.value}
-//                     </div>
-//                     <p className="text-gray-600 text-sm">
-//                       {outcome.impact}
-//                     </p>
-//                   </CardContent>
-//                 </Card>
-//               ))}
-//             </div>
-//           </motion.div>
-//         </div>
-//       </section>
-
-//       {/* Testimonial Section */}
-//       <section className="section-padding bg-gradient-wimbledon text-white">
-//         <div className="container-custom max-w-4xl">
-//           <motion.div
-//             initial={{ opacity: 0, y: 20 }}
-//             whileInView={{ opacity: 1, y: 0 }}
-//             viewport={{ once: true }}
-//             transition={{ duration: 0.6 }}
-//             className="text-center"
-//           >
-//             <Quote className="h-12 w-12 mx-auto mb-6 opacity-50" />
-//             <blockquote className="text-xl md:text-2xl leading-relaxed mb-8 italic">
-//               "{data.testimonial.quote}"
-//             </blockquote>
-//             <div className="border-t border-white/20 pt-6">
-//               <p className="font-semibold text-lg mb-1">
-//                 {data.testimonial.author}
-//               </p>
-//               <p className="text-white/80 mb-1">
-//                 {data.testimonial.role}
-//               </p>
-//               <p className="text-white/60 text-sm">
-//                 {data.testimonial.property}
-//               </p>
-//             </div>
-//           </motion.div>
-//         </div>
-//       </section>
-
-//       {/* Key Takeaways */}
-//       <section className="section-padding bg-white">
-//         <div className="container-custom max-w-5xl">
-//           <motion.div
-//             initial={{ opacity: 0, y: 20 }}
-//             whileInView={{ opacity: 1, y: 0 }}
-//             viewport={{ once: true }}
-//             transition={{ duration: 0.6 }}
-//           >
-//             <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-dark mb-8 text-center">
-//               {data.lessons.title}
-//             </h2>
-
-//             <div className="grid md:grid-cols-2 gap-6">
-//               {data.lessons.points.map((lesson: any, index: number) => (
-//                 <Card key={index} className="card-wimbledon hover-lift">
-//                   <CardContent className="p-6">
-//                     <div className="flex items-start gap-3">
-//                       <div className="flex-shrink-0 w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold">
-//                         {index + 1}
-//                       </div>
-//                       <div>
-//                         <h3 className="font-semibold text-brand-dark mb-2">
-//                           {lesson.title}
-//                         </h3>
-//                         <p className="text-gray-600 text-sm">
-//                           {lesson.description}
-//                         </p>
-//                       </div>
-//                     </div>
-//                   </CardContent>
-//                 </Card>
-//               ))}
-//             </div>
-//           </motion.div>
-//         </div>
-//       </section>
-//     </>
-//   )
-// }
-
-// src/components/case-studies/CaseStudyContent.tsx
-
-// "use client"
-
-// import React from 'react'
-// import { Card, CardContent } from '@/components/ui/card'
-// import { Badge } from '@/components/ui/badge'
-// import { motion } from 'framer-motion'
-// import { CheckCircle, Quote, Sparkles } from 'lucide-react'
-
-// interface CaseStudyContentProps {
-//   data: any
-// }
-
-// export function CaseStudyContent({ data }: CaseStudyContentProps) {
-//   const ChallengeIcon = data.challenge.icon
-//   const SolutionIcon = data.solution.icon
-//   const ResultsIcon = data.results.icon
+//   const ChallengeIcon = icons[data.challenge.icon as keyof typeof icons]
+//   const SolutionIcon = icons[data.solution.icon as keyof typeof icons]
+//   const ResultsIcon = icons[data.results.icon as keyof typeof icons]
 
 //   return (
 //     <>
@@ -373,7 +203,7 @@
 
 //             {/* Action Phases */}
 //             <div className="space-y-6">
-//               {data.solution.actions.map((action: any, index: number) => (
+//               {data.solution.actions.map((action, index) => (
 //                 <motion.div
 //                   key={index}
 //                   initial={{ opacity: 0, y: 20 }}
@@ -465,7 +295,7 @@
 
 //             {/* Outcomes Grid */}
 //             <div className="grid md:grid-cols-2 gap-6">
-//               {data.results.outcomes.map((outcome: any, index: number) => (
+//               {data.results.outcomes.map((outcome, index) => (
 //                 <motion.div
 //                   key={index}
 //                   initial={{ opacity: 0, scale: 0.9 }}
@@ -541,7 +371,7 @@
 //             </motion.div>
             
 //             <blockquote className="text-xl md:text-2xl lg:text-3xl leading-relaxed mb-8 font-light italic">
-//               "{data.testimonial.quote}"
+//               &quot;{data.testimonial.quote}&quot;
 //             </blockquote>
             
 //             <div className="inline-block bg-white/10 backdrop-blur-sm rounded-2xl px-8 py-6 border border-white/20">
@@ -578,7 +408,7 @@
 //             </div>
 
 //             <div className="grid md:grid-cols-2 gap-6">
-//               {data.lessons.points.map((lesson: any, index: number) => (
+//               {data.lessons.points.map((lesson, index) => (
 //                 <motion.div
 //                   key={index}
 //                   initial={{ opacity: 0, y: 20 }}
@@ -624,24 +454,98 @@
 // }
 
 
-// src/components/case-studies/CaseStudyContent.tsx
-
 "use client"
 
 import React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { motion } from 'framer-motion'
-import { CheckCircle, Quote, Sparkles } from 'lucide-react'
+import { CheckCircle, Quote, Sparkles, AlertTriangle, Target, DollarSign, Clock, Droplets } from 'lucide-react'
+
+// Complete icon mapping with all possible icons
+const iconMap = {
+  CheckCircle,
+  Quote,
+  Sparkles,
+  AlertTriangle,
+  Target,
+  DollarSign,
+  Clock,
+  Droplets
+} as const
+
+type IconName = keyof typeof iconMap
+
+interface ChallengeData {
+  icon: string
+  title: string
+  description: string
+  keyIssues: string[]
+}
+
+interface SolutionAction {
+  phase: string
+  steps: string[]
+}
+
+interface SolutionData {
+  icon: string
+  title: string
+  description: string
+  actions: SolutionAction[]
+}
+
+interface ResultOutcome {
+  metric: string
+  value: string
+  impact: string
+}
+
+interface ResultsData {
+  icon: string
+  title: string
+  description: string
+  outcomes: ResultOutcome[]
+}
+
+interface TestimonialData {
+  quote: string
+  author: string
+  role: string
+  property: string
+}
+
+interface LessonPoint {
+  title: string
+  description: string
+}
+
+interface LessonsData {
+  title: string
+  points: LessonPoint[]
+}
+
+export interface CaseStudyData {
+  challenge: ChallengeData
+  solution: SolutionData
+  results: ResultsData
+  testimonial: TestimonialData
+  lessons: LessonsData
+}
 
 interface CaseStudyContentProps {
-  data: any
+  data: CaseStudyData
+}
+
+// Helper function to get icon component safely
+const getIcon = (iconName: string) => {
+  return iconMap[iconName as IconName] || AlertTriangle
 }
 
 export function CaseStudyContent({ data }: CaseStudyContentProps) {
-  const ChallengeIcon = data.challenge.icon
-  const SolutionIcon = data.solution.icon
-  const ResultsIcon = data.results.icon
+  const ChallengeIcon = getIcon(data.challenge.icon)
+  const SolutionIcon = getIcon(data.solution.icon)
+  const ResultsIcon = getIcon(data.results.icon)
 
   return (
     <>
@@ -774,7 +678,7 @@ export function CaseStudyContent({ data }: CaseStudyContentProps) {
 
             {/* Action Phases */}
             <div className="space-y-6">
-              {data.solution.actions.map((action: any, index: number) => (
+              {data.solution.actions.map((action, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -866,7 +770,7 @@ export function CaseStudyContent({ data }: CaseStudyContentProps) {
 
             {/* Outcomes Grid */}
             <div className="grid md:grid-cols-2 gap-6">
-              {data.results.outcomes.map((outcome: any, index: number) => (
+              {data.results.outcomes.map((outcome, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -887,7 +791,7 @@ export function CaseStudyContent({ data }: CaseStudyContentProps) {
                         <CheckCircle className="h-5 w-5 text-green-600" />
                         {outcome.metric}
                       </h3>
-                      <div className="text-3xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-3">
+                      <div className="text-xl font-bold  text-primary mb-3">
                         {outcome.value}
                       </div>
                       <p className="text-gray-600 text-sm leading-relaxed">
@@ -941,8 +845,8 @@ export function CaseStudyContent({ data }: CaseStudyContentProps) {
               <Quote className="h-16 w-16 mx-auto mb-8 opacity-50" />
             </motion.div>
             
-            <blockquote className="text-xl md:text-2xl lg:text-3xl leading-relaxed mb-8 font-light italic">
-              "{data.testimonial.quote}"
+            <blockquote className="text-xl lg:text-2xl leading-relaxed mb-8 font-light italic">
+              &quot;{data.testimonial.quote}&quot;
             </blockquote>
             
             <div className="inline-block bg-white/10 backdrop-blur-sm rounded-2xl px-8 py-6 border border-white/20">
@@ -979,7 +883,7 @@ export function CaseStudyContent({ data }: CaseStudyContentProps) {
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-              {data.lessons.points.map((lesson: any, index: number) => (
+              {data.lessons.points.map((lesson, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

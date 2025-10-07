@@ -108,7 +108,7 @@ export function WhyChooseUs() {
           variants={staggerContainer}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {advantages.map((advantage, index) => {
+          {advantages.map((advantage) => {
             const IconComponent = advantage.icon
             return (
               <motion.div key={advantage.title} variants={fadeInUp}>

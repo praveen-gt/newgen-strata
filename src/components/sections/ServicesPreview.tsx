@@ -178,7 +178,7 @@ export function ServicesPreview() {
             </h3>
             <p className="text-gray-600 max-w-2xl mx-auto mb-6">
               Every property is unique. We tailor our services to match your specific 
-              needs and challenges. Let's discuss how we can help your owners corporation.
+              needs and challenges. Let&apos;s discuss how we can help your owners corporation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="btn-wimbledon">

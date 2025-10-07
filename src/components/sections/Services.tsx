@@ -150,7 +150,7 @@ export function Services() {
           variants={staggerContainer}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {services.map((service, index) => {
+          {services.map((service) => {
             const IconComponent = service.icon
             return (
               <motion.div key={service.title} variants={fadeInUp}>

@@ -38,7 +38,7 @@ export function ContactFormSection() {
             Tell Us About Your <span className="text-gradient-wimbledon">Property</span>
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed mb-8">
-            Complete the form below and we'll provide a customized consultation 
+            Complete the form below and we&apos;ll provide a customized consultation 
             based on your specific strata management needs.
           </p>
           

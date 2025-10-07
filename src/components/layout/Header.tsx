@@ -386,7 +386,7 @@ export function Header() {
               </div>
             </div>
             <div className="text-white/90 font-medium italic">
-              "The quality is long remembered after the price is forgotten"
+              &quot;The quality is long remembered after the price is forgotten&quot;
             </div>
           </div>
         </div>

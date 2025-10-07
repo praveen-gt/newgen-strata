@@ -293,12 +293,12 @@ export function Testimonials() {
             Client Testimonials
           </Badge>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-dark mb-6">
-            Trusted by Melbourne's{" "}
+            Trusted by Melbourne&apos;s{" "}
             <span className="text-gradient-wimbledon">Leading Properties</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-            Don't just take our word for it - hear from the property managers and owners
-            who've experienced the NewGen difference.
+            Don&apos;t just take our word for it - hear from the property managers and owners
+            who&apos;ve experienced the NewGen difference.
           </p>
         </motion.div>
 
@@ -327,7 +327,7 @@ export function Testimonials() {
 
                       {/* Testimonial Text */}
                       <p className="text-gray-700 leading-relaxed mb-6 italic">
-                        "{testimonial.text}"
+                        &quot;{testimonial.text}&quot;
                       </p>
 
                       {/* Author Info */}

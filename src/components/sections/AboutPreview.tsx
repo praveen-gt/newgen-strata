@@ -2,19 +2,11 @@
 
 import React from 'react'
 import Image from 'next/image'
-import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Award, Users, Target, ArrowRight, CheckCircle } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-
-// const highlights = [
-//   'Single point of contact',
-//   'Collaborative approach',
-//   'Modern technology',
-//   '24/7 emergency support'
-// ]
 
 const foundingPrinciples = [
   'Operate with honesty and integrity at all times',
@@ -130,18 +122,12 @@ export function AboutPreview() {
                 Why Choose NewGen?
               </h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                We've revolutionized strata management by combining 70+ years of expertise 
+                We&apos;ve revolutionized strata management by combining 70+ years of expertise 
                 with cutting-edge technology and genuine partnership.
               </p>
             </motion.div>
 
             <motion.div variants={fadeInUp} className="space-y-3">
-              {/* {highlights.map((item, index) => (
-                <div key={index} className="flex items-center space-x-3 p-3 rounded-lg hover:bg-primary/5 transition-colors">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span className="text-gray-700 font-medium">{item}</span>
-                </div>
-              ))} */}
               {foundingPrinciples.map((item, index) => (
                 <div key={index} className="flex items-center space-x-3 p-3 rounded-lg bg-primary/5 hover:bg-primary/20 transition-colors">
                   <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />

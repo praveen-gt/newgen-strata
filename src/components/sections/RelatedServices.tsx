@@ -143,8 +143,8 @@ export function RelatedServices({ currentService }: RelatedServicesProps) {
   const related = allServices.filter(s => s.slug !== currentService)
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
-    loop: true, 
-    align: 'start',
+    loop: false, 
+    align: 'center',
     skipSnaps: false 
   })
 
@@ -184,7 +184,7 @@ export function RelatedServices({ currentService }: RelatedServicesProps) {
         {/* Carousel */}
         <div className="relative">
           <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex gap-6">
+            <div className="flex gap-6 py-4">
               {related.map((service) => {
                 const IconComponent = service.icon
                 return (
@@ -193,7 +193,7 @@ export function RelatedServices({ currentService }: RelatedServicesProps) {
                     className="flex-[0_0_100%] min-w-0 md:flex-[0_0_50%] lg:flex-[0_0_33.333%]"
                   >
                     <Link href={`/services/${service.slug}`}>
-                      <Card className="h-full border-none shadow-md hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2 bg-white">
+                      <Card className="h-full border-none shadow-md hover:shadow-lg transition-all duration-300 group hover:-translate-y-2 bg-white">
                         <CardContent className="p-8">
                           <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl p-4 w-fit mb-6 group-hover:from-primary/20 group-hover:to-secondary/20 transition-colors">
                             <IconComponent className="h-10 w-10 text-primary group-hover:scale-110 transition-transform" />

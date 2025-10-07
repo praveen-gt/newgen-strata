@@ -2,36 +2,35 @@
 
 import React from 'react'
 import { Badge } from '@/components/ui/badge'
-import { Card, CardContent } from '@/components/ui/card'
-import { Phone, Mail, Clock, MapPin, MessageSquare, Calendar } from 'lucide-react'
+// import { Phone, Mail, Clock, MapPin } from 'lucide-react'
 import { motion } from 'framer-motion'
 
-const contactInfo = [
-  {
-    icon: Phone,
-    title: 'Phone',
-    details: '+61 3 9XXX XXXX',
-    description: 'Call us for immediate assistance'
-  },
-  {
-    icon: Mail,
-    title: 'Email',
-    details: 'info@newgenstrataservices.com.au',
-    description: 'Send us your detailed inquiry'
-  },
-  {
-    icon: Clock,
-    title: 'Business Hours',
-    details: 'Mon-Fri: 9:00 AM - 5:00 PM',
-    description: '24/7 emergency support available'
-  },
-  {
-    icon: MapPin,
-    title: 'Service Area',
-    details: 'All Melbourne Metropolitan',
-    description: 'From CBD to outer suburbs'
-  }
-]
+// const contactInfo = [
+//   {
+//     icon: Phone,
+//     title: 'Phone',
+//     details: '+61 3 9XXX XXXX',
+//     description: 'Call us for immediate assistance'
+//   },
+//   {
+//     icon: Mail,
+//     title: 'Email',
+//     details: 'info@newgenstrataservices.com.au',
+//     description: 'Send us your detailed inquiry'
+//   },
+//   {
+//     icon: Clock,
+//     title: 'Business Hours',
+//     details: 'Mon-Fri: 9:00 AM - 5:00 PM',
+//     description: '24/7 emergency support available'
+//   },
+//   {
+//     icon: MapPin,
+//     title: 'Service Area',
+//     details: 'All Melbourne Metropolitan',
+//     description: 'From CBD to outer suburbs'
+//   }
+// ]
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -69,13 +68,13 @@ export function ContactHero() {
             variants={fadeInUp}
             className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6"
           >
-            Let's Discuss Your <span className="text-brand-accent">Strata Needs</span>
+            Let&apos;s Discuss Your <span className="text-brand-accent">Strata Needs</span>
           </motion.h1>
           <motion.p
             variants={fadeInUp}
             className="text-xl text-white/90 leading-relaxed mb-8"
           >
-            Ready to experience the NewGen difference? We're here to help you transform 
+            Ready to experience the NewGen difference? We&apos;re here to help you transform 
             your strata management experience with our expertise and personalized approach.
           </motion.p>
         </motion.div>

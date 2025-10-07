@@ -172,7 +172,7 @@ export function Footer() {
           </div>
           <div className="text-sm text-gray-400">
             <span className="text-brand-accent font-medium">
-              "Delighting our customers"
+              &quot;Delighting our customers&quot;
             </span>
           </div>
         </div>

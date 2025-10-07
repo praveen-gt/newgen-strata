@@ -4,15 +4,6 @@ import { CaseStudyHero } from '@/components/case-studies/CaseStudyHero'
 import { CaseStudyContent } from '@/components/case-studies/CaseStudyContent'
 import { CaseStudyStats } from '@/components/case-studies/CaseStudyStats'
 import { CaseStudyCTA } from '@/components/case-studies/CaseStudyCTA'
-import { 
-  Scale, 
-  Users, 
-  MessageCircle, 
-  CheckCircle,
-  AlertTriangle,
-  Target,
-  ShieldCheck
-} from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Case Study: Complex Dispute Resolution | NewGen Strata Services',
@@ -27,7 +18,7 @@ const caseStudyData = {
     category: 'Dispute Resolution',
     readTime: '8 min read',
     date: 'January 2024',
-    image: '/images/case-studies/dispute-resolution.jpg', // Add your image
+    image: '/images/case-study/case-study-probm-solving.jpg',
     tags: ['Dispute Resolution', 'Mediation', 'Community Management']
   },
   

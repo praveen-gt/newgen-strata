@@ -258,7 +258,7 @@
 
 import React from 'react'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Phone, Mail, Calendar, CheckCircle } from 'lucide-react'
+import { ArrowRight, Phone, Mail, CheckCircle } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
@@ -377,7 +377,7 @@ export function ContactCTA() {
           {/* Quote */}
           <div className="mt-8">
             <blockquote className="text-lg font-medium text-white/70 italic">
-              "The quality is long remembered after the price is forgotten"
+              &quot;The quality is long remembered after the price is forgotten&quot;
             </blockquote>
           </div>
         </motion.div>

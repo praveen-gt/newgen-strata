@@ -2,45 +2,37 @@
 
 "use client"
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Image from 'next/image'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { ArrowRight, CheckCircle, Star } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { ArrowLeft, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
 interface ServiceHeroProps {
-  serviceData?: {
+  serviceData: {
     title: string
     subtitle: string
     description: string
-    heroImage?: string
-    overview?: {
-      title: string
-      content: string
-      features: string[]
-    }
+    heroImage: string
   }
 }
 
-const defaultServiceData = {
-  title: 'Professional Strata Services',
-  subtitle: 'Excellence in Owners Corporation Management',
-  description: 'Comprehensive strata management services tailored to your property needs with modern technology and transparent communication.',
-  overview: {
-    title: 'Complete Service Solutions',
-    content: 'Our comprehensive approach to strata management combines decades of experience with modern technology to deliver exceptional results for your owners corporation.',
-    features: [
-      'Professional service delivery',
-      'Modern technology integration',
-      'Transparent communication',
-      'Regulatory compliance',
-      '24/7 emergency support',
-      'Dedicated contact person'
-    ]
-  }
-}
+// interface ServiceHeroProps {
+//   serviceData?: {
+//     title: string
+//     subtitle: string
+//     description: string
+//     heroImage?: string
+//     overview?: {
+//       title: string
+//       content: string
+//       features: string[]
+//     }
+//   }
+// }
+
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -49,103 +41,88 @@ const fadeInUp = {
 
 const staggerContainer = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.1 } }
+  visible: { transition: { staggerChildren: 0.15 } }
 }
 
-export function ServiceHero({ serviceData = defaultServiceData }: ServiceHeroProps) {
+export function ServiceHero({ serviceData }: ServiceHeroProps) {
   return (
-    <section className="relative py-20 lg:py-32 bg-gradient-to-br from-brand-dark via-primary to-secondary overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full -translate-x-48 -translate-y-48" />
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-white rounded-full translate-x-40 translate-y-40" />
+    <section className="relative pt-24 pb-10 flex items-center overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src={serviceData.heroImage}
+          alt={serviceData.title}
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40 z-[1]" />
       </div>
 
+      {/* Content */}
       <div className="container-custom relative z-10">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={staggerContainer}
-          className="text-center max-w-4xl mx-auto mb-16"
+          className="max-w-3xl"
         >
+          {/* Breadcrumb */}
+          <motion.div
+            variants={fadeInUp}
+            className="flex items-center space-x-2 text-sm text-gray-300 mb-6"
+          >
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <span>/</span>
+            <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+            <span>/</span>
+            <span className="text-white">{serviceData.title}</span>
+          </motion.div>
+
           <motion.div variants={fadeInUp}>
-            <Badge className="bg-white/20 text-white border-white/30 mb-6">
-              {serviceData.title}
+            <Badge className="mb-6 bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-3 rounded-full">
+              {serviceData.subtitle}
             </Badge>
           </motion.div>
+
           <motion.h1
             variants={fadeInUp}
-            className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6"
+            className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
           >
-            {serviceData.subtitle}
+            {serviceData.title}
           </motion.h1>
+
           <motion.p
             variants={fadeInUp}
-            className="text-xl text-white/90 leading-relaxed mb-8"
+            className="text-xl text-gray-300 leading-relaxed mb-8"
           >
             {serviceData.description}
           </motion.p>
-          <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90">
+
+          <motion.div
+            variants={fadeInUp}
+            className="flex flex-col sm:flex-row gap-4"
+          >
+            <Button asChild size="lg" className="btn-wimbledon">
               <Link href="/contact">
-                Get Started Today
+                Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
-              <Link href="/contact">
-                Request Quote
+            <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-brand-dark">
+              <Link href="/services">
+                <ArrowLeft className="mr-2 h-5 w-5" />
+                All Services
               </Link>
             </Button>
           </motion.div>
         </motion.div>
+      </div >
 
-        {/* Service Overview */}
-        {serviceData.overview && (
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={fadeInUp}
-            className="max-w-5xl mx-auto"
-          >
-            <Card className="bg-white/95 backdrop-blur-sm shadow-2xl">
-              <CardContent className="p-8 lg:p-12">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-                  <div>
-                    <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-dark mb-6">
-                      {serviceData.overview.title}
-                    </h2>
-                    <p className="text-gray-600 leading-relaxed mb-8">
-                      {serviceData.overview.content}
-                    </p>
-                    <div className="flex items-center space-x-4">
-                      <div className="flex space-x-1">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                        ))}
-                      </div>
-                      <span className="text-sm text-gray-600">Rated 5 stars by our clients</span>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-brand-dark mb-6">Service Features</h3>
-                    <div className="space-y-4">
-                      {serviceData.overview.features.map((feature, index) => (
-                        <div key={index} className="flex items-center space-x-3">
-                          <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                          <span className="text-gray-700">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        )}
-      </div>
-    </section>
+      {/* Bottom fade */}
+      < div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-white to-transparent z-[2]" />
+    </section >
   )
 }

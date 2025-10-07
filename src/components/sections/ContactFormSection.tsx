@@ -57,7 +57,7 @@ export function ContactFormSection() {
           </div>
         </div>
 
-        <Card className="card-wimbledon shadow-lg">
+        <Card className="card-wimbledon shadow-lg p-0">
           <CardContent className="p-8">
             <ContactForm />
           </CardContent>

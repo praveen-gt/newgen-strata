@@ -1,30 +1,25 @@
 // src/app/page.tsx
 
 import Hero from '@/components/sections/Hero'
-import { About } from '@/components/sections/AboutHomepage'
-// import { Services } from '@/components/sections/Services'
-import { Founders } from '@/components/sections/Founders'
-import { Testimonials } from '@/components/sections/Testimonials'
-import { FAQ } from '@/components/sections/FAQ'
-import { ContactCTA } from '@/components/sections/ContactCTA'
-import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
 import { ServiceStats } from '@/components/sections/ServiceStats'
+import { ServicesPreview } from '@/components/sections/ServicesPreview'
+import { AboutPreview } from '@/components/sections/AboutPreview'
+import { Testimonials } from '@/components/sections/Testimonials'
+import { ContactCTA } from '@/components/sections/ContactCTA'
 
 export default function HomePage() {
   return (
     <>
       <Hero />
       <ServiceStats />
-      <About />
-      <WhyChooseUs />
-      {/* <Services /> */}
-      <Founders />
-      {/* <Testimonials /> */}
-      <FAQ />
+      <ServicesPreview />
+      <AboutPreview />
+      <Testimonials />
       <ContactCTA />
     </>
   )
 }
+
 
 export const metadata = {
   title: 'NewGen Strata Services - Premium Strata Management Melbourne',

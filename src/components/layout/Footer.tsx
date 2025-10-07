@@ -22,8 +22,9 @@ export function Footer() {
   return (
     <footer className="bg-brand-dark text-white">
       {/* Melbourne Skyline Background */}
-      <div className="skyline-silhouette">
-        <div className="container-custom section-padding">
+      <div className="skyline-silhouette relative">
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="container-custom section-padding z-10 relative">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {/* Company Info */}
             <div className="space-y-6">

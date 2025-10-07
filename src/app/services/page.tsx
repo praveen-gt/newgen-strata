@@ -2,10 +2,10 @@
 
 import React from 'react'
 import { Metadata } from 'next'
-import { Services } from '@/components/sections/Services'
-import { ServiceHero } from '@/components/sections/ServiceHero'
-import { ServiceProcess } from '@/components/sections/ServiceProcess'
-import { ServiceGuarantee } from '@/components/sections/ServiceGuarantee'
+import { ServicesHero } from '@/components/sections/ServicesHero'
+import { ServicesGrid } from '@/components/sections/ServicesGrid'
+import { ServicesValueProposition } from '@/components/sections/ServicesValueProposition'
+import { ServicesCTA } from '@/components/sections/ServicesCTA'
 
 export const metadata: Metadata = {
   title: 'Strata Management Services - Complete Solutions',
@@ -21,10 +21,10 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <ServiceHero />
-      <Services />
-      <ServiceProcess />
-      <ServiceGuarantee />
+      <ServicesHero />
+      <ServicesGrid />
+      <ServicesValueProposition />
+      <ServicesCTA />
     </>
   )
 }

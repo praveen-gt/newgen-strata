@@ -19,8 +19,8 @@ const serviceData = {
   title: 'Meeting Management',
   subtitle: 'Professional AGM & Committee Meeting Services',
   description: 'Comprehensive meeting management services ensuring your owners corporation meetings run smoothly, comply with regulations, and achieve productive outcomes.',
-  heroImage: '/images/services/meeting-management-hero.jpg',
-  
+  // heroImage: '/images/services/meeting-management-hero.jpg',
+  heroImage: '/images/about/about-banner.jpg',  
   overview: {
     title: 'Complete Meeting Management Solutions',
     content: 'Our meeting management service takes the stress out of organizing and conducting owners corporation meetings. From initial planning through to post-meeting follow-up, we handle every detail to ensure your meetings are productive, compliant, and well-documented.',
@@ -38,22 +38,22 @@ const serviceData = {
     {
       title: 'Legal Compliance Guaranteed',
       description: 'All meetings conducted in full accordance with Victorian Owners Corporation Act requirements.',
-      icon: 'Shield'
+      icon: 'Shield' as const 
     },
     {
       title: 'Professional Documentation',
       description: 'Detailed minutes and records maintained for easy reference and legal compliance.',
-      icon: 'FileText'
+      icon: 'FileText' as const
     },
     {
       title: 'Efficient Meeting Management',
       description: 'Structured agendas and professional facilitation ensure productive outcomes.',
-      icon: 'Clock'
+      icon: 'Clock' as const
     },
     {
       title: 'Stress-Free Experience',
       description: 'We handle all logistics so committee members can focus on decision-making.',
-      icon: 'CheckCircle'
+      icon: 'CheckCircle' as const
     }
   ],
 

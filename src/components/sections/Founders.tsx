@@ -311,7 +311,7 @@ const fadeInUp = {
 
 export function Founders() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-white" id='founders'>
       <div className="container-custom">
         {/* Header */}
         <motion.div 
@@ -388,7 +388,7 @@ export function Founders() {
         </div>
 
         {/* Quote */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -402,7 +402,7 @@ export function Founders() {
           <div className="font-semibold">
             Kevin Fuller & Sam Disanayaka
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* CTA */}
         <motion.div

@@ -4,16 +4,16 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Separator } from '@/components/ui/separator'
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  Facebook, 
-  Twitter, 
-  Instagram, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Facebook,
+  Twitter,
+  Instagram,
   Linkedin,
-  ArrowRight 
+  ArrowRight
 } from 'lucide-react'
 
 export function Footer() {
@@ -39,8 +39,8 @@ export function Footer() {
                 </div>
               </Link>
               <p className="text-gray-300 text-sm leading-relaxed">
-                A new generation organisation designed to provide exceptional support 
-                services to owners corporations using the latest technology and a 
+                A new generation organisation designed to provide exceptional support
+                services to owners corporations using the latest technology and a
                 commitment to excellence.
               </p>
               <div className="flex space-x-4">
@@ -66,13 +66,13 @@ export function Footer() {
                 {[
                   { name: 'About Us', href: '/about' },
                   { name: 'Our Services', href: '/services' },
-                  { name: 'Our Approach', href: '/approach' },
-                  { name: 'Meet Our Founders', href: '/founders' },
+                  // { name: 'Our Approach', href: '/approach' },
+                  { name: 'Meet Our Founders', href: '/about#founders' },
                   { name: 'Contact Us', href: '/contact' },
                   { name: 'Get Quote', href: '/quote' },
                 ].map((link) => (
                   <li key={link.name}>
-                    <Link 
+                    <Link
                       href={link.href}
                       className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group"
                     >
@@ -89,17 +89,17 @@ export function Footer() {
               <h3 className="font-semibold text-lg text-brand-accent">Our Services</h3>
               <ul className="space-y-3">
                 {[
-                  'Committee Meetings & AGMs',
-                  'Maintenance & Repairs',
-                  'Financial Management',
-                  'Compliance Management',
-                  'Dispute Resolution',
-                  'Insurance Coordination',
-                  'Building Maintenance',
-                  'Document Management',
+                  { name: 'Meeting Management', href: '/services/meeting-management' },
+                  { name: 'Financial Management', href: '/services/financial-management' },
+                  { name: 'Maintenance Coordination', href: '/services/maintenance-coordination' },
+                  { name: 'Compliance & Administration', href: '/services/compliance-administration' },
+                  { name: 'Insurance Services', href: '/services/insurance-services' },
+                  { name: 'Dispute Resolution & Support', href: '/services/dispute-resolution-support' }
                 ].map((service) => (
-                  <li key={service} className="text-gray-300 text-sm">
-                    {service}
+                  <li key={service.href}>
+                    <Link href={service.href} className="text-gray-300 hover:text-white text-sm transition-colors duration-200">
+                      {service.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -134,11 +134,11 @@ export function Footer() {
               </div>
 
               {/* Newsletter Signup */}
-              <div className="border-t border-gray-600 pt-6">
+              {/* <div className="border-t border-gray-600 pt-6">
                 <h4 className="font-medium text-white mb-3">Stay Updated</h4>
                 <div className="flex space-x-2">
-                  <Input 
-                    type="email" 
+                  <Input
+                    type="email"
                     placeholder="Your email"
                     className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
                   />
@@ -146,7 +146,7 @@ export function Footer() {
                     <ArrowRight className="h-4 w-4" />
                   </Button>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

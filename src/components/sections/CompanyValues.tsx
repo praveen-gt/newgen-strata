@@ -834,11 +834,12 @@ export function WhoWeHelp() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-16 text-center"
         >
-          <Card className="bg-gradient-wimbledon text-white p-8 lg:p-12 rounded-2xl border-0 shadow-2xl">
+          {/* <Card className="bg-gradient-wimbledon text-white p-8 lg:p-12 rounded-2xl border-0 shadow-2xl"> */}
+          <Card className="bg-gradient-to-r from-primary to-secondary text-white p-8 lg:p-12 rounded-2xl text-center border-0">
             <div className="max-w-3xl mx-auto">
               <h3 className="text-2xl md:text-3xl font-heading font-bold mb-4">
                 Not Sure Which Category Fits Your Property?

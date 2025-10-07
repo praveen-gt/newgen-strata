@@ -219,8 +219,8 @@ export function AboutHero() {
           <motion.h1
             variants={fadeInUp}
             className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-none heading-wimbledon">
-            Redefining Strata
-            <span className="block text-primary mt-2">Management Excellence</span>
+            Strata Management Built on
+            <span className="block text-primary mt-2">Trust & Results</span>
           </motion.h1>
 
           <motion.p variants={fadeInUp} className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-4xl">

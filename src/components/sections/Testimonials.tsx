@@ -262,7 +262,7 @@ const fadeInUp = {
 
 export function Testimonials() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true, align: 'start', skipSnaps: false },
+    { loop: false, align: 'center', skipSnaps: false },
     [Autoplay({ delay: 5000, stopOnInteraction: true })]
   )
 
@@ -304,14 +304,14 @@ export function Testimonials() {
 
         {/* Carousel */}
         <div className="relative">
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex gap-6">
+          <div className="m-auto" ref={emblaRef}>
+            <div className="flex gap-6 py-4">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
                   className="flex-[0_0_100%] min-w-0 md:flex-[0_0_50%] lg:flex-[0_0_33.333%]"
                 >
-                  <Card className="h-full border-none shadow-lg hover:shadow-xl transition-all duration-300 bg-white">
+                  <Card className="h-full border-none shadow-md transition-all duration-300 bg-white">
                     <CardContent className="p-8">
                       {/* Quote Icon */}
                       <div className="mb-6">
@@ -360,7 +360,7 @@ export function Testimonials() {
               variant="outline"
               size="icon"
               onClick={scrollPrev}
-              className="rounded-full border-2 border-primary/20 hover:border-primary hover:bg-primary hover:text-white transition-all"
+              className="rounded-full border-2 bg-gradient-to-br from-primary/20 to-secondary/20 border-primary/20 hover:border-primary hover:bg-primary hover:text-white transition-all"
             >
               <ChevronLeft className="h-5 w-5" />
             </Button>
@@ -368,7 +368,7 @@ export function Testimonials() {
               variant="outline"
               size="icon"
               onClick={scrollNext}
-              className="rounded-full border-2 border-primary/20 hover:border-primary hover:bg-primary hover:text-white transition-all"
+              className="rounded-full border-2 bg-gradient-to-br from-primary/20 to-secondary/20 border-primary/20 hover:border-primary hover:bg-primary hover:text-white transition-all"
             >
               <ChevronRight className="h-5 w-5" />
             </Button>

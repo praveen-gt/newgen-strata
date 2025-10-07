@@ -221,12 +221,11 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 const differentiators = [
-  'Single point of contact for personalized service',
-  'Collaborative decision-making approach',
-  'Curated network of trusted professionals',
-  'Latest technology and digital solutions',
-  '24/7 emergency support',
-  'Transparent reporting and communication'
+  'Direct access to experienced strata managers',
+  'Comprehensive financial reporting with no surprises',
+  'Vetted contractor network for quality work at fair prices',
+  'Proactive maintenance that protects property values',
+  'Technology-enabled efficiency that saves you money'
 ]
 
 // const differentiators = [
@@ -255,10 +254,10 @@ export default function AboutDetails() {
             variants={fadeInUp}
             className="relative"
           >
-            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative h-[650px] rounded-2xl overflow-hidden shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-brand-dark opacity-20" />
               <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold">
-                <Image src="/images/modern-apartment-building.jpg" alt="Modern apartment building representing our strata management services" fill className="object-cover" />
+                <Image src="/images/about/about-image.jpg" alt="Modern apartment building representing our strata management services" fill className="object-cover" objectPosition='center' />
               </div>
             </div>
           </motion.div>

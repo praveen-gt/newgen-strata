@@ -39,9 +39,9 @@ const services = [
   },
   {
     icon: FileCheck,
-    title: 'Compliance Management',
+    title: 'Compliance & Administration',
     description: '100% regulatory compliance and legal requirement management.',
-    href: '/services/compliance-management'
+    href: '/services/compliance-administration'
   },
   {
     icon: Shield,
@@ -51,11 +51,11 @@ const services = [
   },
   {
     icon: Zap,
-    title: 'Emergency Support',
-    description: '24/7 emergency response for urgent property issues.',
-    href: '/services/emergency-support'
+    title: 'Dispute Resolution & Support',
+    description: 'Professional mediation services and conflict resolution for owners and residents.',
+    href: '/services/dispute-resolution-support'
   }
-]
+];
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },

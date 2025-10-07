@@ -182,7 +182,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce z-10">
+      <div className="hidden 2xl:flex absolute bottom-8 left-1/2 -translate-x-1/2  flex-col items-center animate-bounce z-10">
         <span className="text-white/60 text-xs mb-2 uppercase tracking-wider">
           Scroll to explore
         </span>

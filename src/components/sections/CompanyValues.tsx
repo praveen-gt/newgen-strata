@@ -655,7 +655,7 @@ export function WhoWeHelp() {
                   key={property.id}
                   value={property.id}
                   className="
-                    data-[state=active]:bg-gradient-wimbledon 
+                    data-[state=active]:bg-green-800 
                     data-[state=active]:text-white 
                     data-[state=active]:shadow-xl
                     data-[state=active]:scale-105
@@ -855,7 +855,7 @@ export function WhoWeHelp() {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary">
+                <Button asChild size="lg" variant="outline" className="border-2 border-white text-white bg-primary/90 hover:bg-white hover:text-primary">
                   <Link href="tel:+61399999999">
                     Call Us: +61 3 9XXX XXXX
                   </Link>

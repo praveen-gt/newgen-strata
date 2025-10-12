@@ -111,7 +111,7 @@ export function ServiceHero({ serviceData }: ServiceHeroProps) {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-brand-dark">
+            <Button asChild size="lg" variant="outline" className="border-2 border-white text-white bg-primary bg-white text-brand-dark">
               <Link href="/services">
                 <ArrowLeft className="mr-2 h-5 w-5" />
                 All Services
@@ -122,7 +122,7 @@ export function ServiceHero({ serviceData }: ServiceHeroProps) {
       </div >
 
       {/* Bottom fade */}
-      < div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-white to-transparent z-[2]" />
+      {/* < div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-white to-transparent z-[2]" /> */}
     </section >
   )
 }

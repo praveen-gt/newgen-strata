@@ -1,77 +1,8 @@
-// "use client"
-
-// import React from 'react'
-// import { Badge } from '@/components/ui/badge'
-// import { Clock } from 'lucide-react'
-// import { motion } from 'framer-motion'
-
-// interface CaseStudyHeroProps {
-//   data: {
-//     title: string
-//     subtitle: string
-//     category: string
-//     readTime: string
-//     image?: string
-//     tags: string[]
-//   }
-// }
-
-// export function CaseStudyHero({ data }: CaseStudyHeroProps) {
-//   return (
-//     <section className="relative bg-gradient-to-br from-brand-dark via-primary to-secondary text-white py-20 lg:py-32 overflow-hidden">
-//       <div className="absolute inset-0 opacity-10">
-//         <div className="absolute inset-0" style={{
-//           backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-//           backgroundSize: '40px 40px'
-//         }} />
-//       </div>
-
-//       <div className="container-custom relative z-10">
-//         <motion.div
-//           initial={{ opacity: 0, y: 30 }}
-//           animate={{ opacity: 1, y: 0 }}
-//           transition={{ duration: 0.6 }}
-//           className="max-w-4xl"
-//         >
-//           <Badge className="bg-white/20 text-white border-white/30 mb-4">
-//             {data.category}
-//           </Badge>
-          
-//           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
-//             {data.title}
-//           </h1>
-          
-//           <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-//             {data.subtitle}
-//           </p>
-          
-//           <div className="flex flex-wrap items-center gap-6 text-white/80">
-//             <div className="flex items-center gap-2">
-//               <Clock className="h-4 w-4" />
-//               <span>{data.readTime}</span>
-//             </div>
-            
-//             <div className="flex flex-wrap gap-2">
-//               {data.tags.map((tag) => (
-//                 <Badge key={tag} variant="outline" className="border-white/30 text-white">
-//                   {tag}
-//                 </Badge>
-//               ))}
-//             </div>
-//           </div>
-//         </motion.div>
-//       </div>
-//     </section>
-//   )
-// }
-
 "use client"
 
 import React from 'react'
-import { Badge } from '@/components/ui/badge'
-import { Clock, Calendar, ArrowLeft } from 'lucide-react'
+import { Clock, Calendar } from 'lucide-react'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 import Image from 'next/image'
 
 interface CaseStudyHeroProps {

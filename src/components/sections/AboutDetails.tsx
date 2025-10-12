@@ -270,7 +270,7 @@ export default function AboutDetails() {
             variants={fadeInUp}
             className="space-y-6"
           >
-            <Badge className="bg-primary/10 text-primary border-primary/20">
+            <Badge className="bg-primary/10 text-primary border-primary/20 text-white">
               Our Story
             </Badge>
 

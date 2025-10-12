@@ -226,7 +226,7 @@ export function RelatedServices({ currentService }: RelatedServicesProps) {
               variant="outline"
               size="icon"
               onClick={scrollPrev}
-              className="rounded-full border-2 border-primary/20 hover:border-primary hover:bg-primary hover:text-white transition-all"
+              className="rounded-full border-2 border-primary/20 hover:border-primary hover:bg-primary hover:text-white transition-all text-primary"
             >
               <ChevronLeft className="h-5 w-5" />
             </Button>
@@ -234,7 +234,7 @@ export function RelatedServices({ currentService }: RelatedServicesProps) {
               variant="outline"
               size="icon"
               onClick={scrollNext}
-              className="rounded-full border-2 border-primary/20 hover:border-primary hover:bg-primary hover:text-white transition-all"
+              className="rounded-full border-2 border-primary/20 hover:border-primary hover:bg-primary hover:text-white transition-all text-primary"
             >
               <ChevronRight className="h-5 w-5" />
             </Button>

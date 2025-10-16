@@ -34,8 +34,8 @@ const contactSchema = z.object({
   currentManager: z.string().max(100).optional(),
   serviceType: z.string().min(1),
   message: z.string().min(10).max(2000),
-  newsletter: z.boolean().default(false),
-  privacy: z.boolean().refine((val) => val === true),
+  // newsletter: z.boolean().default(false),
+  // privacy: z.boolean().refine((val) => val === true),
 })
 
 type ContactFormData = z.infer<typeof contactSchema>
@@ -150,10 +150,6 @@ function generateEmailTemplate(data: ContactFormData): string {
               <div class="value" style="white-space: pre-wrap;">${data.message}</div>
             </div>
             
-            <div class="field">
-              <div class="label">Newsletter Subscription</div>
-              <div class="value">${data.newsletter ? '✅ Yes' : '❌ No'}</div>
-            </div>
           </div>
           
           <div class="footer">

@@ -551,9 +551,13 @@ const contactFormSchema = z.object({
     .email('Please enter a valid email address')
     .toLowerCase()
     .trim(),
+  // phone: z.string()
+  //   .min(10, 'Please enter a valid Australian phone number')
+  //   .regex(/^(?:\+?61|0)[2-478](?:[ -]?[0-9]){8}$/, 'Please enter a valid Australian phone number (e.g., 0412 345 678 or +61 3 9123 4567)'),
   phone: z.string()
-    .min(10, 'Please enter a valid Australian phone number')
-    .regex(/^(?:\+?61|0)[2-478](?:[ -]?[0-9]){8}$/, 'Please enter a valid Australian phone number (e.g., 0412 345 678 or +61 3 9123 4567)'),
+    .min(7, 'Please enter a valid phone number')
+    .regex(/^\+?[0-9\s\-().]{7,20}$/, 'Please enter a valid phone number (include country code if outside Australia)'),
+
   company: z.string()
     .max(100, 'Company name must be less than 100 characters')
     .optional(),

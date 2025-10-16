@@ -19,7 +19,8 @@ const serviceData = {
   title: 'Compliance & Administration',
   subtitle: 'Complete Regulatory Compliance & Record Management',
   description: 'Expert management of all compliance requirements, registers, and documentation to keep your owners corporation legally compliant and well-organized.',
-  heroImage: '/images/services/compliance-hero.jpg',
+  // heroImage: '/images/services/compliance-hero.jpg',
+    heroImage: '/images/services/meeting-management-services.jpg',
   
   overview: {
     title: 'Full Compliance Management',

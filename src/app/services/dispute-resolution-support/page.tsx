@@ -19,7 +19,8 @@ const serviceData = {
   title: 'Dispute Resolution & Support',
   subtitle: 'Professional Mediation & Request Management',
   description: 'Expert handling of disputes and special requests, ensuring fair outcomes through professional mediation and clear communication with all stakeholders.',
-  heroImage: '/images/services/dispute-resolution-hero.jpg',
+  // heroImage: '/images/services/dispute-resolution-hero.jpg',
+    heroImage: '/images/services/meeting-management-services.jpg',
   
   overview: {
     title: 'Conflict Resolution & Support Services',

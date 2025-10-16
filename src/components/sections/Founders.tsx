@@ -280,6 +280,7 @@
 "use client"
 
 import React from 'react'
+import Image from 'next/image'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -294,6 +295,7 @@ const founders = [
     experience: '35+ Years',
     expertise: ['Business Leadership', 'Strategic Planning', 'Operations Management', 'Client Relations'],
     description: 'Kevin brings decades of business leadership experience from startups to large corporations. His commitment to excellence and hands-on approach drives our operational strategy.',
+    image: '/images/about/kevin.jpg',
   },
   {
     name: 'Sam Disanayaka',
@@ -301,6 +303,7 @@ const founders = [
     experience: '35+ Years',
     expertise: ['Financial Management', 'Process Innovation', 'Technology Integration', 'Quality Assurance'],
     description: 'Sam\'s expertise in financial management and technology ensures our clients receive cutting-edge service through streamlined, efficient processes.',
+    image: '/images/about/sam.jpg',
   }
 ]
 
@@ -348,8 +351,17 @@ export function Founders() {
                 <CardContent className="p-8">
                   {/* Header */}
                   <div className="flex items-start justify-between mb-6">
-                    <div className="h-16 w-16 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center text-primary font-bold text-2xl">
+                    {/* <div className="h-16 w-16 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center text-primary font-bold text-2xl">
                       {founder.name.charAt(0)}
+                    </div> */}
+                                        <div className="relative w-32 h-32 rounded-full overflow-hidden flex-shrink-0 border-4 border-primary/20">
+
+                      <Image
+                        src={founder.image}
+                        alt={founder.name}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
                     <Badge className="bg-primary/10 text-primary">
                       {founder.experience}

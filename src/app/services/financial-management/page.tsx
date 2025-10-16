@@ -19,7 +19,7 @@ const serviceData = {
   title: 'Financial Management',
   subtitle: 'Complete Financial Oversight & Reporting',
   description: 'Comprehensive financial management services ensuring your owners corporation\'s finances are handled with transparency, accuracy, and professional expertise.',
-  heroImage: '/images/services/financial-management-hero.jpg',
+  heroImage: '/images/services/financial-management-services-banner.jpg',
   
   overview: {
     title: 'Professional Financial Management',

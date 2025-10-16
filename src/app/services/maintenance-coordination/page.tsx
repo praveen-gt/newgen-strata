@@ -19,7 +19,8 @@ const serviceData = {
   title: 'Maintenance Coordination',
   subtitle: 'Proactive Property Maintenance & Repairs',
   description: 'Expert coordination of all maintenance and repairs for your common property, ensuring your building is well-maintained through our trusted contractor network.',
-  heroImage: '/images/services/maintenance-hero.jpg',
+  // heroImage: '/images/services/maintenance-hero.jpg',
+    heroImage: '/images/services/meeting-management-services.jpg',
   
   overview: {
     title: 'Comprehensive Maintenance Solutions',

@@ -19,7 +19,8 @@ const serviceData = {
   title: 'Insurance Services',
   subtitle: 'Expert Insurance Coordination & Claims Management',
   description: 'Comprehensive insurance management ensuring your property is properly protected with expert guidance on coverage and efficient claims handling.',
-  heroImage: '/images/services/insurance-hero.jpg',
+  // heroImage: '/images/services/insurance-hero.jpg',
+    heroImage: '/images/services/meeting-management-services.jpg',
   
   overview: {
     title: 'Complete Insurance Management',

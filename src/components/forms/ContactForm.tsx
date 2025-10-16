@@ -666,7 +666,7 @@ export function ContactForm() {
 
   if (isSubmitted) {
     return (
-      <div className="text-center py-12 px-6">
+      <div className="text-center py-12 px-6 lg:pt-0">
         <div className="inline-flex items-center justify-center w-20 h-20 bg-green-100 rounded-full mb-6">
           <CheckCircle className="h-12 w-12 text-green-600" />
         </div>

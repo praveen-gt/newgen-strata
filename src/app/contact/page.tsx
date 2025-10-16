@@ -50,7 +50,6 @@ export const metadata: Metadata = {
     title: 'Contact NewGen Strata Services - Free Consultation',
     description: 'Get in touch with Melbourne\'s premier strata management team. Free consultations available.',
     images: ['/images/contact-hero.jpg'],
-
   },
 }
 

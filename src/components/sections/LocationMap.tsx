@@ -867,7 +867,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { MapPin, Building2, Users, Navigation } from 'lucide-react'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
+// import Link from 'next/link'
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },

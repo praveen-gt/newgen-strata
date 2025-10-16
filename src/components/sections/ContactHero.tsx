@@ -119,10 +119,10 @@ const fadeInUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
 }
 
-const staggerContainer = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.15 } }
-}
+// const staggerContainer = {
+//   hidden: {},
+//   visible: { transition: { staggerChildren: 0.15 } }
+// }
 
 export function ContactHero() {
   return (
@@ -146,7 +146,7 @@ export function ContactHero() {
             Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-brand-accent">Touch</span>
           </h1>
           <p className="text-xl text-slate-300 leading-relaxed">
-            Ready to transform your strata management experience? We're here to help.
+            Ready to transform your strata management experience? We&apos;re here to help.
           </p>
         </motion.div>
       </div>

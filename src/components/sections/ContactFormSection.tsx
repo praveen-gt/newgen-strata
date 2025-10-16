@@ -109,7 +109,7 @@ export function ContactFormSection() {
               Send us a message
             </h2>
             <p className="text-lg text-slate-600 mb-8">
-              Fill out the form and we'll get back to you within 2 business hours.
+              Fill out the form and we&apos;ll get back to you within 2 business hours.
             </p>
             
             {/* Benefits */}

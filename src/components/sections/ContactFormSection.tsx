@@ -131,7 +131,7 @@ export function ContactFormSection() {
           {/* Right Form */}
           <motion.div variants={fadeInUp} className="lg:col-span-3">
             <Card className="border-0 shadow-xl shadow-slate-200/50 lg:pt-0">
-              <CardContent className="p-8 lg:p-10 lg:pt-0">
+              <CardContent className="p-8 lg:p-10 pt-0">
                 <ContactForm />
               </CardContent>
             </Card>

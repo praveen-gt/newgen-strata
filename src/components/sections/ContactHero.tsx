@@ -126,7 +126,7 @@ const fadeInUp = {
 
 export function ContactHero() {
   return (
-    <section className="relative py-24 lg:py-32 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+    <section className="relative py-24 lg:py-56 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
       {/* Subtle grid pattern */}
        <div className="absolute inset-0 opacity-10">
          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full -translate-x-48 -translate-y-48" />
@@ -154,6 +154,16 @@ export function ContactHero() {
             Ready to transform your strata management experience? We&apos;re here to help.
           </p>
         </motion.div>
+      </div>
+
+       {/* Scroll Indicator */}
+      <div className="hidden 2xl:flex absolute bottom-8 left-1/2 -translate-x-1/2  flex-col items-center animate-bounce z-10 ">
+        <span className="text-white/60 text-xs mb-2 uppercase tracking-wider">
+          Scroll to explore
+        </span>
+        <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center backdrop-blur-sm">
+          <div className="w-1 h-3 bg-primary mt-2 rounded-full animate-scroll" />
+        </div>
       </div>
     </section>
   )

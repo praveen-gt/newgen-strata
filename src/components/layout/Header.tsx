@@ -150,7 +150,8 @@ export function Header() {
                   : "lg:h-24 lg:w-56 lg:shadow-xl lg:hover:scale-105"
               )}>
                 <Image
-                  src="/images/logo/newgen-logo.png"
+                  // src="/images/logo/newgen-logo.png"
+                  src="/images/logo/newgen-logo.jpeg"
                   alt="NewGen Strata Services"
                   fill
                   className="object-contain transition-all duration-500"

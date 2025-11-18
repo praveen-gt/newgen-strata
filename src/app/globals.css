@@ -7,7 +7,8 @@
 
 /* Tailwind v4 Theme Configuration - Replaces tailwind.config.js */
 @theme {
-  --color-theme-green: #016938;
+  /* --color-theme-green: #016938; */
+  --color-theme-green: #036407;
   --color-theme-purple: #592c81;
   /* --color-theme-lightgreen: #c2c310; */
   --color-theme-lightgreen: #016938;

@@ -38,7 +38,7 @@ export function WhatIsNewGen() {
             </h2>
             
             <p className="text-lg text-gray-700 leading-relaxed">
-              As the name NewGen implies it is a "new generation" organisation designed to 
+              As the name NewGen implies it is a &quot;new generation&quot; organisation designed to 
               provide a new level of support service and respect to members of Owners 
               Corporations using the latest technology and techniques and a business model 
               designed to provide the optimal level of management and services to Owners 

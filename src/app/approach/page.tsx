@@ -4,9 +4,9 @@ import React from 'react'
 import { Metadata } from 'next'
 import { ApproachHero } from '@/components/sections/ApproachHero'
 import { OurPhilosophy } from '@/components/sections/OurPhilosophy'
-import { OurProcess } from '@/components/sections/OurProcess'
-import { ServiceDeliveryModel } from '@/components/sections/ServiceDeliveryModel'
-import { TechnologyAdvantage } from '@/components/sections/TechnologyAdvantage'
+// import { OurProcess } from '@/components/sections/OurProcess'
+// import { ServiceDeliveryModel } from '@/components/sections/ServiceDeliveryModel'
+// import { TechnologyAdvantage } from '@/components/sections/TechnologyAdvantage'
 import { WhyItMatters } from '@/components/sections/WhyItMatters'
 
 export const metadata: Metadata = {

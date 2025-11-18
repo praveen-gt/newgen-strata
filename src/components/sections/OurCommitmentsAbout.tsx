@@ -1295,6 +1295,24 @@ import { Badge } from "@/components/ui/badge";
 import { Award, Clock, Shield, Star, CheckCircle2, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+// ==========================================
+// Types
+// ==========================================
+interface CommitmentItem {
+  title: string;
+  icon: React.ComponentType<{ className?: string }>;
+  description: string;
+  details: string[];
+  colors: string;
+}
+
+interface OrbitValue {
+  icon: React.ComponentType<{ className?: string }>;
+  label: string;
+  color: string;
+  angle: number;
+}
+
 // ============================
 // Animation Variants
 // ============================
@@ -1334,7 +1352,15 @@ const SectionHeader = () => (
 // ============================
 // Interactive Commitment Cards
 // ============================
-const InteractiveCommitmentCard = ({ title, icon: Icon, description, details, colors, index }) => {
+// const InteractiveCommitmentCard = ({ title, icon: Icon, description, details, colors, index }) => {
+const InteractiveCommitmentCard = ({
+  title,
+  icon: Icon,
+  description,
+  details,
+  colors,
+  index,
+}: CommitmentItem & { index: number }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -1476,7 +1502,8 @@ const AdvancedCommitmentsGrid = () => {
 // Value Orbit Visualization
 // ============================
 const ValueOrbit = () => {
-  const values = [
+  // const values = [
+  const values: OrbitValue[] = [
     { icon: Award, label: "Capability", color: "from-[#c2ff6b] to-[#9ecc52]", angle: 270 }, // Top
     { icon: Shield, label: "Integrity", color: "from-[#7dd3ff] to-[#4fb3e8]", angle: 0 }, // Right
     { icon: Star, label: "Quality", color: "from-[#ff6bda] to-[#e84fb3]", angle: 90 }, // Bottom
@@ -1622,8 +1649,8 @@ const QuoteBlock = () => (
     className="relative text-center bg-gradient-to-br from-white via-primary/5 to-white rounded-3xl shadow-2xl p-12 max-w-4xl mx-auto border border-primary/20 overflow-hidden"
   >
     {/* Decorative quote marks */}
-    <div className="absolute top-6 left-6 text-8xl text-primary/10 font-serif leading-none">"</div>
-    <div className="absolute bottom-6 right-6 text-8xl text-primary/10 font-serif leading-none">"</div>
+    <div className="absolute top-6 left-6 text-8xl text-primary/10 font-serif leading-none">&quot;</div>
+    <div className="absolute bottom-6 right-6 text-8xl text-primary/10 font-serif leading-none">&quot;</div>
 
     <div className="relative z-10">
       <blockquote className="text-2xl md:text-4xl font-semibold text-brand-dark mb-4 leading-relaxed">

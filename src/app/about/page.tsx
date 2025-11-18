@@ -48,8 +48,8 @@ export default function AboutPage() {
       <AboutHero />
       <WhyNewGen />
       <WhatIsNewGen />
-      <HowWereDifferent />
       <OurCommitmentsAbout />
+      <HowWereDifferent />
       <Founders />
     </>
   )

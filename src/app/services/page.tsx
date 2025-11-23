@@ -659,11 +659,11 @@ export default function ServicesPage() {
                       </div>
 
                       {/* Learn more indicator */}
-                      <div className="mt-6 pt-6 border-t border-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {/* <div className="mt-6 pt-6 border-t border-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div className="flex items-center text-primary font-semibold text-sm">
                           Learn more <ChevronRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
                         </div>
-                      </div>
+                      </div> */}
                     </CardContent>
                   </Card>
                 </motion.div>

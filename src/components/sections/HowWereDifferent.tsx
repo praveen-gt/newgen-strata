@@ -139,6 +139,75 @@
 //   )
 // }
 
+// "use client"
+
+// import React from 'react'
+// import { Card, CardContent } from '@/components/ui/card'
+// import { Badge } from '@/components/ui/badge'
+// import { CheckCircle } from 'lucide-react'
+// import { motion } from 'framer-motion'
+
+// const differentiators = [
+//   'Our major differentiator is the level of service we provide to our clients and the consistency of it',
+//   'All of our management staff, trade and professional service providers have been indoctrinated in our founding principle of "Delighting our customer"',
+//   'We have a register of Trade and Professionals Service Providers, all of whom are either, owned by us, or we have a financial interest in, or who have been evaluated and appointed as a "preferred provider" for our organization. We understand and accept that these "providers" are critical to our business success',
+//   'We do not make decisions for our client Owners Corporations; we work with them to help them make the best possible decisions and then we implement them',
+//   'We have assigned a single point of contact within our organization for each and every Owners Corporation'
+// ]
+
+// const fadeInUp = {
+//   hidden: { opacity: 0, y: 40 },
+//   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+// }
+
+// export function HowWereDifferent() {
+//   return (
+//     <section className="section-padding bg-white">
+//       <div className="container-custom">
+//         <motion.div
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true }}
+//           variants={fadeInUp}
+//           className="text-center max-w-3xl mx-auto mb-16"
+//         >
+//           <Badge className="bg-primary/10 text-primary border-primary/20 mb-4">
+//             Our Difference
+//           </Badge>
+//           <h2 className="text-3xl md:text-5xl font-heading font-bold text-brand-dark mb-6">
+//             How is NewGen Strata Services{" "}
+//             <span className="text-gradient-wimbledon">Different?</span>
+//           </h2>
+//         </motion.div>
+
+//         <motion.div
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true }}
+//           variants={{
+//             hidden: {},
+//             visible: { transition: { staggerChildren: 0.1 } }
+//           }}
+//           className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto"
+//         >
+//           {differentiators.map((item, index) => (
+//             <motion.div key={index} variants={fadeInUp}>
+//               <Card className="h-full border-none shadow-md hover:shadow-xl transition-all duration-300">
+//                 <CardContent className="p-6">
+//                   <div className="flex items-start space-x-3">
+//                     <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+//                     <p className="text-gray-700 leading-relaxed">{item}</p>
+//                   </div>
+//                 </CardContent>
+//               </Card>
+//             </motion.div>
+//           ))}
+//         </motion.div>
+//       </div>
+//     </section>
+//   )
+// }
+
 "use client"
 
 import React from 'react'
@@ -162,8 +231,20 @@ const fadeInUp = {
 
 export function HowWereDifferent() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding relative overflow-hidden">
+      {/* Soft pattern background */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-gray-50 via-white to-primary/5">
+        <div className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage:
+              'radial-gradient(circle at 20px 20px, rgba(0,0,0,0.05) 1px, transparent 0)',
+            backgroundSize: '40px 40px',
+          }}
+        />
+      </div>
+
       <div className="container-custom">
+        {/* Header */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -174,28 +255,36 @@ export function HowWereDifferent() {
           <Badge className="bg-primary/10 text-primary border-primary/20 mb-4">
             Our Difference
           </Badge>
+
           <h2 className="text-3xl md:text-5xl font-heading font-bold text-brand-dark mb-6">
             How is NewGen Strata Services{" "}
             <span className="text-gradient-wimbledon">Different?</span>
           </h2>
         </motion.div>
 
+        {/* Cards */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={{
-            hidden: {},
-            visible: { transition: { staggerChildren: 0.1 } }
-          }}
+          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
           className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto"
         >
           {differentiators.map((item, index) => (
             <motion.div key={index} variants={fadeInUp}>
-              <Card className="h-full border-none shadow-md hover:shadow-xl transition-all duration-300">
+              <Card className="h-full border-0 bg-white/80 backdrop-blur-lg shadow-lg 
+                hover:shadow-2xl transition-all duration-300 relative overflow-hidden group">
+
+                {/* Gradient top border */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary" />
+
                 <CardContent className="p-6">
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                  <div className="flex items-start space-x-4">
+                    {/* Icon */}
+                    <div className="p-2 rounded-xl bg-gradient-to-br from-primary to-secondary shadow-md">
+                      <CheckCircle className="h-5 w-5 text-white" />
+                    </div>
+
                     <p className="text-gray-700 leading-relaxed">{item}</p>
                   </div>
                 </CardContent>

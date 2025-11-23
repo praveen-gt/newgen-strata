@@ -26,6 +26,7 @@
 //   )
 // }
 
+// src/app/about/page.tsx
 
 import React from 'react'
 import { Metadata } from 'next'

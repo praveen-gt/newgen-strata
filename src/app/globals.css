@@ -1,6 +1,6 @@
 /* src/app/globals.css */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;500;600;700&display=swap');
 
 /* Tailwind CSS v4 base imports */
 @import "tailwindcss";
@@ -57,7 +57,7 @@
 
   /* Typography */
   --font-family-heading: 'Playfair Display', ui-serif, serif;
-  --font-family-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-family-body: 'Lato', sans-serif;
   --font-family-sans: var(--font-family-body);
   --font-family-serif: var(--font-family-heading);
 

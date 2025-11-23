@@ -212,46 +212,89 @@ import {
   FileCheck,
   Shield,
   Users,
+  Bell,
+  MessageSquare,
+  ArrowRight,
   // ArrowRight
 } from 'lucide-react'
 import { motion } from 'framer-motion'
-// import Link from 'next/link'
+import { Button } from '../ui/button'
+import Link from 'next/link'
+
+// const services = [
+//   {
+//     icon: Calendar,
+//     title: 'Meeting Management',
+//     description: 'Planning and arranging committee meetings and AGMs with comprehensive documentation.',
+//     color: 'text-primary'
+//   },
+//   {
+//     icon: DollarSign,
+//     title: 'Financial Management',
+//     description: 'Complete financial oversight, accounts payable, budgeting, and transparent reporting.',
+//     color: 'text-secondary'
+//   },
+//   {
+//     icon: Wrench,
+//     title: 'Maintenance Coordination',
+//     description: 'Organizing maintenance and repairs for common property with trusted local contractors.',
+//     color: 'text-brand-accent'
+//   },
+//   {
+//     icon: FileCheck,
+//     title: 'Compliance & Administration',
+//     description: 'Ensuring building compliance and maintaining the owner\'s corporation register.',
+//     color: 'text-primary'
+//   },
+//   {
+//     icon: Shield,
+//     title: 'Insurance Services',
+//     description: 'Taking care of insurance requirements with specialized underwriters and brokers.',
+//     color: 'text-secondary'
+//   },
+//   {
+//     icon: Users,
+//     title: 'Stakeholder Relations',
+//     description: 'Liaising with tenants, owners, and the corporation regarding disputes and requests.',
+//     color: 'text-brand-accent'
+//   }
+// ]
 
 const services = [
   {
     icon: Calendar,
     title: 'Meeting Management',
-    description: 'Planning and arranging committee meetings and AGMs with comprehensive documentation.',
+    description: 'Planning and arranging committee meetings and AGMs, preparing and distributing meeting notices, agendas, and minutes.',
+    color: 'text-primary'
+  },
+  {
+    icon: MessageSquare,
+    title: 'Correspondence Management',
+    description: 'Responding to correspondences on the owner\'s corporation\'s behalf professionally and promptly.',
+    color: 'text-secondary'
+  },
+  {
+    icon: Wrench,
+    title: 'Maintenance & Repairs',
+    description: 'Organizing maintenance and repairs for common property with our vetted network of contractors.',
+    color: 'text-brand-accent'
+  },
+  {
+    icon: FileCheck,
+    title: 'Register & Documentation',
+    description: 'Maintaining the owner\'s corporation register and assisting with documents required for sales.',
     color: 'text-primary'
   },
   {
     icon: DollarSign,
     title: 'Financial Management',
-    description: 'Complete financial oversight, accounts payable, budgeting, and transparent reporting.',
+    description: 'Taking care of accounts payable, budgeting, and providing transparent financial reporting.',
     color: 'text-secondary'
   },
   {
-    icon: Wrench,
-    title: 'Maintenance Coordination',
-    description: 'Organizing maintenance and repairs for common property with trusted local contractors.',
-    color: 'text-brand-accent'
-  },
-  {
-    icon: FileCheck,
-    title: 'Compliance & Administration',
-    description: 'Ensuring building compliance and maintaining the owner\'s corporation register.',
-    color: 'text-primary'
-  },
-  {
-    icon: Shield,
-    title: 'Insurance Services',
-    description: 'Taking care of insurance requirements with specialized underwriters and brokers.',
-    color: 'text-secondary'
-  },
-  {
-    icon: Users,
-    title: 'Stakeholder Relations',
-    description: 'Liaising with tenants, owners, and the corporation regarding disputes and requests.',
+    icon: Bell,
+    title: 'Stakeholder Communication',
+    description: 'Sharing updates and notices with stakeholders, ensuring building compliance, and liaising with all parties regarding disputes and special requests.',
     color: 'text-brand-accent'
   }
 ]
@@ -267,30 +310,107 @@ const staggerContainer = {
 }
 
 export function ServicesPreview() {
-  return (
-    <section className="relative section-padding overflow-hidden">
-      {/* Background with parallax effect */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white" />
+//   return (
+//     <section className="relative section-padding overflow-hidden">
+//       {/* Background with parallax effect */}
+//       <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white" />
       
-      {/* Decorative elements */}
+//       {/* Decorative elements */}
+//       <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+//       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
+      
+//       {/* Diagonal stripes */}
+//       <div className="absolute inset-0 opacity-5">
+//         <div className="absolute inset-0" style={{
+//           backgroundImage: `repeating-linear-gradient(
+//             -45deg,
+//             transparent,
+//             transparent 50px,
+//             var(--color-primary) 50px,
+//             var(--color-primary) 51px
+//           )`
+//         }} />
+//       </div>
+
+//       <div className="container-custom relative z-10">
+//         {/* Section Header */}
+//         <motion.div
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true, amount: 0.3 }}
+//           variants={staggerContainer}
+//           className="text-center max-w-3xl mx-auto mb-16"
+//         >
+//           <motion.div variants={fadeInUp}>
+//             <Badge className="bg-primary/10 text-primary border-primary/20 mb-4">
+//               Our Services
+//             </Badge>
+//           </motion.div>
+
+//           <motion.h2
+//             variants={fadeInUp}
+//             className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-dark mb-6"
+//           >
+//             Comprehensive{" "}
+//             <span className="text-gradient-wimbledon">Strata Solutions</span>
+//           </motion.h2>
+
+//           <motion.p
+//             variants={fadeInUp}
+//             className="text-lg md:text-xl text-gray-600 leading-relaxed"
+//           >
+//             Personal, high-quality services for all aspects of owners corporation management.
+//           </motion.p>
+//         </motion.div>
+
+//         {/* Services Grid */}
+//         <motion.div
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true, amount: 0.1 }}
+//           variants={staggerContainer}
+//           className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+//         >
+//           {services.map((service) => {
+//             const IconComponent = service.icon
+//             return (
+//               <motion.div key={service.title} variants={fadeInUp}>
+//                 <Card className="h-full border-none shadow-md hover:shadow-2xl transition-all duration-300 bg-white/90 backdrop-blur-sm group hover:-translate-y-2">
+//                   <CardContent className="p-6">
+//                     <div className="flex flex-col space-y-4">
+//                       {/* Icon */}
+//                       <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl p-4 w-16 h-16 group-hover:from-primary/20 group-hover:to-secondary/20 transition-colors">
+//                         <IconComponent className={`h-8 w-8 ${service.color} group-hover:scale-110 transition-transform`} />
+//                       </div>
+                      
+//                       {/* Content */}
+//                       <div>
+//                         <h3 className="text-xl font-semibold text-brand-dark mb-2 group-hover:text-primary transition-colors">
+//                           {service.title}
+//                         </h3>
+//                         <p className="text-gray-600 text-sm leading-relaxed">
+//                           {service.description}
+//                         </p>
+//                       </div>
+//                     </div>
+//                   </CardContent>
+//                 </Card>
+//               </motion.div>
+//             )
+//           })}
+//         </motion.div>
+//       </div>
+//     </section>
+//   )
+// }
+
+return (
+    <section className="relative py-20 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white" />
       <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
-      
-      {/* Diagonal stripes */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `repeating-linear-gradient(
-            -45deg,
-            transparent,
-            transparent 50px,
-            var(--color-primary) 50px,
-            var(--color-primary) 51px
-          )`
-        }} />
-      </div>
 
-      <div className="container-custom relative z-10">
-        {/* Section Header */}
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -306,55 +426,78 @@ export function ServicesPreview() {
 
           <motion.h2
             variants={fadeInUp}
-            className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-dark mb-6"
+            className="text-3xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-6"
           >
-            Comprehensive{" "}
-            <span className="text-gradient-wimbledon">Strata Solutions</span>
+            Personal, High-Quality{" "}
+            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Services</span>
           </motion.h2>
 
           <motion.p
             variants={fadeInUp}
             className="text-lg md:text-xl text-gray-600 leading-relaxed"
           >
-            Personal, high-quality services for all aspects of owners corporation management.
+            Comprehensive services for all aspects of owners corporation management.
           </motion.p>
         </motion.div>
 
-        {/* Services Grid */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
           variants={staggerContainer}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12"
         >
           {services.map((service) => {
             const IconComponent = service.icon
             return (
               <motion.div key={service.title} variants={fadeInUp}>
-                <Card className="h-full border-none shadow-md hover:shadow-2xl transition-all duration-300 bg-white/90 backdrop-blur-sm group hover:-translate-y-2">
-                  <CardContent className="p-6">
-                    <div className="flex flex-col space-y-4">
-                      {/* Icon */}
-                      <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl p-4 w-16 h-16 group-hover:from-primary/20 group-hover:to-secondary/20 transition-colors">
-                        <IconComponent className={`h-8 w-8 ${service.color} group-hover:scale-110 transition-transform`} />
+                <Link href="/services" className="block h-full">
+                  <Card className="h-full border-none shadow-md hover:shadow-2xl transition-all duration-300 bg-white/90 backdrop-blur-sm group hover:-translate-y-2 cursor-pointer">
+                    <CardContent className="p-6">
+                      <div className="flex flex-col space-y-4">
+                        <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl p-4 w-16 h-16 group-hover:from-primary/20 group-hover:to-secondary/20 transition-colors">
+                          <IconComponent className={`h-8 w-8 ${service.color} group-hover:scale-110 transition-transform`} />
+                        </div>
+                        
+                        <div>
+                          <h3 className="text-xl font-semibold text-brand-dark mb-2 group-hover:text-primary transition-colors">
+                            {service.title}
+                          </h3>
+                          <p className="text-gray-600 text-sm leading-relaxed mb-3">
+                            {service.description}
+                          </p>
+                          <div className="flex items-center text-primary text-sm font-medium group-hover:gap-2 transition-all">
+                            <span>Learn more</span>
+                            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                          </div>
+                        </div>
                       </div>
-                      
-                      {/* Content */}
-                      <div>
-                        <h3 className="text-xl font-semibold text-brand-dark mb-2 group-hover:text-primary transition-colors">
-                          {service.title}
-                        </h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                          {service.description}
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
+                </Link>
               </motion.div>
             )
           })}
+        </motion.div>
+
+        {/* View All Services CTA */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          className="text-center"
+        >
+          <Button 
+            asChild 
+            size="lg"
+            className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-bold px-10 py-6 rounded-full shadow-xl hover:scale-105 transition-all duration-300"
+          >
+            <Link href="/services">
+              View All Services
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
         </motion.div>
       </div>
     </section>

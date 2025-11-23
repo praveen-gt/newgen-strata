@@ -158,10 +158,227 @@
 //   )
 // }
 
+// "use client"
+
+// import React from 'react'
+// // import Image from 'next/image'
+// import { Card, CardContent } from '@/components/ui/card'
+// import { Badge } from '@/components/ui/badge'
+// import { Button } from '@/components/ui/button'
+// import { ArrowRight } from 'lucide-react'
+// import { motion } from 'framer-motion'
+// import Link from 'next/link'
+
+// const fadeInUp = {
+//   hidden: { opacity: 0, y: 40 },
+//   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+// }
+
+// export function Founders() {
+//   return (
+//     <section className="section-padding bg-white">
+//       <div className="container-custom">
+//         <motion.div 
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true }}
+//           variants={fadeInUp}
+//           className="text-center max-w-3xl mx-auto mb-16"
+//         >
+//           <Badge className="bg-primary/10 text-primary border-primary/20 mb-4">
+//             The Founders
+//           </Badge>
+//           <h2 className="text-3xl md:text-5xl font-heading font-bold text-brand-dark mb-6">
+//             About the Founders of{" "}
+//             <span className="text-gradient-wimbledon">NewGen Strata Services</span>
+//           </h2>
+//         </motion.div>
+
+//         <motion.div
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true }}
+//           variants={fadeInUp}
+//         >
+//           <Card className="border-none shadow-xl">
+//             <CardContent className="p-8 lg:p-12">
+//               <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+//                 <div className="space-y-6">
+//                   <h3 className="text-2xl font-bold text-brand-dark">
+//                     Kevin Fuller & Sam Disanayaka
+//                   </h3>
+//                   <div className="space-y-4 text-gray-700 leading-relaxed">
+//                     <p>
+//                       The two Founders, Kevin Fuller and Sam Disanayaka have more than 70 years 
+//                       of business experience between them.
+//                     </p>
+//                     <p>
+//                       Both have been involved in a variety of businesses ranging from small to 
+//                       large and have hands-on experience as well as many years in business leadership.
+//                     </p>
+//                     <p>
+//                       They have worked together on a variety of projects for several different 
+//                       corporations. At the time of their decision to enter the Owners Corporation 
+//                       Management business and the subsequent formation of NewGen Strata Services 
+//                       they were both actively involved in existing businesses whose resources can 
+//                       now be brought to support NewGen Strata Services.
+//                     </p>
+//                   </div>
+//                 </div>
+
+//                 <div className="relative">
+//                   <div className="bg-gradient-to-br from-primary to-secondary rounded-2xl p-8 text-white shadow-2xl">
+//                     <div className="text-center mb-6">
+//                       <div className="text-5xl font-bold mb-2">70+</div>
+//                       <div className="text-lg">Years Combined Experience</div>
+//                     </div>
+//                     <div className="space-y-3 text-sm">
+//                       <p>✓ Small to large business experience</p>
+//                       <p>✓ Hands-on operational expertise</p>
+//                       <p>✓ Business leadership roles</p>
+//                       <p>✓ Collaborative project delivery</p>
+//                       <p>✓ Multiple industry backgrounds</p>
+//                     </div>
+//                   </div>
+//                 </div>
+//               </div>
+
+//               <div className="text-center pt-8 border-t border-gray-200">
+//                 <Button asChild size="lg" className="btn-wimbledon">
+//                   <Link href="/contact">
+//                     Get in Touch
+//                     <ArrowRight className="ml-2 h-5 w-5" />
+//                   </Link>
+//                 </Button>
+//               </div>
+//             </CardContent>
+//           </Card>
+//         </motion.div>
+//       </div>
+//     </section>
+//   )
+// }
+
+// "use client"
+
+// import React from "react"
+// import { Card, CardContent } from "@/components/ui/card"
+// import { Badge } from "@/components/ui/badge"
+// import { Button } from "@/components/ui/button"
+// import { ArrowRight } from "lucide-react"
+// import { motion } from "framer-motion"
+// import Link from "next/link"
+
+// const fadeInUp = {
+//   hidden: { opacity: 0, y: 40 },
+//   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+// }
+
+// export function Founders() {
+//   return (
+//     <section className="section-padding bg-gradient-to-b from-white to-secondary/5">
+//       <div className="container-custom">
+
+//         {/* Header */}
+//         <motion.div
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true }}
+//           variants={fadeInUp}
+//           className="text-center max-w-3xl mx-auto mb-16"
+//         >
+//           <Badge className="bg-primary/10 text-primary border-primary/20 mb-4">
+//             The Founders
+//           </Badge>
+
+//           <h2 className="text-3xl md:text-5xl font-heading font-bold text-brand-dark mb-6">
+//             About the Founders of{" "}
+//             <span className="text-gradient-wimbledon">NewGen Strata Services</span>
+//           </h2>
+//         </motion.div>
+
+//         {/* Main content */}
+//         <motion.div
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true }}
+//           variants={fadeInUp}
+//         >
+//           <Card className="shadow-2xl bg-white/80 backdrop-blur-md rounded-3xl border border-white/50">
+//             <CardContent className="p-10 lg:p-14">
+
+//               <div className="grid lg:grid-cols-2 gap-14 items-start">
+
+//                 {/* Founders Text */}
+//                 <div className="space-y-7 border-l-4 border-primary pl-6">
+//                   <h3 className="text-2xl font-bold text-brand-dark">
+//                     Kevin Fuller & Sam Disanayaka
+//                   </h3>
+
+//                   <div className="space-y-5 text-gray-700 leading-relaxed text-lg">
+//                     <p>
+//                       The two Founders, Kevin Fuller and Sam Disanayaka have more than 70 years 
+//                       of business experience between them.
+//                     </p>
+//                     <p>
+//                       Both have been involved in a variety of businesses ranging from small to 
+//                       large and have hands-on experience as well as many years in business leadership.
+//                     </p>
+//                     <p>
+//                       They have worked together on a variety of projects for several different 
+//                       corporations. At the time of their decision to enter the Owners Corporation 
+//                       Management business and the subsequent formation of NewGen Strata Services 
+//                       they were both actively involved in existing businesses whose resources can 
+//                       now be brought to support NewGen Strata Services.
+//                     </p>
+//                   </div>
+//                 </div>
+
+//                 {/* Stat Card */}
+//                 <div className="relative">
+//                   <div className="bg-gradient-to-br from-primary to-secondary rounded-3xl p-10 text-white shadow-xl">
+//                     <div className="text-center mb-8">
+//                       <div className="text-6xl font-extrabold mb-2">70+</div>
+//                       <div className="text-lg opacity-90">
+//                         Years Combined Experience
+//                       </div>
+//                     </div>
+
+//                     <div className="space-y-3 text-white/90 text-sm">
+//                       <p>✓ Small to large business experience</p>
+//                       <p>✓ Hands-on operational expertise</p>
+//                       <p>✓ Business leadership roles</p>
+//                       <p>✓ Collaborative project delivery</p>
+//                       <p>✓ Multiple industry backgrounds</p>
+//                     </div>
+//                   </div>
+//                 </div>
+
+//               </div>
+
+//               {/* CTA */}
+//               <div className="text-center pt-10 border-t border-gray-200">
+//                 <Button asChild size="lg" className="btn-wimbledon">
+//                   <Link href="/contact">
+//                     Get in Touch
+//                     <ArrowRight className="ml-2 h-5 w-5" />
+//                   </Link>
+//                 </Button>
+//               </div>
+
+//             </CardContent>
+//           </Card>
+//         </motion.div>
+
+//       </div>
+//     </section>
+//   )
+// }
+
+
 "use client"
 
 import React from 'react'
-// import Image from 'next/image'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -176,8 +393,22 @@ const fadeInUp = {
 
 export function Founders() {
   return (
-    <section className="section-padding bg-white">
-      <div className="container-custom">
+    <section className="section-padding relative overflow-hidden">
+
+      {/* Background animated orbs */}
+      <motion.div
+        animate={{ opacity: [0.2, 0.35, 0.2], scale: [1, 1.2, 1] }}
+        transition={{ duration: 15, repeat: Infinity }}
+        className="absolute top-10 left-10 w-72 h-72 rounded-full bg-primary/10 blur-3xl"
+      />
+      <motion.div
+        animate={{ opacity: [0.2, 0.4, 0.2], scale: [1.1, 0.9, 1.1] }}
+        transition={{ duration: 14, repeat: Infinity }}
+        className="absolute bottom-10 right-10 w-72 h-72 rounded-full bg-secondary/10 blur-3xl"
+      />
+
+      <div className="container-custom relative z-10">
+        {/* Header */}
         <motion.div 
           initial="hidden"
           whileInView="visible"
@@ -188,26 +419,33 @@ export function Founders() {
           <Badge className="bg-primary/10 text-primary border-primary/20 mb-4">
             The Founders
           </Badge>
+
           <h2 className="text-3xl md:text-5xl font-heading font-bold text-brand-dark mb-6">
             About the Founders of{" "}
             <span className="text-gradient-wimbledon">NewGen Strata Services</span>
           </h2>
         </motion.div>
 
+        {/* Main content */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <Card className="border-none shadow-xl">
-            <CardContent className="p-8 lg:p-12">
+          <Card className="border-0 shadow-xl bg-white/80 backdrop-blur-md rounded-3xl overflow-hidden">
+            <CardContent className="p-10 lg:p-14">
+
               <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+
+                {/* Left column — text */}
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-brand-dark">
+                  <h3 className="text-3xl font-bold text-brand-dark relative inline-block">
                     Kevin Fuller & Sam Disanayaka
+                    <span className="block h-1 w-20 bg-gradient-to-r from-primary to-secondary mt-2 rounded-full" />
                   </h3>
-                  <div className="space-y-4 text-gray-700 leading-relaxed">
+
+                  <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
                     <p>
                       The two Founders, Kevin Fuller and Sam Disanayaka have more than 70 years 
                       of business experience between them.
@@ -226,13 +464,23 @@ export function Founders() {
                   </div>
                 </div>
 
-                <div className="relative">
-                  <div className="bg-gradient-to-br from-primary to-secondary rounded-2xl p-8 text-white shadow-2xl">
-                    <div className="text-center mb-6">
-                      <div className="text-5xl font-bold mb-2">70+</div>
-                      <div className="text-lg">Years Combined Experience</div>
+                {/* Right column — experience bubble */}
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  className="relative"
+                >
+                  <div className="bg-gradient-to-br from-primary to-secondary rounded-3xl p-10 text-white shadow-2xl relative overflow-hidden">
+
+                    {/* glow layers */}
+                    <div className="absolute inset-0 bg-white/10 blur-2xl" />
+                    <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-white/10 rounded-full blur-2xl" />
+
+                    <div className="relative z-10 text-center mb-6">
+                      <div className="text-6xl font-extrabold mb-2 drop-shadow-lg">70+</div>
+                      <div className="text-lg tracking-wide opacity-90">Years Combined Experience</div>
                     </div>
-                    <div className="space-y-3 text-sm">
+
+                    <div className="relative z-10 space-y-3 text-base">
                       <p>✓ Small to large business experience</p>
                       <p>✓ Hands-on operational expertise</p>
                       <p>✓ Business leadership roles</p>
@@ -240,17 +488,19 @@ export function Founders() {
                       <p>✓ Multiple industry backgrounds</p>
                     </div>
                   </div>
-                </div>
+                </motion.div>
+
               </div>
 
               <div className="text-center pt-8 border-t border-gray-200">
-                <Button asChild size="lg" className="btn-wimbledon">
+                <Button asChild size="lg" className="btn-wimbledon rounded-full px-10 py-6 text-lg">
                   <Link href="/contact">
                     Get in Touch
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
               </div>
+
             </CardContent>
           </Card>
         </motion.div>

@@ -168,7 +168,7 @@ export default function Hero() {
             asChild
             variant="outline"
             size="lg"
-            className="border-2 border-white/60 bg-white/10 backdrop-blur-md text-white px-10 py-6 rounded-full hover:bg-white/20 hover:border-white/80 transition-all duration-300"
+            className="border-2 border-white/60 bg-white/10 backdrop-blur-md text-white hover:text-white px-10 py-6 rounded-full hover:bg-white/20 hover:border-white/80 transition-all duration-300"
           >
             <Link href="/contact">
               <Phone className="mr-2 h-5 w-5" /> Contact Us

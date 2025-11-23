@@ -140,7 +140,7 @@ const contactInfo = [
     value: 'Melbourne CBD Area',
     detail: 'Serving all Melbourne metro',
     href: '#location',
-    cta: 'Get directions'
+    // cta: 'Get directions'
   },
   {
     icon: Clock,
@@ -148,7 +148,7 @@ const contactInfo = [
     value: 'Mon-Fri: 9AM-5PM',
     detail: 'Emergency: 24/7',
     href: '#emergency',
-    cta: 'View schedule'
+    // cta: 'View schedule'
   }
 ]
 
@@ -192,7 +192,7 @@ export function ContactDetails() {
                           <div className="text-sm text-slate-600 mb-4">
                             {item.detail}
                           </div>
-                          <Button 
+                          {/* <Button 
                             asChild 
                             variant="ghost" 
                             size="sm"
@@ -201,7 +201,7 @@ export function ContactDetails() {
                             <Link href={item.href}>
                               {item.cta} →
                             </Link>
-                          </Button>
+                          </Button> */}
                         </div>
                       </div>
                     </CardContent>

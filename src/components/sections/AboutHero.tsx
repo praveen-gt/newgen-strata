@@ -71,11 +71,84 @@
 //   )
 // }
 
+// "use client"
+
+// import React from 'react'
+// import Image from 'next/image'
+// import { motion } from 'framer-motion'
+
+// const fadeInUp = {
+//   hidden: { opacity: 0, y: 40 },
+//   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+// }
+
+// const staggerContainer = {
+//   hidden: {},
+//   visible: { transition: { staggerChildren: 0.15 } }
+// }
+
+// export function AboutHero() {
+//   return (
+//     <section className="relative h-[70vh] flex items-center overflow-hidden">
+//       <div className="absolute inset-0">
+//         <Image
+//           src="/images/about/about-banner.jpg"
+//           alt="NewGen Strata Services"
+//           fill
+//           className="object-cover"
+//           priority
+//         />
+//         <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/80 via-primary/60 to-black/70" />
+//       </div>
+
+//       <div className="absolute top-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
+//       <div className="absolute bottom-32 right-20 w-80 h-80 bg-secondary/20 rounded-full blur-3xl animate-pulse delay-700" />
+
+//       <div className="container-custom relative z-10">
+//          <motion.div
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true, amount: 0.3 }}
+//           variants={staggerContainer}
+//           className="max-w-3xl"
+//         >
+//         {/* <motion.div
+//           initial="hidden"
+//           animate="visible"
+//           variants={{
+//             hidden: {},
+//             visible: { transition: { staggerChildren: 0.15 } }
+//           }}
+//           className="max-w-3xl"
+//         > */}
+//           <motion.h1
+//             variants={fadeInUp}
+//             className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight heading-wimbledon"
+//           >
+//             About{" "}
+//             <span className="text-brand-accent">NewGen Strata Services</span>
+//           </motion.h1>
+
+//           <motion.p 
+//             variants={fadeInUp} 
+//             className="text-lg md:text-xl text-gray-200 leading-relaxed"
+//           >
+//             A new generation organisation designed to provide exceptional support, 
+//             service and respect to members of Owners Corporations.
+//           </motion.p>
+//         </motion.div>
+//       </div>
+//     </section>
+//   )
+// }
+
 "use client"
 
 import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { Badge } from '@/components/ui/badge'
+import { Award, Users, Target, TrendingUp } from 'lucide-react'
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -87,57 +160,107 @@ const staggerContainer = {
   visible: { transition: { staggerChildren: 0.15 } }
 }
 
+const stats = [
+  { icon: Award, value: '70+', label: 'Years Combined Experience', color: 'from-primary to-primary/80' },
+  { icon: Users, value: '100%', label: 'Client Satisfaction', color: 'from-secondary to-secondary/80' },
+  { icon: Target, value: '3', label: 'Core Commitments', color: 'from-brand-accent to-brand-accent/80' },
+  { icon: TrendingUp, value: 'Growing', label: 'Portfolio', color: 'from-primary to-secondary' }
+]
+
 export function AboutHero() {
   return (
-    <section className="relative h-[70vh] flex items-center overflow-hidden">
+    <section className="relative flex items-center overflow-hidden">
+      {/* Background Image with Parallax Effect */}
       <div className="absolute inset-0">
         <Image
           src="/images/about/about-banner.jpg"
-          alt="NewGen Strata Services"
+          alt="NewGen Strata Services - Modern strata management excellence"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/80 via-primary/60 to-black/70" />
+        {/* Lighter Gradient Overlay - Better Contrast */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/75 via-black/50 to-brand-dark/70" />
       </div>
 
-      <div className="absolute top-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-32 right-20 w-80 h-80 bg-secondary/20 rounded-full blur-3xl animate-pulse delay-700" />
+      {/* Animated Gradient Orbs - Subtler */}
+      <div className="absolute top-20 left-10 w-96 h-96 bg-primary/15 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-32 right-20 w-96 h-96 bg-secondary/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '0.7s' }} />
 
-      <div className="container-custom relative z-10">
-         <motion.div
+      <div className="container-custom relative z-10 pt-20 pb-16">
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={staggerContainer}
-          className="max-w-3xl"
+          className="max-w-4xl"
         >
-        {/* <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: {},
-            visible: { transition: { staggerChildren: 0.15 } }
-          }}
-          className="max-w-3xl"
-        > */}
+          {/* Badge */}
+          {/* <motion.div variants={fadeInUp} className="mb-6">
+            <Badge className="bg-white/95 backdrop-blur-md border-white/50 text-brand-dark px-6 py-3 text-sm font-semibold rounded-full shadow-xl">
+              🏢 Melbourne&apos;s Premier Strata Management
+            </Badge>
+          </motion.div> */}
+
+          {/* Main Heading */}
           <motion.h1
             variants={fadeInUp}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight heading-wimbledon"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg"
           >
             About{" "}
-            <span className="text-brand-accent">NewGen Strata Services</span>
+            <span className="text-brand-accent drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
+              NewGen Strata Services
+            </span>
           </motion.h1>
 
+          {/* Subtitle */}
           <motion.p 
             variants={fadeInUp} 
-            className="text-lg md:text-xl text-gray-200 leading-relaxed"
+            className="text-xl md:text-2xl text-white leading-relaxed mb-8 max-w-3xl drop-shadow-md"
           >
             A new generation organisation designed to provide exceptional support, 
             service and respect to members of Owners Corporations.
           </motion.p>
+
+          {/* Key Values */}
+          <motion.div 
+            variants={fadeInUp}
+            className="flex flex-wrap gap-4 mb-12"
+          >
+            {['Honesty', 'Integrity', 'Excellence', 'Transparency'].map((value, index) => (
+              <div 
+                key={value}
+                className="flex items-center gap-2 bg-white/95 backdrop-blur-md border border-white/50 rounded-full px-5 py-2.5 text-brand-dark hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+              >
+                <div className="w-2 h-2 bg-primary rounded-full animate-pulse" style={{ animationDelay: `${index * 0.2}s` }} />
+                <span className="text-sm font-semibold">{value}</span>
+              </div>
+            ))}
+          </motion.div>
+
+
         </motion.div>
       </div>
+
+      {/* Scroll Indicator
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.5, duration: 0.8 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 animate-bounce"
+      >
+        <span className="text-white/60 text-xs uppercase tracking-wider font-medium">
+          Scroll to learn more
+        </span>
+        <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center backdrop-blur-sm">
+          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-scroll" />
+        </div>
+      </motion.div> */}
+
+      {/* Decorative Bottom Wave */}
+      {/* <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" /> */}
     </section>
   )
 }
+
+export default AboutHero

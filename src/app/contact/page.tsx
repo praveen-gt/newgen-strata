@@ -59,7 +59,7 @@ export default function ContactPage() {
       <ContactHero />
       <ContactFormSection />
       <ContactDetails />
-      <LocationMap />
+      {/* <LocationMap /> */}
     </>
   )
 }

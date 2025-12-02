@@ -112,6 +112,7 @@
 "use client"
 
 import React from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 const fadeInUp = {
@@ -126,18 +127,39 @@ const fadeInUp = {
 
 export function ContactHero() {
   return (
-    <section className="relative py-24 lg:py-56 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+    <section className="relative py-24 lg:py-40 overflow-hidden">
       {/* Subtle grid pattern */}
-       <div className="absolute inset-0 opacity-10">
+       {/* <div className="absolute inset-0 opacity-10">
          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full -translate-x-48 -translate-y-48" />
          <div className="absolute bottom-0 right-0 w-80 h-80 bg-white rounded-full translate-x-40 translate-y-40" />
-       </div>
+       </div> */}
 
+         {/* ✅ BACKGROUND IMAGE */}
+      <Image
+        src="/images/contact/contact-page-hero-image.jpg"
+        alt="Contact Hero Background"
+        fill
+        priority
+        className="absolute inset-0 object-cover"
+      />
+
+       {/* Gradient dark overlay to improve text contrast */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-800/70 to-slate-900/80" />
+
+      {/* Subtle grid pattern overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-      
-      {/* Gradient orbs */}
+
+      {/* Gradient glowing orbs */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl" />
+
+
+
+      {/* <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem]" /> */}
+      
+      {/* Gradient orbs */}
+      {/* <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl" /> */}
 
       <div className="container-custom relative z-10">
         <motion.div
@@ -148,7 +170,8 @@ export function ContactHero() {
           className="text-center max-w-3xl mx-auto"
         >
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
-            Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-brand-accent">Touch</span>
+            {/* Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-brand-accent">Touch</span> */}
+            Get in Touch
           </h1>
           <p className="text-xl text-slate-300 leading-relaxed">
             Ready to transform your strata management experience? We&apos;re here to help.

@@ -332,7 +332,7 @@
 //                           )}
 //                         />
 //                       </button>
-                      
+
 //                       {/* Submenu */}
 //                       <div
 //                         className={cn(
@@ -459,7 +459,7 @@ import {
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu'
 import {
-  Menu, Phone, Mail, MapPin, ArrowRight, 
+  Menu, Phone, Mail, MapPin, ArrowRight,
   Briefcase, Users, X, ChevronRight
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -475,17 +475,17 @@ const navigation = [
 
 // Quick links for desktop dropdown (optional)
 const quickLinks = [
-  { 
-    name: 'Our Services', 
-    href: '/services', 
-    description: 'Complete overview of our comprehensive strata management services', 
-    icon: Briefcase 
+  {
+    name: 'Our Services',
+    href: '/services',
+    description: 'Complete overview of our comprehensive strata management services',
+    icon: Briefcase
   },
-  { 
-    name: 'Service Providers', 
-    href: '/service-providers', 
-    description: 'Our vetted network of professional service providers', 
-    icon: Users 
+  {
+    name: 'Service Providers',
+    href: '/service-providers',
+    description: 'Our vetted network of professional service providers',
+    icon: Users
   },
 ]
 
@@ -622,27 +622,31 @@ export function Header() {
 
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-3 flex-shrink-0">
-              <Button asChild variant="ghost" size="sm" className="text-gray-700 hover:text-primary hover:bg-primary/5">
+              <Button asChild variant="ghost"
+                // size="sm"
+                // className="text-gray-700 hover:text-primary hover:bg-primary/5"
+                className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white shadow-md hover:shadow-lg transition-all rounded-full"
+              >
                 <a href="tel:+61399999999">
                   <Phone className="h-4 w-4 mr-2" />
                   Call
                 </a>
               </Button>
-              <Button 
+              {/* <Button 
               asChild 
               className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white shadow-md hover:shadow-lg transition-all rounded-full"
               >
                 <Link href="/contact">Get Quote</Link>
-              </Button>
+              </Button> */}
             </div>
 
             {/* Mobile Menu Button */}
-            <Button 
-              variant="ghost" 
-              size="sm" 
+            <Button
+              variant="ghost"
+              size="sm"
               className={cn(
                 "lg:hidden ml-auto",
-                isScrolled ? "text-primary" : "text-gray-700", 
+                isScrolled ? "text-primary" : "text-gray-700",
                 "bg-primary/5"
               )}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -668,7 +672,7 @@ export function Header() {
         )}
       >
         {/* Backdrop */}
-        <div 
+        <div
           className={cn(
             "absolute inset-0 bg-gradient-to-br from-brand-dark/95 via-brand-dark/90 to-primary/95 backdrop-blur-sm transition-opacity duration-300",
             isMobileMenuOpen ? "opacity-100" : "opacity-0"
@@ -688,12 +692,12 @@ export function Header() {
             {/* Mobile Navigation */}
             <nav className="flex-1 space-y-2">
               {navigation.map((item, index) => (
-                <div 
+                <div
                   key={item.name}
                   className={cn(
                     "transition-all duration-300",
-                    isMobileMenuOpen 
-                      ? "opacity-100 translate-x-0" 
+                    isMobileMenuOpen
+                      ? "opacity-100 translate-x-0"
                       : "opacity-0 -translate-x-4"
                   )}
                   style={{ transitionDelay: `${index * 50}ms` }}
@@ -714,17 +718,17 @@ export function Header() {
               ))}
 
               {/* Quick Access Links in Mobile */}
-              <div 
+              <div
                 className={cn(
                   "mt-6 pt-6 border-t border-white/20 space-y-2 transition-all duration-300",
-                  isMobileMenuOpen 
-                    ? "opacity-100 translate-x-0" 
+                  isMobileMenuOpen
+                    ? "opacity-100 translate-x-0"
                     : "opacity-0 -translate-x-4"
                 )}
                 style={{ transitionDelay: `${navigation.length * 50}ms` }}
               >
                 <div className="text-white/60 text-sm font-medium px-5 mb-3">Quick Access</div>
-                {quickLinks.map((link) => {
+                {/* {quickLinks.map((link) => {
                   const IconComponent = link.icon
                   return (
                     <Link
@@ -746,24 +750,24 @@ export function Header() {
                       </div>
                     </Link>
                   )
-                })}
+                })} */}
               </div>
             </nav>
 
             {/* Mobile Contact Info & CTA */}
-            <div 
+            <div
               className={cn(
-                "mt-8 space-y-4 transition-all duration-300",
-                isMobileMenuOpen 
-                  ? "opacity-100 translate-y-0" 
+                " space-y-4 transition-all duration-300",
+                isMobileMenuOpen
+                  ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-4"
               )}
               style={{ transitionDelay: '300ms' }}
             >
               {/* Contact Info */}
               <div className="space-y-3 p-5 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20">
-                <a 
-                  href="tel:+61399999999" 
+                <a
+                  href="tel:+61399999999"
                   className="flex items-center gap-3 text-white hover:text-primary transition-colors group"
                 >
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 group-hover:bg-primary group-hover:scale-110 transition-all">
@@ -774,8 +778,8 @@ export function Header() {
                     <div className="font-medium">+61 3 9XXX XXXX</div>
                   </div>
                 </a>
-                <a 
-                  href="mailto:info@newgenstrataservices.com.au" 
+                <a
+                  href="mailto:info@newgenstrataservices.com.au"
                   className="flex items-center gap-3 text-white hover:text-primary transition-colors group"
                 >
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 group-hover:bg-primary group-hover:scale-110 transition-all">
@@ -789,8 +793,8 @@ export function Header() {
               </div>
 
               {/* CTA Button */}
-              <Button 
-                asChild 
+              <Button
+                asChild
                 className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white h-14 text-base font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-200"
               >
                 <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>

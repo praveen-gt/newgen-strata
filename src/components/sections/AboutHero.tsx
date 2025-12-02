@@ -207,10 +207,11 @@ export function AboutHero() {
             variants={fadeInUp}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg"
           >
-            About{" "}
-            <span className="text-brand-accent drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
+            About NewGen Strata Services
+           
+            {/* <span className="text-brand-accent drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
               NewGen Strata Services
-            </span>
+            </span> */}
           </motion.h1>
 
           {/* Subtitle */}

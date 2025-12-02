@@ -115,7 +115,7 @@ const features = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden skyline-silhouette" style={{
+    <section className="relative min-h-[calc(100vh-4rem)] md:min-h-screen flex items-center justify-center overflow-hidden skyline-silhouette" style={{
         backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 100%), url('/images/melbourne-skyline-silhouette.jpg')`,
         backgroundPosition: 'bottom center',
         backgroundSize: 'cover',
@@ -193,6 +193,15 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* Scroll Indicator */}
+      {/* <div className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center animate-bounce z-10">
+        <span className="text-white/60 text-xs mb-2 uppercase tracking-wider">
+          Scroll to explore
+        </span>
+        <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center backdrop-blur-sm">
+          <div className="w-1 h-3 bg-primary mt-2 rounded-full animate-scroll" />
+        </div>
+      </div> */}
     </section>
   )
 }

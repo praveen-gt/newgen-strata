@@ -67,28 +67,125 @@ const staggerContainer = {
 
 export function ServicesPreview() {
 return (
-    <section className="relative py-20 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white" />
-      <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
+    // <section className="relative py-20 overflow-hidden">
+    //   <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white" />
+    //   <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+    //   <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-6 relative z-10">
+    //   <div className="container mx-auto px-6 relative z-10">
+    //     <motion.div
+    //       initial="hidden"
+    //       whileInView="visible"
+    //       viewport={{ once: true, amount: 0.3 }}
+    //       variants={staggerContainer}
+    //       className="text-center max-w-3xl mx-auto mb-16"
+    //     >
+    //       <motion.div variants={fadeInUp}>
+    //         <Badge className="bg-primary/10 text-primary border-primary/20 mb-4">
+    //           Our Services
+    //         </Badge>
+    //       </motion.div>
+
+    //       <motion.h2
+    //         variants={fadeInUp}
+    //         className="text-3xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-6"
+    //       >
+    //         Personal, High-Quality{" "}
+    //         <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Services</span>
+    //       </motion.h2>
+
+    //       <motion.p
+    //         variants={fadeInUp}
+    //         className="text-lg md:text-xl text-gray-600 leading-relaxed"
+    //       >
+    //         Comprehensive services for all aspects of owners corporation management.
+    //       </motion.p>
+    //     </motion.div>
+
+    //     <motion.div
+    //       initial="hidden"
+    //       whileInView="visible"
+    //       viewport={{ once: true, amount: 0.1 }}
+    //       variants={staggerContainer}
+    //       className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12"
+    //     >
+    //       {services.map((service) => {
+    //         const IconComponent = service.icon
+    //         return (
+    //           <motion.div key={service.title} variants={fadeInUp}>
+    //             <Link href="/services" className="block h-full">
+    //               <Card className="h-full border-none shadow-md hover:shadow-2xl transition-all duration-300 bg-white/90 backdrop-blur-sm group hover:-translate-y-2 cursor-pointer">
+    //                 <CardContent className="p-6">
+    //                   <div className="flex flex-col space-y-4">
+    //                     <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl p-4 w-16 h-16 group-hover:from-primary/20 group-hover:to-secondary/20 transition-colors">
+    //                       <IconComponent className={`h-8 w-8 ${service.color} group-hover:scale-110 transition-transform`} />
+    //                     </div>
+                        
+    //                     <div>
+    //                       <h3 className="text-xl font-semibold text-brand-dark mb-2 group-hover:text-primary transition-colors">
+    //                         {service.title}
+    //                       </h3>
+    //                       <p className="text-gray-600 text-sm leading-relaxed mb-3">
+    //                         {service.description}
+    //                       </p>
+    //                       <div className="flex items-center text-primary text-sm font-medium group-hover:gap-2 transition-all">
+    //                         <span>Learn more</span>
+    //                         <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+    //                       </div>
+    //                     </div>
+    //                   </div>
+    //                 </CardContent>
+    //               </Card>
+    //             </Link>
+    //           </motion.div>
+    //         )
+    //       })}
+    //     </motion.div>
+
+    //     {/* View All Services CTA */}
+    //     <motion.div
+    //       initial="hidden"
+    //       whileInView="visible"
+    //       viewport={{ once: true }}
+    //       variants={fadeInUp}
+    //       className="text-center"
+    //     >
+    //       <Button 
+    //         asChild 
+    //         size="lg"
+    //         className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-bold px-10 py-6 rounded-full shadow-xl hover:scale-105 transition-all duration-300"
+    //       >
+    //         <Link href="/services">
+    //           View All Services
+    //           <ArrowRight className="ml-2 h-5 w-5" />
+    //         </Link>
+    //       </Button>
+    //     </motion.div>
+    //   </div>
+    // </section>
+
+     <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white" />
+      <div className="absolute top-1/4 left-0 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-0 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-secondary/5 rounded-full blur-3xl" />
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={staggerContainer}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 md:mb-16"
         >
           <motion.div variants={fadeInUp}>
-            <Badge className="bg-primary/10 text-primary border-primary/20 mb-4">
+            <Badge className="bg-primary/10 text-primary border-primary/20 mb-3 sm:mb-4 text-xs sm:text-sm px-3 py-1.5 sm:px-4 sm:py-2">
               Our Services
             </Badge>
           </motion.div>
 
           <motion.h2
             variants={fadeInUp}
-            className="text-3xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-4 sm:mb-5 md:mb-6 px-2"
           >
             Personal, High-Quality{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Services</span>
@@ -96,7 +193,7 @@ return (
 
           <motion.p
             variants={fadeInUp}
-            className="text-lg md:text-xl text-gray-600 leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed px-2"
           >
             Comprehensive services for all aspects of owners corporation management.
           </motion.p>
@@ -107,7 +204,7 @@ return (
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
           variants={staggerContainer}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 mb-8 sm:mb-10 md:mb-12"
         >
           {services.map((service) => {
             const IconComponent = service.icon
@@ -115,22 +212,22 @@ return (
               <motion.div key={service.title} variants={fadeInUp}>
                 <Link href="/services" className="block h-full">
                   <Card className="h-full border-none shadow-md hover:shadow-2xl transition-all duration-300 bg-white/90 backdrop-blur-sm group hover:-translate-y-2 cursor-pointer">
-                    <CardContent className="p-6">
-                      <div className="flex flex-col space-y-4">
-                        <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl p-4 w-16 h-16 group-hover:from-primary/20 group-hover:to-secondary/20 transition-colors">
-                          <IconComponent className={`h-8 w-8 ${service.color} group-hover:scale-110 transition-transform`} />
+                    <CardContent className="p-5 sm:p-6">
+                      <div className="flex flex-col space-y-3 sm:space-y-4">
+                        <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl p-3 sm:p-4 w-14 h-14 sm:w-16 sm:h-16 group-hover:from-primary/20 group-hover:to-secondary/20 transition-colors">
+                          <IconComponent className={`h-7 w-7 sm:h-8 sm:w-8 ${service.color} group-hover:scale-110 transition-transform`} />
                         </div>
                         
                         <div>
-                          <h3 className="text-xl font-semibold text-brand-dark mb-2 group-hover:text-primary transition-colors">
+                          <h3 className="text-lg sm:text-xl font-semibold text-brand-dark mb-2 group-hover:text-primary transition-colors">
                             {service.title}
                           </h3>
-                          <p className="text-gray-600 text-sm leading-relaxed mb-3">
+                          <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-2 sm:mb-3">
                             {service.description}
                           </p>
-                          <div className="flex items-center text-primary text-sm font-medium group-hover:gap-2 transition-all">
+                          <div className="flex items-center text-primary text-xs sm:text-sm font-medium group-hover:gap-2 transition-all">
                             <span>Learn more</span>
-                            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                            <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 group-hover:translate-x-1 transition-transform" />
                           </div>
                         </div>
                       </div>
@@ -153,11 +250,11 @@ return (
           <Button 
             asChild 
             size="lg"
-            className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-bold px-10 py-6 rounded-full shadow-xl hover:scale-105 transition-all duration-300"
+            className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-bold px-8 py-5 sm:px-10 sm:py-6 text-sm sm:text-base rounded-full shadow-xl hover:scale-105 transition-all duration-300"
           >
             <Link href="/services">
               View All Services
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Link>
           </Button>
         </motion.div>

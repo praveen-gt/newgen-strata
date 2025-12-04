@@ -40,18 +40,18 @@ const SectionHeader = () => (
     whileInView="visible"
     viewport={{ once: true }}
     variants={fadeInUp}
-    className="text-center max-w-3xl mx-auto mb-20"
+    className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 md:mb-20"
   >
-    <Badge className="bg-secondary/10 text-secondary border-secondary/20 mb-4">
+    <Badge className="bg-secondary/10 text-secondary border-secondary/20 mb-3 sm:mb-4 text-xs sm:text-sm px-3 py-1.5 sm:px-4 sm:py-2">
       Our Promise
     </Badge>
 
-    <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-dark mb-6">
+    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-4 sm:mb-5 md:mb-6 px-2">
       The Commitments of{" "}
-      <span className="text-gradient-wimbledon">NewGen Strata Services</span>
+      <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">NewGen Strata Services</span>
     </h2>
 
-    <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+    <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed px-2">
       We have three fundamental commitments we make to our clients, our professional
       & trade service providers, and our own staff — and we are ready and willing to
       be held to these and challenged on them at any time.
@@ -72,59 +72,99 @@ const InteractiveCommitmentCard = ({
   index,
 }: CommitmentItem & { index: number }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: index * 0.15, duration: 0.6 }}
-      className="relative group"
-    >
-      <motion.div
-        layout
-        className={`
-          relative rounded-3xl p-8 shadow-xl 
-          backdrop-blur-sm border border-white/20 
-          bg-white transition-all duration-500
-        `}
-        whileHover={{ scale: 1.02, y: -5 }}
-        transition={{ type: "spring", stiffness: 300 }}
-      >
-        {/* Top section: Icon + Sparkles */}
-        <div className="flex items-center justify-between mb-4">
-          <div className={`p-4 rounded-2xl bg-gradient-to-br ${colors} backdrop-blur-sm`}>
-            <Icon className="h-8 w-8 text-brand-dark" />
-          </div>
+    // <motion.div
+    //   initial={{ opacity: 0, y: 50 }}
+    //   whileInView={{ opacity: 1, y: 0 }}
+    //   viewport={{ once: true }}
+    //   transition={{ delay: index * 0.15, duration: 0.6 }}
+    //   className="relative group"
+    // >
+    //   <motion.div
+    //     layout
+    //     className={`
+    //       relative rounded-3xl p-8 shadow-xl 
+    //       backdrop-blur-sm border border-white/20 
+    //       bg-white transition-all duration-500
+    //     `}
+    //     whileHover={{ scale: 1.02, y: -5 }}
+    //     transition={{ type: "spring", stiffness: 300 }}
+    //   >
+    //     {/* Top section: Icon + Sparkles */}
+    //     <div className="flex items-center justify-between mb-4">
+    //       <div className={`p-4 rounded-2xl bg-gradient-to-br ${colors} backdrop-blur-sm`}>
+    //         <Icon className="h-8 w-8 text-brand-dark" />
+    //       </div>
 
-          <Sparkles className="h-6 w-6 text-brand-dark opacity-70 rotate-45" />
-        </div>
+    //       <Sparkles className="h-6 w-6 text-brand-dark opacity-70 rotate-45" />
+    //     </div>
 
-        {/* Title */}
-        <h3 className="text-2xl md:text-3xl font-bold text-brand-dark mb-3">
-          {title}
-        </h3>
+    //     {/* Title */}
+    //     <h3 className="text-2xl md:text-3xl font-bold text-brand-dark mb-3">
+    //       {title}
+    //     </h3>
 
-        {/* Description */}
-        <p className="text-gray-700 leading-relaxed text-lg mb-4">
-          {description}
-        </p>
+    //     {/* Description */}
+    //     <p className="text-gray-700 leading-relaxed text-lg mb-4">
+    //       {description}
+    //     </p>
 
-        {/* ALWAYS VISIBLE DETAILS (expanded look) */}
-        <div className="space-y-3 pt-4 border-t border-gray-200">
-          {details.map((detail, idx) => (
-            <div
-              key={idx}
-              className="flex items-start gap-3"
-            >
-              <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-              <p className="text-gray-600 text-sm">{detail}</p>
+    //     {/* ALWAYS VISIBLE DETAILS (expanded look) */}
+    //     <div className="space-y-3 pt-4 border-t border-gray-200">
+    //       {details.map((detail, idx) => (
+    //         <div
+    //           key={idx}
+    //           className="flex items-start gap-3"
+    //         >
+    //           <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+    //           <p className="text-gray-600 text-sm">{detail}</p>
+    //         </div>
+    //       ))}
+    //     </div>
+
+    //     {/* Decorative light blur */}
+    //     <div className="absolute -right-8 -bottom-8 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
+    //   </motion.div>
+    // </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: index * 0.15, duration: 0.6 }}
+          className="relative group"
+        >
+          <motion.div
+            layout
+            className="relative rounded-2xl sm:rounded-3xl p-6 sm:p-7 md:p-8 shadow-xl backdrop-blur-sm border border-white/20 bg-white transition-all duration-500"
+            whileHover={{ scale: 1.02, y: -5 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <div className="flex items-center justify-between mb-3 sm:mb-4">
+              <div className={`p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-gradient-to-br ${colors} backdrop-blur-sm`}>
+                <Icon className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-brand-dark" />
+              </div>
+              <Sparkles className="h-5 w-5 sm:h-6 sm:w-6 text-brand-dark opacity-70 rotate-45" />
             </div>
-          ))}
-        </div>
-
-        {/* Decorative light blur */}
-        <div className="absolute -right-8 -bottom-8 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
-      </motion.div>
-    </motion.div>
+    
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-brand-dark mb-2 sm:mb-3">
+              {title}
+            </h3>
+    
+            <p className="text-gray-700 leading-relaxed text-base sm:text-lg mb-3 sm:mb-4">
+              {description}
+            </p>
+    
+            <div className="space-y-2 sm:space-y-3 pt-3 sm:pt-4 border-t border-gray-200">
+              {details.map((detail, idx) => (
+                <div key={idx} className="flex items-start gap-2 sm:gap-3">
+                  <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-600 text-xs sm:text-sm">{detail}</p>
+                </div>
+              ))}
+            </div>
+    
+            <div className="absolute -right-6 -bottom-6 sm:-right-8 sm:-bottom-8 w-24 h-24 sm:w-32 sm:h-32 bg-white/10 rounded-full blur-2xl" />
+          </motion.div>
+        </motion.div>
   );
 };
 
@@ -173,7 +213,7 @@ const AdvancedCommitmentsGrid = () => {
   ];
 
   return (
-    <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-7 md:gap-8 max-w-7xl mx-auto mb-12 sm:mb-14 md:mb-16">
       {commitments.map((item, index) => (
         <InteractiveCommitmentCard key={item.title} {...item} index={index} />
       ))}
@@ -230,93 +270,159 @@ const ValueOrbit = () => {
   }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-      className="relative max-w-4xl mx-auto mb-20 py-8 md:py-16 px-4"
-    >
-      {/* Container - responsive sizing */}
-      <div className="relative w-full h-[450px] sm:h-[500px] md:h-[600px] flex items-center justify-center">
-        {/* Orbital rings - responsive sizing */}
+    // <motion.div
+    //   initial={{ opacity: 0, scale: 0.8 }}
+    //   whileInView={{ opacity: 1, scale: 1 }}
+    //   viewport={{ once: true }}
+    //   transition={{ duration: 0.8 }}
+    //   className="relative max-w-4xl mx-auto mb-20 py-8 md:py-16 px-4"
+    // >
+    //   {/* Container - responsive sizing */}
+    //   <div className="relative w-full h-[450px] sm:h-[500px] md:h-[600px] flex items-center justify-center">
+    //     {/* Orbital rings - responsive sizing */}
+    //     <motion.div
+    //       animate={{ rotate: 360 }}
+    //       transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+    //       className="absolute w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] md:w-[440px] md:h-[440px] rounded-full border-2 border-dashed border-primary/30"
+    //     />
+    //     <motion.div
+    //       animate={{ rotate: -360 }}
+    //       transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+    //       className="absolute w-[260px] h-[260px] sm:w-[330px] sm:h-[330px] md:w-[400px] md:h-[400px] rounded-full border-2 border-dotted border-secondary/30"
+    //     />
+
+    //     {/* Orbiting values - positioned in a circle */}
+    //     {values.map((value, index) => {
+    //       // Responsive radius calculation
+    //       // const getRadius = () => {
+    //       //   if (typeof window !== 'undefined') {
+    //       //     if (window.innerWidth < 640) return 130; // mobile
+    //       //     if (window.innerWidth < 768) return 170; // tablet
+    //       //     return 220; // desktop
+    //       //   }
+    //       //   return 220; // default
+    //       // };
+
+
+    //       const { left, top, radius } = positions;
+    //       const angleRad = (value.angle * Math.PI) / 180;
+    //       const x = Math.cos(angleRad) * radius;
+    //       const y = Math.sin(angleRad) * radius;
+
+    //       return (
+    //         <motion.div
+    //           key={value.label}
+    //           initial={{ opacity: 0, scale: 0 }}
+    //           whileInView={{ opacity: 1, scale: 1 }}
+    //           viewport={{ once: true }}
+    //           transition={{ delay: index * 0.2, duration: 0.5 }}
+    //           // style={{
+    //           //   position: 'absolute',
+    //           //   left: `calc(${leftPos}% + ${x}px)`,
+    //           //   top: `calc(${topPos}% + ${y}px)`,
+    //           //   transform: 'translate(-50%, -50%)',
+    //           //   zIndex: 30,
+    //           // }}
+    //           style={{
+    //             position: 'absolute',
+    //             left: `calc(${left}% + ${x}px)`,
+    //             top: `calc(${top}% + ${y}px)`,
+    //             transform: 'translate(-50%, -50%)',
+    //             zIndex: 30,
+    //           }}
+    //         >
+    //           <motion.div
+    //             whileHover={{ scale: 1.15, rotate: 5 }}
+    //             className={`w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-xl md:rounded-2xl shadow-xl bg-gradient-to-br ${value.color} flex items-center justify-center backdrop-blur-sm border-2 md:border-4 border-white cursor-pointer group relative`}
+    //           >
+    //             <div className="text-center">
+    //               <value.icon className="h-6 w-6 sm:h-7 sm:w-7 md:h-9 md:w-9 text-brand-dark mx-auto mb-1 group-hover:scale-110 transition-transform" />
+    //               <p className="font-bold text-brand-dark text-xs sm:text-xs md:text-sm">{value.label}</p>
+    //             </div>
+    //           </motion.div>
+    //         </motion.div>
+    //       );
+    //     })}
+
+    //     {/* Center core - responsive sizing */}
+    //     <motion.div
+    //       whileHover={{ scale: 1.05 }}
+    //       className="absolute w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-gradient-to-br from-primary to-primary/80 rounded-full shadow-2xl flex items-center justify-center z-10 border-2 md:border-4 border-white"
+    //     >
+    //       <div className="text-center">
+    //         <p className="font-bold text-white text-sm sm:text-base md:text-lg leading-tight">
+    //           OUR<br />CUSTOMERS
+    //         </p>
+    //       </div>
+    //     </motion.div>
+    //   </div>
+    // </motion.div>
+
         <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-          className="absolute w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] md:w-[440px] md:h-[440px] rounded-full border-2 border-dashed border-primary/30"
-        />
-        <motion.div
-          animate={{ rotate: -360 }}
-          transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-          className="absolute w-[260px] h-[260px] sm:w-[330px] sm:h-[330px] md:w-[400px] md:h-[400px] rounded-full border-2 border-dotted border-secondary/30"
-        />
-
-        {/* Orbiting values - positioned in a circle */}
-        {values.map((value, index) => {
-          // Responsive radius calculation
-          // const getRadius = () => {
-          //   if (typeof window !== 'undefined') {
-          //     if (window.innerWidth < 640) return 130; // mobile
-          //     if (window.innerWidth < 768) return 170; // tablet
-          //     return 220; // desktop
-          //   }
-          //   return 220; // default
-          // };
-
-
-          const { left, top, radius } = positions;
-          const angleRad = (value.angle * Math.PI) / 180;
-          const x = Math.cos(angleRad) * radius;
-          const y = Math.sin(angleRad) * radius;
-
-          return (
-            <motion.div
-              key={value.label}
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2, duration: 0.5 }}
-              // style={{
-              //   position: 'absolute',
-              //   left: `calc(${leftPos}% + ${x}px)`,
-              //   top: `calc(${topPos}% + ${y}px)`,
-              //   transform: 'translate(-50%, -50%)',
-              //   zIndex: 30,
-              // }}
-              style={{
-                position: 'absolute',
-                left: `calc(${left}% + ${x}px)`,
-                top: `calc(${top}% + ${y}px)`,
-                transform: 'translate(-50%, -50%)',
-                zIndex: 30,
-              }}
-            >
-              <motion.div
-                whileHover={{ scale: 1.15, rotate: 5 }}
-                className={`w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-xl md:rounded-2xl shadow-xl bg-gradient-to-br ${value.color} flex items-center justify-center backdrop-blur-sm border-2 md:border-4 border-white cursor-pointer group relative`}
-              >
-                <div className="text-center">
-                  <value.icon className="h-6 w-6 sm:h-7 sm:w-7 md:h-9 md:w-9 text-brand-dark mx-auto mb-1 group-hover:scale-110 transition-transform" />
-                  <p className="font-bold text-brand-dark text-xs sm:text-xs md:text-sm">{value.label}</p>
-                </div>
-              </motion.div>
-            </motion.div>
-          );
-        })}
-
-        {/* Center core - responsive sizing */}
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          className="absolute w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-gradient-to-br from-primary to-primary/80 rounded-full shadow-2xl flex items-center justify-center z-10 border-2 md:border-4 border-white"
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative max-w-4xl mx-auto mb-12 sm:mb-16 md:mb-20 py-8 md:py-16 px-4"
         >
-          <div className="text-center">
-            <p className="font-bold text-white text-sm sm:text-base md:text-lg leading-tight">
-              OUR<br />CUSTOMERS
-            </p>
+          <div className="relative w-full h-[450px] sm:h-[500px] md:h-[600px] flex items-center justify-center">
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+              className="absolute w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] md:w-[440px] md:h-[440px] rounded-full border-2 border-dashed border-primary/30"
+            />
+            <motion.div
+              animate={{ rotate: -360 }}
+              transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+              className="absolute w-[260px] h-[260px] sm:w-[330px] sm:h-[330px] md:w-[400px] md:h-[400px] rounded-full border-2 border-dotted border-secondary/30"
+            />
+    
+            {values.map((value, index) => {
+              const { left, top, radius } = positions;
+              const angleRad = (value.angle * Math.PI) / 180;
+              const x = Math.cos(angleRad) * radius;
+              const y = Math.sin(angleRad) * radius;
+    
+              return (
+                <motion.div
+                  key={value.label}
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.2, duration: 0.5 }}
+                  style={{
+                    position: 'absolute',
+                    left: `calc(${left}% + ${x}px)`,
+                    top: `calc(${top}% + ${y}px)`,
+                    transform: 'translate(-50%, -50%)',
+                    zIndex: 30,
+                  }}
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.15, rotate: 5 }}
+                    className={`w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-xl md:rounded-2xl shadow-xl bg-gradient-to-br ${value.color} flex items-center justify-center backdrop-blur-sm border-2 md:border-4 border-white cursor-pointer group relative`}
+                  >
+                    <div className="text-center">
+                      <value.icon className="h-6 w-6 sm:h-7 sm:w-7 md:h-9 md:w-9 text-brand-dark mx-auto mb-1 group-hover:scale-110 transition-transform" />
+                      <p className="font-bold text-brand-dark text-xs sm:text-xs md:text-sm">{value.label}</p>
+                    </div>
+                  </motion.div>
+                </motion.div>
+              );
+            })}
+    
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="absolute w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-gradient-to-br from-primary to-primary/80 rounded-full shadow-2xl flex items-center justify-center z-10 border-2 md:border-4 border-white"
+            >
+              <div className="text-center">
+                <p className="font-bold text-white text-sm sm:text-base md:text-lg leading-tight">
+                  OUR<br />CUSTOMERS
+                </p>
+              </div>
+            </motion.div>
           </div>
         </motion.div>
-      </div>
-    </motion.div>
   );
 };
 
@@ -329,20 +435,19 @@ const QuoteBlock = () => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.8 }}
-    className="relative text-center bg-gradient-to-br from-white via-primary/5 to-white rounded-3xl shadow-2xl p-12 max-w-4xl mx-auto border border-primary/20 overflow-hidden"
+    className="relative text-center bg-gradient-to-br from-white via-primary/5 to-white rounded-2xl sm:rounded-3xl shadow-2xl p-8 sm:p-10 md:p-12 max-w-4xl mx-auto border border-primary/20 overflow-hidden"
   >
-    {/* Decorative quote marks */}
-    <div className="absolute top-6 left-6 text-8xl text-primary/10 font-serif leading-none">&quot;</div>
-    <div className="absolute bottom-6 right-6 text-8xl text-primary/10 font-serif leading-none">&quot;</div>
+    <div className="absolute top-4 left-4 sm:top-6 sm:left-6 text-6xl sm:text-7xl md:text-8xl text-primary/10 font-serif leading-none">&quot;</div>
+    <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 text-6xl sm:text-7xl md:text-8xl text-primary/10 font-serif leading-none">&quot;</div>
 
     <div className="relative z-10">
-      <blockquote className="text-2xl md:text-4xl font-semibold text-brand-dark mb-4 leading-relaxed">
+      <blockquote className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-brand-dark mb-3 sm:mb-4 leading-relaxed px-2">
         The quality is long remembered after the price is forgotten
       </blockquote>
-      <div className="flex items-center justify-center gap-2 text-gray-600 font-medium text-lg">
-        <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-primary" />
+      <div className="flex items-center justify-center gap-2 text-gray-600 font-medium text-sm sm:text-base md:text-lg">
+        <div className="w-8 sm:w-10 md:w-12 h-0.5 bg-gradient-to-r from-transparent to-primary" />
         <p>NewGen Strata Services</p>
-        <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-primary" />
+        <div className="w-8 sm:w-10 md:w-12 h-0.5 bg-gradient-to-l from-transparent to-primary" />
       </div>
     </div>
   </motion.div>
@@ -353,13 +458,26 @@ const QuoteBlock = () => (
 // ============================
 export default function OurCommitmentsAbout() {
   return (
-    <section className="relative section-padding overflow-hidden bg-gradient-to-br from-primary/5 via-white to-secondary/5">
-      {/* Enhanced Decorative Background */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '0.7s' }} />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary/5 to-secondary/5 rounded-full blur-3xl" />
+    // <section className="relative section-padding overflow-hidden bg-gradient-to-br from-primary/5 via-white to-secondary/5">
+    //   {/* Enhanced Decorative Background */}
+    //   <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
+    //   <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '0.7s' }} />
+    //   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary/5 to-secondary/5 rounded-full blur-3xl" />
 
-      <div className="container-custom relative z-10">
+    //   <div className="container-custom relative z-10">
+    //     <SectionHeader />
+    //     <ValueOrbit />
+    //     <AdvancedCommitmentsGrid />
+    //     <QuoteBlock />
+    //   </div>
+    // </section>
+
+     <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden bg-gradient-to-br from-primary/5 via-white to-secondary/5">
+      <div className="absolute top-0 left-1/4 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-0 right-1/4 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '0.7s' }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] sm:w-[500px] sm:h-[500px] md:w-[600px] md:h-[600px] bg-gradient-to-br from-primary/5 to-secondary/5 rounded-full blur-3xl" />
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeader />
         <ValueOrbit />
         <AdvancedCommitmentsGrid />

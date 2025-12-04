@@ -120,7 +120,7 @@
   * {
     border-color: var(--color-border);
   }
-  
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
@@ -154,6 +154,7 @@
 
 /* Component layer styles */
 @layer components {
+
   /* Custom button variants */
   .btn-wimbledon {
     background: var(--gradient-wimbledon);
@@ -165,8 +166,9 @@
   }
 
   .bg-gradient-wimbledon {
-  background: linear-gradient(135deg, #1A472A, #3D8B37); /* Wimbledon green shades */
-}
+    background: linear-gradient(135deg, #1A472A, #3D8B37);
+    /* Wimbledon green shades */
+  }
 
   .btn-wimbledon:hover {
     box-shadow: var(--shadow-lg);
@@ -286,12 +288,17 @@
 
   /* Hero section background */
   .skyline-silhouette {
-  background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 100%),
-              url('/images/melbourne-skyline-silhouette.jpg') bottom center / 100% auto no-repeat;
-  /* Added `background-attachment: fixed;` potentially for a parallax effect if you scroll the main page */
-  /* You can remove `background-attachment: fixed;` if you don't want the parallax effect */
-  background-attachment: fixed; 
-}
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 100%),
+      url('/images/melbourne-skyline-silhouette.jpg') bottom center / cover no-repeat;
+    background-attachment: scroll;
+  }
+
+  /* Footer background - mobile friendly with desktop parallax */
+  .skyline-silhouette-footer {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 100%),
+      url('/images/melbourne-skyline-silhouette.jpg') bottom center / cover no-repeat;
+    background-attachment: scroll;
+  }
 
   /* Glass morphism effect */
   .glass {
@@ -323,6 +330,7 @@
 
 /* Utility layer */
 @layer utilities {
+
   /* Text utilities */
   .text-balance {
     text-wrap: balance;
@@ -346,6 +354,14 @@
   @media (min-width: 1024px) {
     .responsive-text {
       font-size: 1.125rem;
+    }
+
+        .skyline-silhouette {
+      background-attachment: fixed;
+    }
+
+    .skyline-silhouette-footer {
+      background-attachment: fixed;
     }
   }
 
@@ -394,6 +410,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -404,6 +421,7 @@
     transform: translateY(100%);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -415,6 +433,7 @@
     transform: translateX(100%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -422,53 +441,116 @@
 }
 
 @keyframes pulse-slow {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.8;
   }
 }
 
 @keyframes slide-down {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slide-up {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes gradient {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 @keyframes scroll {
-  0% { transform: translateY(0); opacity: 0; }
-  40% { opacity: 1; }
-  80% { transform: translateY(20px); opacity: 0; }
-  100% { opacity: 0; }
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  80% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
-.animate-fade-in { animation: fade-in 1s ease-out; }
-.animate-slide-down { animation: slide-down 0.8s ease-out; }
-.animate-slide-up { animation: slide-up 0.8s ease-out; }
-.animate-gradient { background-size: 200% 200%; animation: gradient 6s ease infinite; }
-.animate-scroll { animation: scroll 2s ease-in-out infinite; }
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
 
-.delay-200 { animation-delay: 200ms; }
-.delay-400 { animation-delay: 400ms; }
-.delay-600 { animation-delay: 600ms; }
-.delay-1000 { animation-delay: 1000ms; }
+.animate-slide-down {
+  animation: slide-down 0.8s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 6s ease infinite;
+}
+
+.animate-scroll {
+  animation: scroll 2s ease-in-out infinite;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+.delay-600 {
+  animation-delay: 600ms;
+}
+
+.delay-1000 {
+  animation-delay: 1000ms;
+}
 
 /* Print styles */
 @media print {
   .no-print {
     display: none !important;
   }
-  
+
   * {
     print-color-adjust: exact !important;
   }

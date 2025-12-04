@@ -231,7 +231,7 @@ const fadeInUp = {
 
 export function HowWereDifferent() {
   return (
-    <section className="section-padding relative overflow-hidden">
+    <section className="relative overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24">
       {/* Soft pattern background */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-gray-50 via-white to-primary/5">
         <div className="absolute inset-0 opacity-20"
@@ -243,7 +243,7 @@ export function HowWereDifferent() {
         />
       </div>
 
-      <div className="container-custom">
+       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial="hidden"
@@ -252,11 +252,11 @@ export function HowWereDifferent() {
           variants={fadeInUp}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <Badge className="bg-primary/10 text-primary border-primary/20 mb-4">
+          <Badge className="bg-primary/10 text-primary border-primary/20 mb-3 sm:mb-4 text-xs sm:text-sm px-3 py-1.5 sm:px-4 sm:py-2">
             Our Difference
           </Badge>
 
-          <h2 className="text-3xl md:text-5xl font-heading font-bold text-brand-dark mb-6">
+         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-dark mb-4 sm:mb-5 md:mb-6 px-2">
             How is NewGen Strata Services{" "}
             <span className="text-gradient-wimbledon">Different?</span>
           </h2>

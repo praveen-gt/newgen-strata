@@ -169,98 +169,139 @@ const stats = [
 
 export function AboutHero() {
   return (
-    <section className="relative flex items-center overflow-hidden">
-      {/* Background Image with Parallax Effect */}
-      <div className="absolute inset-0">
-        <Image
-          src="/images/about/about-banner.jpg"
-          alt="NewGen Strata Services - Modern strata management excellence"
-          fill
-          className="object-cover"
-          priority
-        />
-        {/* Lighter Gradient Overlay - Better Contrast */}
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/75 via-black/50 to-brand-dark/70" />
-      </div>
+    // <section className="relative flex items-center overflow-hidden">
+    //   {/* Background Image with Parallax Effect */}
+    //   <div className="absolute inset-0">
+    //     <Image
+    //       src="/images/about/about-banner.jpg"
+    //       alt="NewGen Strata Services - Modern strata management excellence"
+    //       fill
+    //       className="object-cover"
+    //       priority
+    //     />
+    //     {/* Lighter Gradient Overlay - Better Contrast */}
+    //     <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/75 via-black/50 to-brand-dark/70" />
+    //   </div>
 
-      {/* Animated Gradient Orbs - Subtler */}
-      <div className="absolute top-20 left-10 w-96 h-96 bg-primary/15 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-32 right-20 w-96 h-96 bg-secondary/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '0.7s' }} />
+    //   {/* Animated Gradient Orbs - Subtler */}
+    //   <div className="absolute top-20 left-10 w-96 h-96 bg-primary/15 rounded-full blur-3xl animate-pulse" />
+    //   <div className="absolute bottom-32 right-20 w-96 h-96 bg-secondary/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '0.7s' }} />
 
-      <div className="container-custom relative z-10 pt-20 pb-16">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={staggerContainer}
-          className="max-w-4xl"
-        >
-          {/* Badge */}
-          {/* <motion.div variants={fadeInUp} className="mb-6">
-            <Badge className="bg-white/95 backdrop-blur-md border-white/50 text-brand-dark px-6 py-3 text-sm font-semibold rounded-full shadow-xl">
-              🏢 Melbourne&apos;s Premier Strata Management
-            </Badge>
-          </motion.div> */}
+    //   <div className="container-custom relative z-10 pt-20 pb-16">
+    //     <motion.div
+    //       initial="hidden"
+    //       whileInView="visible"
+    //       viewport={{ once: true, amount: 0.3 }}
+    //       variants={staggerContainer}
+    //       className="max-w-4xl"
+    //     >
 
-          {/* Main Heading */}
-          <motion.h1
-            variants={fadeInUp}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg"
-          >
-            About NewGen Strata Services
+
+    //       {/* Main Heading */}
+    //       <motion.h1
+    //         variants={fadeInUp}
+    //         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg"
+    //       >
+    //         About NewGen Strata Services
            
-            {/* <span className="text-brand-accent drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
-              NewGen Strata Services
-            </span> */}
-          </motion.h1>
+    //         {/* <span className="text-brand-accent drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
+    //           NewGen Strata Services
+    //         </span> */}
+    //       </motion.h1>
 
-          {/* Subtitle */}
-          <motion.p 
-            variants={fadeInUp} 
-            className="text-xl md:text-2xl text-white leading-relaxed mb-8 max-w-3xl drop-shadow-md"
-          >
-            A new generation organisation designed to provide exceptional support, 
-            service and respect to members of Owners Corporations.
-          </motion.p>
+    //       {/* Subtitle */}
+    //       <motion.p 
+    //         variants={fadeInUp} 
+    //         className="text-xl md:text-2xl text-white leading-relaxed mb-8 max-w-3xl drop-shadow-md"
+    //       >
+    //         A new generation organisation designed to provide exceptional support, 
+    //         service and respect to members of Owners Corporations.
+    //       </motion.p>
 
-          {/* Key Values */}
-          <motion.div 
-            variants={fadeInUp}
-            className="flex flex-wrap gap-4 mb-12"
-          >
-            {['Honesty', 'Integrity', 'Excellence', 'Transparency'].map((value, index) => (
-              <div 
-                key={value}
-                className="flex items-center gap-2 bg-white/95 backdrop-blur-md border border-white/50 rounded-full px-5 py-2.5 text-brand-dark hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+    //       {/* Key Values */}
+    //       <motion.div 
+    //         variants={fadeInUp}
+    //         className="flex flex-wrap gap-4 mb-12"
+    //       >
+    //         {['Honesty', 'Integrity', 'Excellence', 'Transparency'].map((value, index) => (
+    //           <div 
+    //             key={value}
+    //             className="flex items-center gap-2 bg-white/95 backdrop-blur-md border border-white/50 rounded-full px-5 py-2.5 text-brand-dark hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+    //           >
+    //             <div className="w-2 h-2 bg-primary rounded-full animate-pulse" style={{ animationDelay: `${index * 0.2}s` }} />
+    //             <span className="text-sm font-semibold">{value}</span>
+    //           </div>
+    //         ))}
+    //       </motion.div>
+
+
+    //     </motion.div>
+    //   </div>
+
+
+    // </section>
+
+      <section className="relative flex items-center overflow-hidden min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh]">
+          {/* Background Image with Parallax Effect */}
+          <div className="absolute inset-0">
+            <Image
+              src="/images/about/about-banner.jpg"
+              alt="NewGen Strata Services - Modern strata management excellence"
+              fill
+              className="object-cover"
+              priority
+            />
+            {/* Lighter Gradient Overlay - Better Contrast */}
+            <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/75 via-black/50 to-brand-dark/70" />
+          </div>
+    
+          {/* Animated Gradient Orbs - Subtler */}
+          <div className="absolute top-10 left-5 w-48 h-48 sm:top-14 sm:left-7 sm:w-64 sm:h-64 md:top-20 md:left-10 md:w-96 md:h-96 bg-primary/15 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-16 right-5 w-48 h-48 sm:bottom-20 sm:right-7 sm:w-64 sm:h-64 md:bottom-32 md:right-20 md:w-96 md:h-96 bg-secondary/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '0.7s' }} />
+    
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 sm:py-20 md:py-24 lg:py-28">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={staggerContainer}
+              className="max-w-4xl"
+            >
+              {/* Main Heading */}
+              <motion.h1
+                variants={fadeInUp}
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-5 md:mb-6 leading-tight drop-shadow-lg"
               >
-                <div className="w-2 h-2 bg-primary rounded-full animate-pulse" style={{ animationDelay: `${index * 0.2}s` }} />
-                <span className="text-sm font-semibold">{value}</span>
-              </div>
-            ))}
-          </motion.div>
-
-
-        </motion.div>
-      </div>
-
-      {/* Scroll Indicator
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.5, duration: 0.8 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 animate-bounce"
-      >
-        <span className="text-white/60 text-xs uppercase tracking-wider font-medium">
-          Scroll to learn more
-        </span>
-        <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center backdrop-blur-sm">
-          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-scroll" />
-        </div>
-      </motion.div> */}
-
-      {/* Decorative Bottom Wave */}
-      {/* <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" /> */}
-    </section>
+                About NewGen Strata Services
+              </motion.h1>
+    
+              {/* Subtitle */}
+              <motion.p 
+                variants={fadeInUp} 
+                className="text-base sm:text-lg md:text-xl lg:text-2xl text-white leading-relaxed mb-6 sm:mb-7 md:mb-8 max-w-3xl drop-shadow-md"
+              >
+                A new generation organisation designed to provide exceptional support, 
+                service and respect to members of Owners Corporations.
+              </motion.p>
+    
+              {/* Key Values */}
+              <motion.div 
+                variants={fadeInUp}
+                className="flex flex-wrap gap-2 sm:gap-3 md:gap-4"
+              >
+                {['Honesty', 'Integrity', 'Excellence', 'Transparency'].map((value, index) => (
+                  <div 
+                    key={value}
+                    className="flex items-center gap-1.5 sm:gap-2 bg-white/95 backdrop-blur-md border border-white/50 rounded-full px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-2.5 text-brand-dark hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                  >
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full animate-pulse" style={{ animationDelay: `${index * 0.2}s` }} />
+                    <span className="text-xs sm:text-sm font-semibold">{value}</span>
+                  </div>
+                ))}
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
   )
 }
 

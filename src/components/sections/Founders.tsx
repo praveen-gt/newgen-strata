@@ -416,11 +416,11 @@ export function Founders() {
           variants={fadeInUp}
           className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 md:mb-16"
         >
-          <Badge className="bg-primary/10 text-primary border-primary/20 mb-3 sm:mb-4 text-xs sm:text-sm px-3 py-1.5 sm:px-4 sm:py-2">
+          <Badge className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-700 border-blue-300/50 mb-4 sm:mb-5 md:mb-6 text-base sm:text-lg md:text-xl px-5 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-3.5 font-semibold shadow-lg hover:shadow-xl transition-shadow duration-300">
             The Founders
           </Badge>
 
-         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-dark mb-4 sm:mb-5 md:mb-6 px-2">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-dark mb-4 sm:mb-5 md:mb-6 px-2">
             About the Founders of{" "}
             <span className="text-gradient-wimbledon">NewGen Strata Services</span>
           </h2>
@@ -459,9 +459,12 @@ export function Founders() {
 
                 {/* Experience bubble */}
                 <motion.div whileHover={{ scale: 1.03 }} className="relative mx-auto w-full max-w-xs sm:max-w-sm md:max-w-full">
-                  <div className="bg-gradient-to-br from-primary to-secondary rounded-3xl p-6 sm:p-8 md:p-10 text-white shadow-2xl relative overflow-hidden">
-                    <div className="absolute inset-0 bg-white/10 blur-2xl" />
-                    <div className="absolute -bottom-6 -right-6 w-28 sm:w-36 md:w-40 h-28 sm:h-36 md:h-40 bg-white/10 rounded-full blur-2xl" />
+                  <div
+                    className="bg-gradient-to-br from-blue-600 via-purple-600 to-emerald-600 rounded-xl sm:rounded-2xl p-6 sm:p-7 md:p-8 text-white shadow-2xl h-full relative overflow-hidden"
+
+                  >
+                    {/* <div className="absolute inset-0 bg-white/10 blur-2xl" /> */}
+                    {/* <div className="absolute -bottom-6 -right-6 w-28 sm:w-36 md:w-40 h-28 sm:h-36 md:h-40 bg-white/10 rounded-full blur-2xl" /> */}
 
                     <div className="relative z-10 text-center mb-4 sm:mb-6">
                       <div className="text-5xl sm:text-6xl font-extrabold mb-1 drop-shadow-lg">70+</div>
@@ -481,10 +484,14 @@ export function Founders() {
               </div>
 
               <div className="text-center pt-12">
-                <Button asChild size="lg" className="btn-wimbledon rounded-full px-8 sm:px-10 py-5 text-base sm:text-lg">
-                  <Link href="/contact">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 hover:from-blue-700 hover:via-purple-700 hover:to-emerald-700 text-white font-bold px-8 py-5 sm:px-10 sm:py-6 text-sm sm:text-base rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                >
+                  <Link href="/contact" className="flex items-center">
                     Get in Touch
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                   </Link>
                 </Button>
               </div>

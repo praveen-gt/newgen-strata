@@ -1,7 +1,7 @@
 import Hero from '@/components/sections/Hero'
-import { OurCommitments } from '@/components/sections/OurCommitments'
-import { ServicesPreview } from '@/components/sections/ServicesPreview'
-import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
+import  OurCommitments  from '@/components/sections/OurCommitments'
+import ServicesPreview from '@/components/sections/ServicesPreview'
+import WhyChooseUs from '@/components/sections/WhyChooseUs'
 import { ContactCTA } from '@/components/sections/ContactCTA'
 
 export default function HomePage() {

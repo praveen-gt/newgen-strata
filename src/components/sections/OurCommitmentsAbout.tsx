@@ -42,13 +42,13 @@ const SectionHeader = () => (
     variants={fadeInUp}
     className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 md:mb-20"
   >
-    <Badge className="bg-secondary/10 text-secondary border-secondary/20 mb-3 sm:mb-4 text-xs sm:text-sm px-3 py-1.5 sm:px-4 sm:py-2">
+            <Badge className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-700 border-blue-300/50 mb-4 sm:mb-5 md:mb-6 text-base sm:text-lg md:text-xl px-5 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-3.5 font-semibold shadow-lg hover:shadow-xl transition-shadow duration-300">
       Our Promise
     </Badge>
 
-    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-4 sm:mb-5 md:mb-6 px-2">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-4 sm:mb-5 md:mb-6 px-2">
       The Commitments of{" "}
-      <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">NewGen Strata Services</span>
+      <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent">NewGen Strata Services</span>
     </h2>
 
     <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed px-2">
@@ -430,27 +430,22 @@ const ValueOrbit = () => {
 // Quote Block Component
 // ============================
 const QuoteBlock = () => (
-  <motion.div
-    initial={{ opacity: 0, y: 40 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.8 }}
-    className="relative text-center bg-gradient-to-br from-white via-primary/5 to-white rounded-2xl sm:rounded-3xl shadow-2xl p-8 sm:p-10 md:p-12 max-w-4xl mx-auto border border-primary/20 overflow-hidden"
-  >
-    <div className="absolute top-4 left-4 sm:top-6 sm:left-6 text-6xl sm:text-7xl md:text-8xl text-primary/10 font-serif leading-none">&quot;</div>
-    <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 text-6xl sm:text-7xl md:text-8xl text-primary/10 font-serif leading-none">&quot;</div>
-
-    <div className="relative z-10">
-      <blockquote className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-brand-dark mb-3 sm:mb-4 leading-relaxed px-2">
-        The quality is long remembered after the price is forgotten
-      </blockquote>
-      <div className="flex items-center justify-center gap-2 text-gray-600 font-medium text-sm sm:text-base md:text-lg">
-        <div className="w-8 sm:w-10 md:w-12 h-0.5 bg-gradient-to-r from-transparent to-primary" />
-        <p>NewGen Strata Services</p>
-        <div className="w-8 sm:w-10 md:w-12 h-0.5 bg-gradient-to-l from-transparent to-primary" />
-      </div>
-    </div>
-  </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInUp}
+          className="text-center bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 sm:p-7 md:p-8 max-w-4xl mx-auto border-2 border-blue-200/50 relative overflow-hidden"
+        >
+          {/* Decorative corner elements */}
+          <div className="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-blue-400/20 to-transparent rounded-br-full" />
+          <div className="absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-tl from-purple-400/20 to-transparent rounded-tl-full" />
+          
+          <blockquote className="text-lg sm:text-xl md:text-2xl font-semibold text-brand-dark italic mb-2 px-2 relative z-10">
+            &quot;The quality is long remembered after the price is forgotten&quot;
+          </blockquote>
+          <p className="text-sm sm:text-base text-gray-700 font-medium relative z-10">— NewGen Strata Services</p>
+        </motion.div>
 );
 
 // ============================

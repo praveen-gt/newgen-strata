@@ -18,14 +18,15 @@ export function WhyNewGen() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="max-w-4xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
-          <Badge className="bg-primary/10 text-primary border-primary/20 mb-4 sm:mb-5 md:mb-6 text-xs sm:text-sm px-3 py-1.5 sm:px-4 sm:py-2">
-            Our Story
-          </Badge>
+
+            <Badge className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-700 border-blue-300/50 mb-4 sm:mb-5 md:mb-6 text-base sm:text-lg md:text-xl px-5 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-3.5 font-semibold shadow-lg hover:shadow-xl transition-shadow duration-300">
+              Our Story
+            </Badge>
           
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-dark mb-4 sm:mb-5 md:mb-6">
-            Why Start <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">NewGen Strata Services?</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-4 sm:mb-5 md:mb-6 px-2">
+            Why Start <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent">NewGen Strata Services?</span>
           </h2>
           
           <div className="prose prose-lg max-w-none">

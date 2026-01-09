@@ -76,12 +76,14 @@ export function WhatIsNewGen() {
                 viewport={{ once: true }}
                 variants={fadeInUp}
               >
-                <Badge className="bg-secondary/10 text-secondary border-secondary/20 mb-4 sm:mb-5 md:mb-6 text-xs sm:text-sm px-3 py-1.5 sm:px-4 sm:py-2">
+                {/* <Badge className="bg-secondary/10 text-secondary border-secondary/20 mb-4 sm:mb-5 md:mb-6 text-xs sm:text-sm px-3 py-1.5 sm:px-4 sm:py-2"> */}
+            {/* <Badge className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-700 border-blue-300/50 mb-4 sm:mb-5 md:mb-6 text-base sm:text-lg md:text-xl px-5 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-3.5 font-semibold shadow-lg hover:shadow-xl transition-shadow duration-300">
                   What Is NewGen
-                </Badge>
-                
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-dark mb-4 sm:mb-5 md:mb-6">
-                  What is <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">NewGen Strata Services?</span>
+                </Badge> */}
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-4 sm:mb-5 md:mb-6 px-2">                
+                {/* <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-dark mb-4 sm:mb-5 md:mb-6"> */}
+                  What is <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent">NewGen Strata Services?</span>
                 </h2>
                 
                 <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
@@ -98,7 +100,8 @@ export function WhatIsNewGen() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeInUp}
-                className="bg-gradient-to-br from-primary to-secondary rounded-xl sm:rounded-2xl p-6 sm:p-7 md:p-8 text-white shadow-2xl"
+                            // <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-emerald-600 rounded-xl sm:rounded-2xl p-6 sm:p-7 md:p-8 text-white shadow-2xl h-full relative overflow-hidden"></div>
+                className="bg-gradient-to-br from-blue-600 via-purple-600 to-emerald-600 rounded-xl sm:rounded-2xl p-6 sm:p-7 md:p-8 text-white shadow-2xl h-full relative overflow-hidden"
               >
                 <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-5 md:mb-6">The Founding Principles</h3>
                 <ul className="space-y-3 sm:space-y-4">

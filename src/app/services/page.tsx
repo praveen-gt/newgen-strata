@@ -529,13 +529,13 @@ export default function ServicesPage() {
           variants={staggerContainer}
           className="max-w-4xl text-center mx-auto"
           >
-            <motion.div variants={fadeInUp} className="flex items-center justify-center gap-2 mb-6">
+            {/* <motion.div variants={fadeInUp} className="flex items-center justify-center gap-2 mb-6">
               <Sparkles className="h-5 w-5 text-white animate-pulse" />
               <Badge className="bg-white/20 backdrop-blur-md border-white/40 text-white text-sm px-4 py-1.5">
                 Our Services
               </Badge>
               <Sparkles className="h-5 w-5 text-white animate-pulse" style={{ animationDelay: '0.3s' }} />
-            </motion.div>
+            </motion.div> */}
 
             <motion.h1 
               variants={fadeInUp}
@@ -697,11 +697,6 @@ export default function ServicesPage() {
             className="text-center max-w-4xl mx-auto"
           >
             {/* Badge */}
-            <motion.div variants={fadeInUp} className="mb-6">
-              <Badge className="bg-white/20 backdrop-blur-md border-white/40 text-white text-sm px-4 py-2">
-                Get Started Today
-              </Badge>
-            </motion.div>
 
             <motion.h2 
               variants={fadeInUp}

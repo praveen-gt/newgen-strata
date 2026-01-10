@@ -245,14 +245,15 @@ export function AboutHero() {
           {/* Background Image with Parallax Effect */}
           <div className="absolute inset-0">
             <Image
-              src="/images/about/about-banner.jpg"
+              // src="/images/about/about-banner.jpg"
+              src="/images/image-2.jpg"
               alt="NewGen Strata Services - Modern strata management excellence"
               fill
               className="object-cover"
               priority
             />
             {/* Lighter Gradient Overlay - Better Contrast */}
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/75 via-black/50 to-brand-dark/70" />
+            <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/55 via-black/30 to-brand-dark/50" />
           </div>
     
           {/* Animated Gradient Orbs - Subtler */}
@@ -265,7 +266,7 @@ export function AboutHero() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               variants={staggerContainer}
-              className="max-w-4xl"
+              className="max-w-5xl"
             >
               {/* Main Heading */}
               <motion.h1
@@ -292,7 +293,7 @@ export function AboutHero() {
                 {['Honesty', 'Integrity', 'Excellence', 'Transparency'].map((value, index) => (
                   <div 
                     key={value}
-                    className="flex items-center gap-1.5 sm:gap-2 bg-white/95 backdrop-blur-md border border-white/50 rounded-full px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-2.5 text-brand-dark hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                    className="flex items-center gap-1.5 sm:gap-2 bg-white/95 backdrop-blur-md border border-white/50 rounded-full px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-2.5 text-brand-dark hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl"
                   >
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full animate-pulse" style={{ animationDelay: `${index * 0.2}s` }} />
                     <span className="text-xs sm:text-sm font-semibold">{value}</span>

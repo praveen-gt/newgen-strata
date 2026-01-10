@@ -24,6 +24,7 @@ import {
 } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const providerCategories = [
   {
@@ -173,7 +174,22 @@ export default function ServiceProvidersPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-32 md:py-40 overflow-hidden bg-gradient-to-br from-brand-dark via-primary to-secondary">
+      <section className="relative py-32 md:py-40 overflow-hidden">
+        
+                  <div className="absolute inset-0">
+                    <Image
+                      // src="/images/about/about-banner.jpg"
+                      src="/images/image-2.jpg"
+                      alt="NewGen Strata Services - Modern strata management excellence"
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                    {/* Lighter Gradient Overlay - Better Contrast */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/55 via-black/30 to-brand-dark/50" />
+                  </div>
+        
+        
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl animate-pulse" />

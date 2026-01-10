@@ -12,6 +12,8 @@ export default function Hero() {
   return (
     <section className="relative min-h-[calc(100vh-8rem)] md:min-h-screen flex items-center justify-center overflow-hidden skyline-silhouette">
       
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-black/20 z-0" />
+
 
       <div className="relative z-10 text-center max-w-5xl px-4 sm:px-6 lg:px-8 py-12 md:py-0 animate-fade-in">
         {/* Badge */}

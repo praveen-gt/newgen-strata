@@ -350,6 +350,7 @@ import {
 } from 'lucide-react'
 
 import Link from 'next/link'
+import Image from 'next/image'
 
 const services = [
   {
@@ -508,6 +509,19 @@ export default function ServicesPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-32 md:py-40 overflow-hidden bg-gradient-to-br from-brand-dark via-primary to-secondary">
+                  <div className="absolute inset-0">
+                    <Image
+                      // src="/images/about/about-banner.jpg"
+                      src="/images/melbourne-skyline-banner.png"
+                      alt="NewGen Strata Services - Modern strata management excellence"
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                    {/* Lighter Gradient Overlay - Better Contrast */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/75 via-black/50 to-brand-dark/70" />
+                  </div>
+
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl animate-pulse" />
@@ -539,7 +553,7 @@ export default function ServicesPage() {
 
             <motion.h1 
               variants={fadeInUp}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight"
+              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight"
             >
               Personal, High-Quality{" "}
               <span className="relative inline-block">
@@ -548,13 +562,13 @@ export default function ServicesPage() {
               </span>
             </motion.h1>
 
-            <motion.p 
+            {/* <motion.p 
               variants={fadeInUp}
               className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto"
             >
               Comprehensive management and support for all aspects of owners corporations, 
               delivered with honesty, integrity, and a commitment to excellence.
-            </motion.p>
+            </motion.p> */}
           </motion.div>
         </div>
 

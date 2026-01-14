@@ -249,11 +249,11 @@
 //                       <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl p-4 w-16 h-16 mb-6 group-hover:from-primary/20 group-hover:to-secondary/20 transition-colors">
 //                         <IconComponent className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />
 //                       </div>
-                      
+
 //                       <h3 className="text-2xl font-bold text-brand-dark mb-3 group-hover:text-primary transition-colors">
 //                         {service.title}
 //                       </h3>
-                      
+
 //                       <p className="text-gray-600 mb-6 leading-relaxed">
 //                         {service.description}
 //                       </p>
@@ -303,7 +303,7 @@
 //                   <ArrowRight className="ml-2 h-5 w-5" />
 //                 </Link>
 //               </Button>
-              
+
 //               <Button
 //                 asChild
 //                 variant="outline"
@@ -331,7 +331,7 @@ import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
-import { 
+import {
   Calendar,
   FileText,
   MessageSquare,
@@ -389,13 +389,29 @@ const services = [
     ],
     color: 'from-green-500 to-emerald-500'
   },
+  // {
+  //   icon: Wrench,
+  //   title: 'Maintenance & Repairs',
+  //   description: 'Organizing maintenance and repairs for common property with our trusted network of contractors.',
+  //   details: [
+  //     'Coordinate routine maintenance schedules',
+  //     'Emergency repair response',
+  //     'Quality control and oversight',
+  //     'Work with vetted, reliable contractors'
+  //   ],
+  //   color: 'from-orange-500 to-red-500'
+  // },
   {
     icon: Wrench,
     title: 'Maintenance & Repairs',
-    description: 'Organizing maintenance and repairs for common property with our trusted network of contractors.',
+    description: 'Comprehensive maintenance, repairs, and essential services for common property with our trusted network of contractors.',
     details: [
       'Coordinate routine maintenance schedules',
-      'Emergency repair response',
+      'Emergency repair response and restoration',
+      'Cleaning and hygiene services',
+      'Grounds and gardening services',
+      'Pest control management',
+      'Floor repair and restoration services',
       'Quality control and oversight',
       'Work with vetted, reliable contractors'
     ],
@@ -509,18 +525,18 @@ export default function ServicesPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-32 md:py-40 overflow-hidden bg-gradient-to-br from-brand-dark via-primary to-secondary">
-                  <div className="absolute inset-0">
-                    <Image
-                      // src="/images/about/about-banner.jpg"
-                      src="/images/melbourne-skyline-banner.png"
-                      alt="NewGen Strata Services - Modern strata management excellence"
-                      fill
-                      className="object-cover"
-                      priority
-                    />
-                    {/* Lighter Gradient Overlay - Better Contrast */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/75 via-black/50 to-brand-dark/70" />
-                  </div>
+        <div className="absolute inset-0">
+          <Image
+            // src="/images/about/about-banner.jpg"
+            src="/images/melbourne-skyline-banner.png"
+            alt="NewGen Strata Services - Modern strata management excellence"
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Lighter Gradient Overlay - Better Contrast */}
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/75 via-black/50 to-brand-dark/70" />
+        </div>
 
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
@@ -537,11 +553,11 @@ export default function ServicesPage() {
 
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
-                    initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={staggerContainer}
-          className="max-w-4xl text-center mx-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
+            className="max-w-4xl text-center mx-auto"
           >
             {/* <motion.div variants={fadeInUp} className="flex items-center justify-center gap-2 mb-6">
               <Sparkles className="h-5 w-5 text-white animate-pulse" />
@@ -551,7 +567,7 @@ export default function ServicesPage() {
               <Sparkles className="h-5 w-5 text-white animate-pulse" style={{ animationDelay: '0.3s' }} />
             </motion.div> */}
 
-            <motion.h1 
+            <motion.h1
               variants={fadeInUp}
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight"
             >
@@ -575,7 +591,7 @@ export default function ServicesPage() {
         {/* Bottom wave decoration */}
         <div className="absolute bottom-0 left-0 right-0">
           <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-            <path d="M0 80L60 75C120 70 240 60 360 55C480 50 600 50 720 52.5C840 55 960 60 1080 57.5C1200 55 1320 45 1380 40L1440 35V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0Z" fill="rgb(249, 250, 251)"/>
+            <path d="M0 80L60 75C120 70 240 60 360 55C480 50 600 50 720 52.5C840 55 960 60 1080 57.5C1200 55 1320 45 1380 40L1440 35V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0Z" fill="rgb(249, 250, 251)" />
           </svg>
         </div>
       </section>
@@ -616,8 +632,8 @@ export default function ServicesPage() {
             {services.map((service, index) => {
               const IconComponent = service.icon
               return (
-                <motion.div 
-                  key={service.title} 
+                <motion.div
+                  key={service.title}
                   variants={scaleIn}
                   onHoverStart={() => setHoveredIndex(index)}
                   onHoverEnd={() => setHoveredIndex(null)}
@@ -625,7 +641,7 @@ export default function ServicesPage() {
                   <Card className="h-full border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-500 bg-white group hover:-translate-y-3 overflow-hidden relative">
                     {/* Gradient accent on hover */}
                     <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${service.color} transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500`} />
-                    
+
                     <CardContent className="p-8">
                       {/* Icon with gradient background */}
                       <div className="relative mb-6">
@@ -635,7 +651,7 @@ export default function ServicesPage() {
                         {/* Floating badge on hover */}
                         <motion.div
                           initial={{ opacity: 0, scale: 0 }}
-                          animate={{ 
+                          animate={{
                             opacity: hoveredIndex === index ? 1 : 0,
                             scale: hoveredIndex === index ? 1 : 0
                           }}
@@ -644,11 +660,11 @@ export default function ServicesPage() {
                           Featured
                         </motion.div>
                       </div>
-                      
+
                       <h3 className="text-2xl font-bold text-brand-dark mb-3 group-hover:text-primary transition-colors duration-300">
                         {service.title}
                       </h3>
-                      
+
                       <p className="text-gray-600 mb-6 leading-relaxed">
                         {service.description}
                       </p>
@@ -691,7 +707,7 @@ export default function ServicesPage() {
       <section className="relative py-32 overflow-hidden">
         {/* Premium gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-brand-dark via-primary to-secondary" />
-        
+
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden opacity-20">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" />
@@ -712,27 +728,27 @@ export default function ServicesPage() {
           >
             {/* Badge */}
 
-            <motion.h2 
+            <motion.h2
               variants={fadeInUp}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
             >
               Ready to Experience Professional Strata Management?
             </motion.h2>
-            
-            <motion.p 
+
+            <motion.p
               variants={fadeInUp}
               className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed"
             >
-              Whether you own a large complex or a small property, we tailor our services 
+              Whether you own a large complex or a small property, we tailor our services
               to meet your unique needs with honesty, integrity, and excellence.
             </motion.p>
 
             {/* CTA Buttons */}
-            <motion.div 
+            <motion.div
               variants={fadeInUp}
               className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             >
-              <Button 
+              <Button
                 asChild
                 size="lg"
                 className="group bg-white text-brand-dark hover:bg-gray-50 font-bold px-12 py-7 rounded-2xl shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300 text-lg"
@@ -742,7 +758,7 @@ export default function ServicesPage() {
                   <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
-              
+
               <Button
                 asChild
                 variant="outline"
@@ -757,7 +773,7 @@ export default function ServicesPage() {
             </motion.div>
 
             {/* Trust indicators */}
-            <motion.div 
+            <motion.div
               variants={fadeInUp}
               className="mt-12 flex flex-wrap items-center justify-center gap-8 text-white/80"
             >

@@ -326,7 +326,7 @@ export function Footer() {
               <Link href="/" className="inline-block focus:outline-none focus:ring-2 focus:ring-brand-accent rounded-lg" aria-label="NewGen Strata Services Home">
                 <div className="relative h-20 w-32 sm:h-22 sm:w-36 md:h-24 md:w-40 bg-white rounded-lg p-2">
                   <Image
-                    src="/images/logo/newgen-logo.jpeg"
+                    src="/images/logo/logo.webp"
                     alt="NewGen Strata Services Logo"
                     fill
                     className="object-contain"

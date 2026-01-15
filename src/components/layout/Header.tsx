@@ -1240,7 +1240,7 @@ export function Header() {
           <div className={cn(
             "relative flex items-center transition-all duration-300",
             // Mobile: fixed compact height
-            "h-16",
+            "h-22",
             // Desktop: larger height with scroll effect
             isScrolled ? "lg:h-20" : "lg:h-20"
           )}>
@@ -1248,16 +1248,16 @@ export function Header() {
             {/* Logo - Consistent across all devices */}
             <Link
               href="/"
-              className={cn("absolute left-4 sm:left-6 z-30 transition-all duration-300 ease-out", isScrolled ? "top-1/2 -translate-y-1/2" : "top-3/4 -translate-y-1/2")}
+              className={cn("absolute left-4 sm:left-6 z-30 transition-all duration-300 ease-out", isScrolled ? "top-1/2 -translate-y-1/2" : "top-1/2 lg:top-3/4 -translate-y-1/2")}
             >
               <div className={cn(
-                "relative bg-white rounded-lg shadow-lg transition-all duration-300 hover:scale-105",
+                "relative bg-white rounded-lg lg:shadow-lg transition-all duration-300 hover:scale-105",
                 // Mobile: compact fixed size
-                "p-2",
+                "p-0",
                 // Desktop: larger with scroll effect
                 isScrolled 
-                  ? " w-32 h-12 lg:p-3 lg:w-40 lg:h-16" 
-                  : "w-36 h-20 lg:p-4 lg:w-56 lg:h-24"
+                  ? " w-18 h-18 lg:p-3 lg:w-40 lg:h-16" 
+                  : "w-18 h-18 lg:p-4 lg:w-56 lg:h-24"
               )}>
                 <Image
                   src="/images/logo/logo.webp"
